@@ -2,10 +2,13 @@
 
 Will utilize:
 
-MySQL
-Java Spring Boot
-React
+- MySQL
+- Node.js
+- Express.js
+- React.js
 
 Host on Cloud Services
+  - AWS
+  - GCP
 
 Inspired by Pitt CS Wiki
