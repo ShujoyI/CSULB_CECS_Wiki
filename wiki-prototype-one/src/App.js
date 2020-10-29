@@ -7,6 +7,7 @@ import CourseExplorer from './components/pages/CourseExplorer';
 import Career from './components/pages/Career';
 import Academics from './components/pages/Academics';
 import Guides from './components/pages/Guides';
+import GetStarted from './components/pages/GetStarted';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/career' component={Career} />
           <Route path='/courseExplorer' component={CourseExplorer} />
           <Route path='/guides' component={Guides} />
+          <Route path='/getStarted' component={GetStarted} />
         </Switch>
       </Router>
     </>
