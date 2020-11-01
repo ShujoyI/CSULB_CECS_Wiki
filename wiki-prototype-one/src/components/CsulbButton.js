@@ -1,10 +1,10 @@
 import React from 'react';
-import './Button.css';
+import './CsulbButton.css';
 
-const STYLES = ['btn--primary', 'btn--outline'];
+const STYLES = ['csulbbtn--primary', 'csulbbtn--outline'];
 
-const SIZES = ['btn--medium', 'btn--large'];
-export const Button = ({
+const SIZES = ['csulbbtn--medium', 'csulbbtn--large'];
+export const CsulbButton = ({
     children, 
     type, 
     onClick, 

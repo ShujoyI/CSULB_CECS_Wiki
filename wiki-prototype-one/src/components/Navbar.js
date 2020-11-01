@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from './CsulbButton';
+import { CsulbButton } from './CsulbButton';
+
 import './Navbar.css';
 
 function Navbar() {
@@ -28,12 +29,16 @@ function Navbar() {
         <nav>
             <nav className='navbar'>
                 <div className='navbar-container'>
-                    <Link to='/' className='navbar-logo' onClick={closeWebMenu}>
-                        CSulb Wiki <i className='fas fa-globe-americas' />
-                    </Link>
-                    <div className='menu-icon' onClick={handleClick}>
-                        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-                    </div>
+                    <ul className={click ? 'nav-menu active' : 'nav-menu-logo'}>
+                        <li className='nav-item'>
+                            <Link to='/' className='nav-links' onClick={closeWebMenu}>
+                                LB
+                            </Link>
+                        </li>
+                        <li className='nav-item'>
+                            <input type="text" className="nav-search" placeholder="Search..." />
+                        </li>
+                    </ul>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
                             <Link to='/account' className='nav-links' onClick={closeWebMenu}>
@@ -46,7 +51,7 @@ function Navbar() {
                             </Link>
                         </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>CSULB HOME</Button>}
+                    {button && <CsulbButton className='csulbbtns' buttonStyle='csulbbtn--outline' buttonSize='medium'>CSULB HOME</CsulbButton>}
                 </div>
             </nav>
         </nav>

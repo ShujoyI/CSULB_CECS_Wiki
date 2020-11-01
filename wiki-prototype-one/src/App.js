@@ -10,6 +10,7 @@ import Guides from './components/pages/Guides';
 import GetStarted from './components/pages/GetStarted';
 import Account from './components/pages/Account';
 import AdminPage from './components/pages/AdminPage';
+import SearchPage from './components/pages/SearchPage';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path='/getStarted' component={GetStarted} />
           <Route path='/account' component={Account} />
           <Route path='/adminPage' component={AdminPage} />
+          <Route path='/searchPage' component={SearchPage} />
         </Switch>
       </Router>
     </>
