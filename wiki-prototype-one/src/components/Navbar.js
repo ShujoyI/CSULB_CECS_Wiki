@@ -32,7 +32,7 @@ function Navbar() {
                     <ul className={click ? 'nav-menu active' : 'nav-menu-logo'}>
                         <li className='nav-item'>
                             <Link to='/' className='nav-links' onClick={closeWebMenu}>
-                                LB
+                                Home
                             </Link>
                         </li>
                         <li className='nav-item'>
