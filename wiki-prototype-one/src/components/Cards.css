@@ -1,7 +1,7 @@
 /* code for the actual page */
 .cards {
     padding: 8rem;
-    background-color: #f2f2f2;
+    background-color: #000;
 }
   
 /* code for the text at the top of the page */
@@ -11,6 +11,7 @@ h1 {
 
 /* code for the container of the 4 boxes */
 .cards__container {
+  background-color: #000;
   display: flex;
   flex-flow: row;
   align-items: center;
@@ -38,7 +39,7 @@ h1 {
 
 /* code for the actual box that contains the image, link description, and page description */
 .cards__item__link {
-  background-color: #b3f0ff;
+  background-color:#ecaa00;
   display: flex;
   flex-flow: column;
   width: 100%;
@@ -73,7 +74,7 @@ h1 {
   font-size: 12px;
   font-weight: 700;
   color: #fff;
-  background-color: #0026ff;
+  background-color:  #686868c5;
   box-sizing: border-box;
 }
 
@@ -101,7 +102,7 @@ h1 {
 }
 
 .cards__item__text {
-  color: #252e48;
+  color: #000;
   font-size: 18px;
   line-height: 24px;
 }
