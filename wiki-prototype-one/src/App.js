@@ -2,15 +2,15 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Home from './components/pages/Home';
-import CourseExplorer from './components/pages/CourseExplorer';
-import Career from './components/pages/Career';
-import Academics from './components/pages/Academics';
-import Guides from './components/pages/Guides';
-import GetStarted from './components/pages/GetStarted';
-import Account from './components/pages/Account';
-import AdminPage from './components/pages/AdminPage';
-import SearchPage from './components/pages/SearchPage';
+import Home from './pages/Home';
+import CourseExplorer from './pages/CourseExplorer';
+import Career from './pages/Career';
+import Academics from './pages/Academics';
+import Guides from './pages/Guides';
+import GetStarted from './pages/GetStarted';
+import Account from './pages/Account';
+import AdminPage from './pages/AdminPage';
+import SearchPage from './pages/SearchPage';
 
 function App() {
   return (
