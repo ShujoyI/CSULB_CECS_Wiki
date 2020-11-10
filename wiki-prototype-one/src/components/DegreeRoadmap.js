@@ -1,9 +1,10 @@
 import DagreGraph from "dagre-d3-react"
 
-ReactDOM.render(
-    <div>
+function DegreeRoadmap(){
+    return (
+        <div>
         <DagreGraph
-            nodes={nodes}
+            nodes={1, 2, 3}
             links={links}
             options={{
                 rankdir: 'LR',
@@ -19,6 +20,8 @@ ReactDOM.render(
             onNodeClick={e => console.log(e)}
             onRelationshipClick={e => console.log(e)}
         />
-    </div>,
-    container
-)
+    </div>
+    );
+}
+    
+export default DegreeRoadmap
