@@ -1,13 +1,23 @@
 import React from 'react';
 import '../App.css';
-import HeroSection from '../components/HeroSection';
+import { Button } from '../components/Button';
+import '../styles/Home.css';
 
 function Home () {
     return (
-        <>
-            <HeroSection />
-        </>
-
+        <div className='hero-container'>
+            <video src="/videos/video-3.mp4" autoPlay loop muted />
+            <h1>CSulb WIKI</h1>
+            <div className='hero-btns'>
+                <Button 
+                    className='btns'
+                    buttonStyle='btn'
+                    buttonSize='large'
+                >
+                    GET STARTED
+                </Button>
+            </div>
+        </div>
     );
 }
 
