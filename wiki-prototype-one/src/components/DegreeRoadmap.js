@@ -43,7 +43,7 @@ function DegreeRoadmap(){
             width='500'
             height='500'
             animate={1000}
-            shape='circle'
+            shape='rect'
             fitBoundaries
             zoomable
             onNodeClick={e => console.log(e)}
