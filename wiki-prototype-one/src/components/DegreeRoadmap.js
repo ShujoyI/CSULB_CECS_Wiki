@@ -1,5 +1,37 @@
 import DagreGraph from "dagre-d3-react"
 
+<<<<<<< Updated upstream
+=======
+// test data for graph
+let tempData = {
+  nodes: [
+    {
+      id: "CECS_225",
+      label: "<h3>CECS 225</h3>",
+      labelType: "html"
+    },
+    {
+      id: "CECS_341",
+      label: "<h3>CECS 341</h3>",
+      labelType: "html",
+      config: {
+              style: 'fill: #afa'
+          }
+    }
+  ],
+  links: [
+    {
+      source: 'CECS_225',
+      target: 'CECS_341',
+      label: 'TO',
+      config: {
+              arrowheadStyle: 'display: none',
+      }
+    },
+  ]
+}
+
+>>>>>>> Stashed changes
 function DegreeRoadmap(){
     return (
         <div>
