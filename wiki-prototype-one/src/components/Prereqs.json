@@ -1,0 +1,12 @@
+{
+    "CECS225": {},
+    "CECS100": {},
+    "CECS228": {},
+    "ENGR361": {},
+    "CECS277": {
+        "prereq": ["CECS225"]
+    },
+    "CECS174": {
+        "prereq": ["CECS100"]
+    }
+}
