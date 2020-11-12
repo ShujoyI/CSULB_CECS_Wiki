@@ -1,0 +1,10 @@
+.node {
+    fill: white;
+    outline: auto;
+}
+
+path {
+    stroke: black;
+    fill: black;
+    stroke-width: 1.5px;
+}

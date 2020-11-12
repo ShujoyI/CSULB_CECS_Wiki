@@ -1,4 +1,5 @@
 import DagreGraph from "dagre-d3-react"
+import './DegreeRoadmap.css';
 
 
 // test data for graph
@@ -28,11 +29,6 @@ let tempData = {
     {
       source: 'CECS_225',
       target: 'CECS_341',
-      config: {
-        style: "stroke-width: 3px; stroke-dasharray: 5, 5;",
-        arrowheadClass: 'arrowhead',
-        lineInterpolate: 'basis',
-      }
     },
     {
       source: 'CECS_341',
