@@ -1,8 +1,10 @@
 import DagreGraph from "dagre-d3-react"
 
+
 // test data for graph
 let tempData = {
   nodes: [
+    
     {
       id: "CECS_225",
       label: "<h3>CECS 225</h3>",
@@ -15,16 +17,25 @@ let tempData = {
       config: {
               style: 'fill: #afa'
           }
-    }
+    }, 
+    {
+      id: "3",
+      label: "<h3>CECS 326</h3>",
+      labelType: "html"
+    },
   ],
   links: [
     {
       source: 'CECS_225',
       target: 'CECS_341',
-      label: 'TO',
       config: {
-              arrowheadStyle: 'display: none',
+        style: "stroke-width: 3px; stroke-dasharray: 5, 5;",
+        arrowheadClass: 'arrowhead',
       }
+    },
+    {
+      source: 'CECS_341',
+      target: '3',
     },
   ]
 }
@@ -33,10 +44,10 @@ function DegreeRoadmap(){
     return (
         <div>
         <DagreGraph
-            nodes={1, 2, 3}
-            links={links}
+            nodes={tempData.nodes}
+            links={tempData.links}
             options={{
-                rankdir: 'LR',
+                rankdir: 'RL',
                 align: 'UL',
                 ranker: 'tight-tree'
             }}
@@ -45,7 +56,7 @@ function DegreeRoadmap(){
             animate={1000}
             shape='rect'
             fitBoundaries
-            zoomable
+            //zoomable
             onNodeClick={e => console.log(e)}
             onRelationshipClick={e => console.log(e)}
         />
