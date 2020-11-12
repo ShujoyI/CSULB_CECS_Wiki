@@ -31,6 +31,7 @@ let tempData = {
       config: {
         style: "stroke-width: 3px; stroke-dasharray: 5, 5;",
         arrowheadClass: 'arrowhead',
+        lineInterpolate: 'basis',
       }
     },
     {
