@@ -1,7 +1,5 @@
 import DagreGraph from "dagre-d3-react"
 
-<<<<<<< Updated upstream
-=======
 // test data for graph
 let tempData = {
   nodes: [
@@ -31,7 +29,6 @@ let tempData = {
   ]
 }
 
->>>>>>> Stashed changes
 function DegreeRoadmap(){
     return (
         <div>
