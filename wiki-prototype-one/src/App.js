@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import Footer from './components/Footer';
 import {BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
@@ -29,7 +28,6 @@ function App() {
           <Route path='/adminPage' component={AdminPage} />
           <Route path='/searchPage' component={SearchPage} />
         </Switch>
-        <Footer />
       </Router>
     </>
   );
