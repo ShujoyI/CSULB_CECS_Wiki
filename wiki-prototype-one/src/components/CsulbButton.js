@@ -1,11 +1,10 @@
 import React from 'react';
-import './Button.css';
-import { Link } from 'react-router-dom';
+import './CsulbButton.css';
 
-const STYLES = ['btn--primary', 'btn--outline'];
+const STYLES = ['csulbbtn--primary', 'csulbbtn--outline'];
 
-const SIZES = ['btn--medium', 'btn--large'];
-export const Button = ({
+const SIZES = ['csulbbtn--medium', 'csulbbtn--large'];
+export const CsulbButton = ({
     children, 
     type, 
     onClick, 
@@ -21,7 +20,7 @@ export const Button = ({
     : SIZES[0]
 
     return (
-        <Link to='/getStarted' className='btn-web'>
+        <a href='https://www.csulb.edu/' className='btn-web'>
             <button
             className={`btn ${checkButtonStyle} ${checkButtonSize}`}
             onClick={onClick}
@@ -29,6 +28,6 @@ export const Button = ({
             >
                 {children}
             </button>
-        </Link>
+        </a>
     )
 };
