@@ -1,0 +1,25 @@
+{
+    "courses": [
+        {
+            "id": "CECS225"
+        },
+        {
+            "id": "CECS100"
+        },
+        {
+            "id": "CECS228"
+        },
+        {
+            "id": "ENGR361"
+        },
+        {
+            "id": "CECS277",
+            "prereq": ["CECS225"]
+        },
+        {
+            "id": "CECS174",
+            "prereq": ["CECS100"]
+        }
+    ]
+    
+}
