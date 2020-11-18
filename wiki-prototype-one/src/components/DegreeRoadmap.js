@@ -2,36 +2,34 @@ import React from "react"
 import DagreGraph from "dagre-d3-react"
 import './DegreeRoadmap.css'
 import PREREQS from "./Prereqs.json"
+import CourseCard from "./CourseCard"
 
-let nodes = []
-let temp = [1,2,3]
-PREREQS.array.forEach(element => {
-  console.log(element)
-});
+// let nodes = []
+// let temp = [1,2,3]
+// PREREQS.array.forEach(element => {
+//   console.log(element)
+// });
 
 // test data for graph
 let tempData = {
-  // nodes: [
+  nodes: [
     
-  //   {
-  //     id: "CECS_225",
-  //     label: "<h3>CECS 225</h3>",
-  //     labelType: "html"
-  //   },
-  //   {
-  //     id: "CECS_341",
-  //     label: "<h3>CECS 341</h3>",
-  //     labelType: "html",
-  //     config: {
-  //             style: 'fill: #afa'
-  //         }
-  //   }, 
-  //   {
-  //     id: "3",
-  //     label: "<h3>CECS 326</h3>",
-  //     labelType: "html"
-  //   },
-  // ],
+    {
+      id: "CECS_225",
+      label: "<h3>CECS 225</h3>",
+      labelType: "html",
+    },
+    {
+      id: "CECS_341",
+      label: "<h3>CECS 341</h3>",
+      labelType: "html",
+    }, 
+    {
+      id: "3",
+      label: "<h3>CECS 326</h3>",
+      labelType: "html"
+    },
+  ],
   links: [
     {
       source: 'CECS_225',
@@ -48,7 +46,7 @@ function DegreeRoadmap(){
     return (
         <div>
         <DagreGraph
-            nodes={nodes}
+            nodes={tempData.nodes}
             links={tempData.links}
             options={{
                 rankdir: 'RL',
@@ -61,11 +59,13 @@ function DegreeRoadmap(){
             shape='rect'
             fitBoundaries
             //zoomable
-            onNodeClick={e => console.log(e)}
+            onNodeClick={e => alert("I was clicked\n" + tempData.nodes[0].id)}
             onRelationshipClick={e => console.log(e)}
         />
+        <CourseCard/>
     </div>
     );
 }
-    
+
+
 export default DegreeRoadmap
