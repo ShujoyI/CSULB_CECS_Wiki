@@ -3,6 +3,10 @@
     outline: auto;
 }
 
+.node:hover {
+    fill: #afa
+}
+
 path {
     stroke: black;
     fill: black;
