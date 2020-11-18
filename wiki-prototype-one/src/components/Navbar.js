@@ -11,7 +11,7 @@ function Navbar() {
     const closeWebMenu = () => setClick(false);
 
     const showButton = () => {
-        if(window.innerWidth <= 960) {
+        if(window.innerWidth <= 1140) {
             setButton(false)
         } else {
             setButton(true)
@@ -28,9 +28,12 @@ function Navbar() {
         <nav>
             <nav className='navbar'>
                 <div className='navbar-container'>
+                    <div className='menu-icon' onClick={handleClick}>
+                        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+                    </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu-logo'}>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={closeWebMenu}>
+                            <Link to='/' className='nav-logo-links' onClick={closeWebMenu}>
                                 Home
                             </Link>
                         </li>
