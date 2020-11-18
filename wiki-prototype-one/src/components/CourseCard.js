@@ -1,4 +1,5 @@
 import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
 import {Button, Card} from 'react-bootstrap';
 
 // Hardcoded to display CECS 225 Data
