@@ -1,7 +1,7 @@
 import React from 'react';
-import "bootstrap/dist/css/bootstrap.min.css";
-import {Button, Card} from 'react-bootstrap';
-
+// import "bootstrap/dist/css/bootstrap.min.css";
+import { Card } from 'react-bootstrap';
+import { Button } from './Button'
 // Hardcoded to display CECS 225 Data
 
 function CourseCard() {
@@ -13,7 +13,14 @@ function CourseCard() {
             <Card.Text>
             It's that class where you do MIPS and stuff
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+            {/* <Button variant="primary">Go somewhere</Button> */}
+            <Button 
+                className='coursebtns'
+                buttonStyle='coursebtn'
+                buttonSize='medium'
+            >
+                Prerequisites
+            </Button>
         </Card.Body>
         </Card>
     );

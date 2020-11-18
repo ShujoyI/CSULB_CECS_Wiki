@@ -25,6 +25,17 @@ export const Button = ({
             </Link>
         )
     }
+    else if (checkButtonStyle === 'coursebtn') {
+        return (
+            <button
+                className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+                onClick={onClick}
+                type={type}
+                >
+                    {children}
+            </button>
+        )
+    }
     else {
         return (
             <a href='https://www.csulb.edu/' className='btn-web'>
