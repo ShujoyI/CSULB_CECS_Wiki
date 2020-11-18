@@ -1,6 +1,5 @@
 import React from 'react';
 import {Button, Card} from 'react-bootstrap';
-import './CourseCard.css';
 
 // Hardcoded to display CECS 225 Data
 
