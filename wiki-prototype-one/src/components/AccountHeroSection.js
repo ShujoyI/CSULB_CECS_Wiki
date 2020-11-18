@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./AccountHeroSection.css";
 import { useHistory } from 'react-router-dom';
-import { FormGroup, FormControl, FormLabel, Button } from 'react-bootstrap';
+import { FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap';
 
 function AccountHeroSection () {
 
@@ -25,7 +25,7 @@ function AccountHeroSection () {
         <div className='account-hero-section'>
             <form onSubmit={handleSubmit}>
                 <FormGroup className='emailGroup' controlID='userEmail'>
-                    <FormLabel className='emailLabel'>Email</FormLabel>
+                    <ControlLabel className='emailLabel'>Email</ControlLabel>
                     <FormControl className='emailBox'
                         type="email" 
                         placeholder="Enter email" 
@@ -33,7 +33,7 @@ function AccountHeroSection () {
                     />
                 </FormGroup>
                 <FormGroup controlID='userPassword'>
-                    <FormLabel className='passwordLabel'>Password</FormLabel>
+                    <ControlLabel className='passwordLabel'>Password</ControlLabel>
                     <FormControl 
                         type="password" 
                         placeholder="Password" 
