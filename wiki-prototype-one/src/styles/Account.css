@@ -22,10 +22,17 @@
         background-color: blue;
         padding-right: 20px;
         margin-top: 20px;
-        margin-left: 100px;
+        margin-left: 50px;
     }
+
+    .account-hero-section .myregister {
+        color: white;
+        background-color: blue;
+        width: auto;
+    }
+
     .account-hero-section form {
         margin: 0 auto;
         max-width: 320px;
     }
-} 
+}
