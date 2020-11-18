@@ -53,8 +53,8 @@ function DegreeRoadmap(){
                 align: 'UL',
                 ranker: 'tight-tree'
             }}
-            width='500'
-            height='500'
+            width='300'
+            height='300'
             animate={1000}
             shape='rect'
             fitBoundaries
