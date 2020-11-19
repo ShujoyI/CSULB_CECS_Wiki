@@ -47,11 +47,6 @@ function Navbar() {
                                 Account
                             </Link>
                         </li>
-                        <li className='nav-item'>
-                            <Link to='/support' className='nav-links' onClick={closeWebMenu}>
-                                Support
-                            </Link>
-                        </li>
                     </ul>
                     {button && <Button className='csulbbtns' buttonStyle='csulbbtn' buttonSize='medium'>CSULB HOME</Button>}
                 </div>
