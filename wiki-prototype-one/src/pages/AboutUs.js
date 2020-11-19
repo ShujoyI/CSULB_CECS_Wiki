@@ -3,7 +3,7 @@ import '../App.css'
 import '../styles/AboutUs.css';
 import { Link } from 'react-router-dom';
 
-export default function Academics() {
+export default function AboutUs() {
     return (
         <div className='about-container'>
             <section>
