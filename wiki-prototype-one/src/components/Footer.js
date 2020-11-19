@@ -6,20 +6,18 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div className='footer-container'>
-      <section className='footer-subscription'>
-      </section>
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>Service</h2>
-            <Link to='/courseExplorer'>Course Explorer</Link>
+            <Link to='/CourseExplorer'>Course Explorer</Link>
             <Link to='/Guides'>Guides</Link>
             <Link to='/Career'>Career</Link>
             <Link to='/Academics'>Academics</Link>
           </div>
           <div class='footer-link-items'>
             <h2>Resources</h2>
-            <Link to='/'>About us</Link>
+            <Link to='/AboutUs'>About us</Link>
             <Link to='/'>Contact</Link>
             <Link to='/'>Sitemap</Link>
             <Link to='/'>Feedback</Link>
