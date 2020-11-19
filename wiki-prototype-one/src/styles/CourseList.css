@@ -1,5 +1,6 @@
-.selectedCourse {
+.courseClicked {
     padding-left: 100px;
+    padding-top: 100px;
 }
 
 .courseHeaders h1 {
@@ -10,13 +11,13 @@
 }
 
 .courseHeaders h2 {
+    padding-top: 15px;
     font-size: 20px;
 }
 
 .courseHeaders h3 {
     font-size: 15px;
     padding-left: 30px;
-    padding-bottom: 20px;
 }
 
 .courseHeaders {
@@ -81,4 +82,13 @@
 .electiveButtonsRowThree {
     padding-bottom: 30px;
     padding-left: 30px;
+}
+
+.roadMap h2 {
+    padding-top: 10px;
+}
+
+.roadMapLink {
+    padding-left: 15px;
+    padding-bottom: 10px;
 }

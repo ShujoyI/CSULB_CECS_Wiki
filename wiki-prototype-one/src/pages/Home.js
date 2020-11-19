@@ -7,7 +7,7 @@ function Home () {
     return (
         <div className='hero-container'>
             <video src="/videos/video-3.mp4" autoPlay loop muted />
-            <h1>CSulb WIKI</h1>
+            <h1>BeachCS</h1>
             <div className='hero-btns'>
                 <Button 
                     className='btns'

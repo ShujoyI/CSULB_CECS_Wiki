@@ -84,12 +84,11 @@ function DegreeRoadmap(){
           //zoomable
           // onNodeClick={e => alert("I was clicked\n" + tempData.nodes[0].id)}
           onRelationshipClick={e => console.log(e)}
-      /> */}
-      <CourseCard
       />
+      <CourseCard
+      /> */}
     </div>
   );
 }
-
 
 export default DegreeRoadmap
