@@ -4,7 +4,7 @@
 }
 
 .node:hover {
-    fill: #afa
+    fill: rgb(3, 226, 255)
 }
 
 path {
@@ -12,3 +12,20 @@ path {
     fill: black;
     stroke-width: 1.5px;
 }
+
+.roadMap {
+    /* position: relative; */
+    width: 100%;
+}
+
+h1 {
+    text-align: left;
+}
+
+/* .cardHead {
+    margin-top: 20rem;
+} */
+
+/* .cardBody {
+    margin-top: 10rem;
+} */

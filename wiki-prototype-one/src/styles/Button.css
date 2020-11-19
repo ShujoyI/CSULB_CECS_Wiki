@@ -14,22 +14,6 @@
     transition: all 0.3s ease-out;
 }
 
-.coursebtns {
-    padding: 8px 20px;
-    border-radius: 2px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
-
-.coursebtn {
-    background-color: #fff;
-    color: #000;
-    padding: 8px 20px;
-    border: 1px solid #000;
-    transition: all 0.3s ease-out;
-}
-
 .csulbbtns {
     padding: 8px 20px;
     border-radius: 2px;
@@ -47,6 +31,23 @@
     transition: all 0.3s ease-out;
 }
 
+.classbtns {
+    padding: 8px 20px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.classbtn {
+    background: transparent;
+    color:  #000;
+    padding: 8px 20px;
+    border: 3px solid #ecaa00;
+    transition: all 0.3s ease-out;
+    border-radius: 98%;
+    margin-right: 3rem;
+}
+
 .medium {
     padding: 8px 10px;
     font-size: 15px;
@@ -57,9 +58,21 @@
     font-size: 20px;
 }
 
+.classmedium {
+    padding: 8px 10px;
+    font-size: 15px;
+}
+
 .medium:hover {
     background: #000;
     color:  #ecaa00;
+    transition: all 0.3s ease-out;
+}
+
+.classmedium:hover {
+    background: #ecaa00;
+    color: #fff;
+    border: none;
     transition: all 0.3s ease-out;
 }
 

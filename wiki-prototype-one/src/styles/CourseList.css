@@ -1,0 +1,84 @@
+.selectedCourse {
+    padding-left: 100px;
+}
+
+.courseHeaders h1 {
+    color: #000;
+    text-align: left;
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+
+.courseHeaders h2 {
+    font-size: 20px;
+}
+
+.courseHeaders h3 {
+    font-size: 15px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+
+.courseHeaders {
+    background-color: rgba(187, 187, 187, 0.527);
+    padding-left: 20px;
+}
+
+.lowerDivision {
+    padding-left: 60px;
+}
+
+.lowerDivision h2 {
+    padding-bottom: 15px;
+}
+
+.upperDivision {
+    padding-left: 60px;
+}
+
+.upperDivision h2 {
+    padding-bottom: 15px;
+}
+
+.elective {
+    padding-left: 60px;
+}
+
+.elective h2 {
+    padding-bottom: 15px;
+}
+
+.lowerDivisionButtonsRowOne {
+    padding-bottom: 2rem;
+    padding-left: 30px;
+}
+
+.lowerDivisionButtonsRowTwo {
+    padding-bottom: 2rem;
+    padding-left: 30px;
+}
+
+.upperDivisionButtonsRowOne {
+    padding-bottom: 2rem;
+    padding-left: 30px;
+}
+
+.upperDivisionButtonsRowTwo {
+    padding-bottom: 2rem;
+    padding-left: 30px;
+}
+
+.electiveButtonsRowOne {
+    padding-bottom: 2rem;
+    padding-left: 30px;
+}
+
+.electiveButtonsRowTwo {
+    padding-bottom: 2rem;
+    padding-left: 30px;
+}
+
+.electiveButtonsRowThree {
+    padding-bottom: 30px;
+    padding-left: 30px;
+}

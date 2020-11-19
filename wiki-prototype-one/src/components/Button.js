@@ -7,8 +7,10 @@ export const Button = ({
     type, 
     onClick, 
     buttonStyle, 
-    buttonSize
+    buttonSize,
+    name
 }) => {
+    const getName = name;
     const checkButtonStyle = buttonStyle;
     const checkButtonSize = buttonSize;
 
@@ -34,6 +36,17 @@ export const Button = ({
                 >
                     {children}
             </button>
+        )
+    }
+    else if (checkButtonStyle === 'classbtn') {
+        return (
+            <button
+                className={`btn ${checkButtonStyle} ${checkButtonSize} ${getName}`}
+                onClick={onClick}
+                type={type}
+                >
+                    {children}
+                </button>
         )
     }
     else {
