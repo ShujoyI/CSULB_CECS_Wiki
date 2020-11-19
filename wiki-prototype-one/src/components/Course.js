@@ -21,7 +21,7 @@ function Course(props) {
                 <Card.Header className='cardHead'>Course Info</Card.Header>
                     <Card.Body className='cardBody'>
                         <Card.Title className='cardTitle'>{props.courseNumber}</Card.Title>
-                        <Card.Text claassName='cardText'>{props.courseDescription}</Card.Text>
+                        <Card.Text className='cardText'>{props.courseDescription}</Card.Text>
                     </Card.Body>
             </Card>
         );
