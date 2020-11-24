@@ -3,15 +3,19 @@ import { Button } from './Button'
 import '../styles/CourseList.css';
 import Course from './Course';
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 function CourseList() {
 
     const [courseNum, setCourseNum] = useState("")
     const [courseDes, setCourseDes] = useState("")
 
-    function setDetails(num, des) {
-        setCourseNum(num);
-        setCourseDes(des);
+    function setDetails() {
+        axios.get("/selectCourse").then(response => {
+            setCourseNum(response.data)
+        });
+        //setCourseNum(num);
+        //setCourseDes(des);
     }
 
     return(
@@ -27,7 +31,7 @@ function CourseList() {
             <div className='lowerDivision'>
                 <h2>Lower Division</h2>
                 <div className='lowerDivisionButtonsRowOne'>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("ENGR 101", "Freshman orientation seminar on careers in engineering. Speakers from various fields illustrate opportunities and challenges in the engineering profession.")}>ENGR 101</Button>
+                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails()}>ENGR 101</Button>
                     <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("ENGR 102", "Development of skills and identification of strengths and weaknesses for success in a COE major.")}>ENGR 102</Button>
                     <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 100", "This course will help students to develop their critical thinking skills using technical software. The main topics will include: identifying engineering issues for investigation, developing planning and problem solving strategies, locating pertinent information and examples, critically analyzing these sources, forming and testing hypotheses, synthesizing and organizing results for effective communication, and developing transferable problem solving skills.")}>CECS 100</Button>
                     <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 105", "Introduction to Computer Science.")}>CECS 105</Button>
