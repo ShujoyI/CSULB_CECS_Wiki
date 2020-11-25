@@ -5,24 +5,31 @@ import Course from './Course';
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
-function CourseList() {
+export function CourseList() {
 
     const [courseNum, setCourseNum] = useState("")
     const [courseDes, setCourseDes] = useState("")
 
-    function setDetails() {
+    function setDetails(variableToQuery) {
+
+        const courseNum = variableToQuery;
+        const course = {
+            courseNum,
+        };
+      
+        axios.post('/create', course);
+
         axios.get("/selectCourse").then(response => {
-            setCourseNum(response.data)
+            setCourseNum(response.data.courseNumber);
+            setCourseDes(response.data.courseDescription);
         });
-        //setCourseNum(num);
-        //setCourseDes(des);
     }
 
     return(
         <div className='courseHeaders'>
             <h1>Courses</h1>
             <div className='roadMap'>
-                <h2>For imformation on how to build you schedule, check out this interactive Road Map.</h2>
+                <h2>For information on how to build your schedule, check out this interactive Road Map.</h2>
                 <Link className='roadMapLink' to='/degreeRoadMap'>BeachCS Road Map 2020</Link>
             </div>
             <h2>Below are all CS courses available at CSULB.</h2>
@@ -31,13 +38,13 @@ function CourseList() {
             <div className='lowerDivision'>
                 <h2>Lower Division</h2>
                 <div className='lowerDivisionButtonsRowOne'>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails()}>ENGR 101</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("ENGR 102", "Development of skills and identification of strengths and weaknesses for success in a COE major.")}>ENGR 102</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 100", "This course will help students to develop their critical thinking skills using technical software. The main topics will include: identifying engineering issues for investigation, developing planning and problem solving strategies, locating pertinent information and examples, critically analyzing these sources, forming and testing hypotheses, synthesizing and organizing results for effective communication, and developing transferable problem solving skills.")}>CECS 100</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 105", "Introduction to Computer Science.")}>CECS 105</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 174", "Introduction to Object Oriented Programming.")}>CECS 174</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 225", "Introduction to MIPS Programming.")}>CECS 225</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 228", "Discrete Mathematics I.")}>CECS 228</Button>
+                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("ENGR 101")}>ENGR 101</Button>
+                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("ENGR 102")}>ENGR 102</Button>
+                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 100")}>CECS 100</Button>
+                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 105")}>CECS 105</Button>
+                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 174")}>CECS 174</Button>
+                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 225")}>CECS 225</Button>
+                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 228")}>CECS 228</Button>
                 </div>
                 <div className='lowerDivisionButtonsRowTwo'>
                     <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 274</Button>
