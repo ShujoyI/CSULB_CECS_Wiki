@@ -64,19 +64,19 @@ let tempData = {
 function DegreeRoadmap(){
   return (
     <div>
-      <h1>Course Roadmap</h1>
+      {/* <h1>Course Roadmap</h1>
       <figure className='roadMap' data-category="Road Map">
         <img src="images/img-roadmap.jpg" alt='Travel Image' className="roadMapImage"/>
-      </figure>
-      {/* <DagreGraph
+      </figure> */}
+      <DagreGraph
           nodes={tempData.nodes}
           links={tempData.links}
-          options={{
-              rankdir: 'TB',
+          config={{
+              rankdir: 'LR',
               align: 'UR',
               ranker: 'tight-tree'
           }}
-          width='200'
+          width='800'
           height='500'
           animate={1000}
           shape='rect'
@@ -86,7 +86,8 @@ function DegreeRoadmap(){
           onRelationshipClick={e => console.log(e)}
       />
       <CourseCard
-      /> */}
+      />
+      
     </div>
   );
 }
