@@ -81,42 +81,77 @@ let tempData = {
     },
     {
       id: "14",
-      label: "<h3>ENGR 323</h3>",
+      label: "<h3>CECS 323</h3>",
       labelType: "html"
     },
     {
       id: "15",
-      label: "<h3>ENGR 327</h3>",
+      label: "<h3>CECS 327</h3>",
       labelType: "html"
     },
     {
       id: "16",
-      label: "<h3>ENGR 343</h3>",
+      label: "<h3>CECS 343</h3>",
       labelType: "html"
     },
   ],
 
   links: [
     {
+      // CECS 225 -> CECS 341
       source: '1',
       target: '8',
     },
     {
+      // CECS 274 -> CECS 282
       source: '4',
       target: '7',
     },
     {
+      // CECS 274 -> CECS 328
       source: '4',
       target: '6',
     },
     {
+      // CECS 328 -> CECS 329
       source: '6',
       target: '9',
     },
     {
+      // CECS 228 -> CECS 229
       source: '2',
       target: '3',
-    }
+    },
+    {
+      // CECS 328 -> CECS 342
+      source: '6',
+      target: '10',
+    },
+    {
+      // CECS 228 -> CECS 328
+      source: '2',
+      target: '6',
+    },
+    {
+      // CECS 277 -> CECS 282
+      source: '5',
+      target: '7',
+    },
+    {
+      // CECS 282 -> CECS 343
+      source: '7',
+      target: '16',
+    },
+    {
+      // CECS 228 -> CECS 323
+      source: '7',
+      target: '14',
+    },
+    {
+      // CECS 282 -> CECS 323
+      source: '2',
+      target: '14',
+    },
   ]
 
 }
@@ -132,8 +167,10 @@ function DegreeRoadmap(){
           links={tempData.links}
           config={{
               rankdir: 'LR',
-              align: 'DR',
-              ranker: 'tight-tree'
+              align: 'DL',
+              ranker: 'tight-tree',
+              edgesep: 70,
+              ranksep: 200,
           }}
           width='900'
           height='900'
