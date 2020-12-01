@@ -1,8 +1,8 @@
 import React from 'react';
-import '../styles/Button.css';
+import '../styles/button.css';
 import { Link } from 'react-router-dom';
 
-export const Button = ({
+export const Btton = ({
     children, 
     type, 
     onClick, 
@@ -17,48 +17,48 @@ export const Button = ({
     if (checkButtonStyle === 'btn') {
         return (
             <Link to='/getStarted' className='btn-web'>
-                <button
+                <btton
                 className={`btn ${checkButtonStyle} ${checkButtonSize}`}
                 onClick={onClick}
                 type={type}
                 >
                     {children}
-                </button>
+                </btton>
             </Link>
         )
     }
     else if (checkButtonStyle === 'coursebtn') {
         return (
-            <button
+            <btton
                 className={`btn ${checkButtonStyle} ${checkButtonSize}`}
                 onClick={onClick}
                 type={type}
                 >
                     {children}
-            </button>
+            </btton>
         )
     }
     else if (checkButtonStyle === 'classbtn') {
         return (
-            <button
+            <btton
                 className={`btn ${checkButtonStyle} ${checkButtonSize} ${getName}`}
                 onClick={onClick}
                 type={type}
                 >
                     {children}
-                </button>
+            </btton>
         )
     }
     else {
         return (
             <a href='https://www.csulb.edu/' className='btn-web'>
-                <button
+                <btton
                 className={`btn ${checkButtonStyle} ${checkButtonSize}`}
                 onClick={onClick}
                 type={type}
                 >
                     {children}
-                </button>
+                </btton>
             </a>
         )
     }

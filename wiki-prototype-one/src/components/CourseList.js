@@ -1,28 +1,49 @@
 import React, { useState } from 'react';
-import { Button } from './Button'
+import { Btton } from './button'
 import '../styles/CourseList.css';
 import Course from './Course';
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
-function CourseList() {
+export function CourseList() {
 
     const [courseNum, setCourseNum] = useState("")
     const [courseDes, setCourseDes] = useState("")
 
-    function setDetails() {
+    function setDetails(variableToQuery) {
+
+        const courseNum = variableToQuery;
+        const course = {
+            courseNum,
+        };
+      
+        axios.post('/create', course);
+
         axios.get("/selectCourse").then(response => {
-            setCourseNum(response.data)
+            setCourseNum(response.data.courseNumber);
+            setCourseDes(response.data.courseDescription);
         });
-        //setCourseNum(num);
-        //setCourseDes(des);
     }
+
+    // window.onload = addElement;
+
+    // function addElement() {
+    //     const newButton = document.createElement("Btton");
+    //     newButton.innerHTML = 'CECS 100';
+    //     newButton.className = 'classbtns';
+    //     newButton.buttonStyle = 'classbtn';
+    //     newButton.buttonSize = 'classmedium';
+    //     newButton.onClick = node => setDetails('CECS 100');
+
+    //     const currentDiv = document.getElementById("lowerButtonsOne");
+    //     currentDiv.appendChild(newButton);
+    // }
 
     return(
         <div className='courseHeaders'>
             <h1>Courses</h1>
             <div className='roadMap'>
-                <h2>For imformation on how to build you schedule, check out this interactive Road Map.</h2>
+                <h2>For information on how to build your schedule, check out this interactive Road Map.</h2>
                 <Link className='roadMapLink' to='/degreeRoadMap'>BeachCS Road Map 2020</Link>
             </div>
             <h2>Below are all CS courses available at CSULB.</h2>
@@ -30,70 +51,70 @@ function CourseList() {
             <Course className="selectedCourse" courseNumber={courseNum} courseDescription={courseDes}/>
             <div className='lowerDivision'>
                 <h2>Lower Division</h2>
-                <div className='lowerDivisionButtonsRowOne'>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails()}>ENGR 101</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("ENGR 102", "Development of skills and identification of strengths and weaknesses for success in a COE major.")}>ENGR 102</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 100", "This course will help students to develop their critical thinking skills using technical software. The main topics will include: identifying engineering issues for investigation, developing planning and problem solving strategies, locating pertinent information and examples, critically analyzing these sources, forming and testing hypotheses, synthesizing and organizing results for effective communication, and developing transferable problem solving skills.")}>CECS 100</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 105", "Introduction to Computer Science.")}>CECS 105</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 174", "Introduction to Object Oriented Programming.")}>CECS 174</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 225", "Introduction to MIPS Programming.")}>CECS 225</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 228", "Discrete Mathematics I.")}>CECS 228</Button>
+                <div className='lowerDivisionButtonsRowOne' id='lowerButtonsOne'>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("ENGR 101")}>ENGR 101</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("ENGR 102")}>ENGR 102</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 100")}>CECS 100</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 105")}>CECS 105</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 174")}>CECS 174</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 225")}>CECS 225</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 228")}>CECS 228</Btton>
                 </div>
                 <div className='lowerDivisionButtonsRowTwo'>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 274</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 277</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 282</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 229</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>MATH 122</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>MATH 123</Button>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 274")}>CECS 274</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 277")}>CECS 277</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 282")}>CECS 282</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 229")}>CECS 229</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("MATH 122")}>MATH 122</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("MATH 123")}>MATH 123</Btton>
                 </div>
             </div>
             <div className='upperDivision'>
                 <h2>Upper Division</h2>
                 <div className='upperDivisionButtonsRowOne'>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 323</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 326</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 327</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 328</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 341</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 343</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 378</Button>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 323")}>CECS 323</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 326")}>CECS 326</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 327")}>CECS 327</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 328")}>CECS 328</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 341")}>CECS 341</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 343")}>CECS 343</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 378")}>CECS 378</Btton>
                 </div>
                 <div className='upperDivisionButtonsRowTwo'>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>ENGR 350</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>EE 381</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>ENGR 361</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 342</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 491A</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 491B</Button>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("ENGR 350")}>ENGR 350</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("EE 381")}>EE 381</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("ENGR 361")}>ENGR 361</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 342")}>CECS 342</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 491A")}>CECS 491A</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 491B")}>CECS 491B</Btton>
                 </div>
             </div>
             <div className='elective'>
                 <h2>Electives</h2>
                 <div className='electiveButtonsRowOne'>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 456</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 451</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 419</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 428</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 429</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 444</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 445</Button>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 456")}>CECS 456</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 451")}>CECS 451</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 419")}>CECS 419</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 428")}>CECS 428</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 429")}>CECS 429</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 444")}>CECS 444</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 445")}>CECS 445</Btton>
                 </div>
                 <div className='electiveButtonsRowTwo'>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 448</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 449</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 455</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 450</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 453</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 470</Button>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 448")}>CECS 448</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 449")}>CECS 449</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 455")}>CECS 455</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 450")}>CECS 450</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 453")}>CECS 453</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 470")}>CECS 470</Btton>
                 </div>
                 <div className='electiveButtonsRowThree'>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 475</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 476</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 478</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 495</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>CECS 497</Button>
-                    <Button className='classbtns' buttonStyle='classbtn' buttonSize='classmedium'>EE 495</Button>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 475")}>CECS 475</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 476")}>CECS 476</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 478")}>CECS 478</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 495")}>CECS 495</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 497")}>CECS 497</Btton>
+                    <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("EE 495")}>EE 495</Btton>
                 </div>
             </div>
         </div>

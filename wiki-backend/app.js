@@ -4,7 +4,6 @@ const mysql = require('mysql');
 const port = 5000
 
 const app = express();
-const SELECT_A_COURSE_QUERY = "SELECT courseName FROM courses WHERE courseName = 'ENGR 101'";
 
 const connection = mysql.createConnection({
     host: '127.0.0.1',
@@ -19,31 +18,36 @@ connection.connect(err => {
     }
 });
 
-app.use(cors());
+app.use(
+    cors({
+        origin: 'http://localhost:3000',
+    })
+);
 
-app.get('/', (req,res) => res.send('Hello'))
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
-app.listen(port, () => console.log('Example app listening on port ${port}'))
+let SELECT_A_COURSE_QUERY = ``;
+
+function createQuery(selectedCourse) {
+    SELECT_A_COURSE_QUERY = `SELECT * FROM courses WHERE courseName = "${selectedCourse.CourseNumber}"`;
+}
+
+app.post('/create', function(req, res) {
+    const newCourse = {
+        CourseNumber: req.body.courseNum,
+    };
+    createQuery(newCourse);
+});
 
 app.get('/selectCourse', (req, res) => {
-    connection.query(SELECT_A_COURSE_QUERY, (err, results) => {
-        var parsedBody = results[0].courseName;
-        return res.json({
-            course
-        });
-        //var parsedBody = JSON.parse(results);
-        //var course = parsedBody[0][0];
-        //var description = parsedBody["description"];
-        // return res.json({
-        //     data: results
-        // });
-        // if(err) {
-        //     return res.send(err)
-        // }
-        // else {
-        //     return res.json({
-        //         data: results
-        //     })    
-        // };
-    });
-})
+    connection.query(SELECT_A_COURSE_QUERY, 
+        function(err, results) {
+            var courseNumber = results[0].courseName;
+            var courseDescription = results[0].description;
+            res.send({ courseNumber, courseDescription });
+        }
+    );
+});
+
+app.listen(port, () => console.log(`Example app listening on port ${port}`))
