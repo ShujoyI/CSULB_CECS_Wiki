@@ -181,8 +181,7 @@ function DegreeRoadmap(){
           // onNodeClick={e => alert("I was clicked\n" + tempData.nodes[0].id)}
           onRelationshipClick={e => console.log(e)}
       />
-      <CourseCard
-      />
+
       
     </div>
   );
