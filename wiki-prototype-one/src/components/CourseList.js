@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Btton } from './button'
+import { Btton } from './Button'
 import '../styles/CourseList.css';
 import Course from './Course';
 import { Link } from 'react-router-dom';
