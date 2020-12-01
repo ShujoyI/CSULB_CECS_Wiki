@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import { Button } from '../components/Button';
+import { Btton } from '../components/button';
 import '../styles/Home.css';
 
 function Home () {
@@ -9,13 +9,13 @@ function Home () {
             <video src="/videos/video-3.mp4" autoPlay loop muted />
             <h1>BeachCS</h1>
             <div className='hero-btns'>
-                <Button 
+                <Btton 
                     className='btns'
                     buttonStyle='btn'
                     buttonSize='large'
                 >
                     GET STARTED
-                </Button>
+                </Btton>
             </div>
         </div>
     );

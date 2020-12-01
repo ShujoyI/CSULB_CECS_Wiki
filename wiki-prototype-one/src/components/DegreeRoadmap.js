@@ -2,7 +2,7 @@ import React from "react"
 import DagreGraph from "dagre-d3-react"
 import './DegreeRoadmap.css'
 // import PREREQS from "./Prereqs.json"
-import CourseCard from "./CourseCard"
+// import CourseCard from "./CourseCard"
 
 // let nodes = []
 // let temp = [1,2,3]
