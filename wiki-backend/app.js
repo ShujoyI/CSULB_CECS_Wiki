@@ -20,7 +20,7 @@ connection.connect(err => {
 
 app.use(
     cors({
-        origin: 'http://localhost:3000',
+        origin: 'http://localhost:3000/',
     })
 );
 
@@ -28,9 +28,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 let SELECT_A_COURSE_QUERY = ``;
+let ADD_ACCOUNT = ``;
 
 function createQuery(selectedCourse) {
     SELECT_A_COURSE_QUERY = `SELECT * FROM courses WHERE courseName = "${selectedCourse.CourseNumber}"`;
+}
+
+function addAccount(newAccount) {
+    ADD_ACCOUNT = `INSERT INTO administrators(email, password) VALUES("${newAccount.email}", "${newAccount.password}")`;
 }
 
 app.post('/create', function(req, res) {
@@ -38,6 +43,15 @@ app.post('/create', function(req, res) {
         CourseNumber: req.body.courseNum,
     };
     createQuery(newCourse);
+});
+
+app.post('/createAccount', function(req, res) {
+    const newAccount = {
+        email: req.body.newEmail,
+        password: req.body.newPassword,
+    };
+    addAccount(newAccount);
+    connection.query(ADD_ACCOUNT);
 });
 
 app.get('/selectCourse', (req, res) => {
@@ -50,4 +64,4 @@ app.get('/selectCourse', (req, res) => {
     );
 });
 
-app.listen(port, () => console.log(`Example app listening on port ${port}`))
+app.listen(port, () => console.log(`Example app listening on port "${port}"`));

@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import { Btton } from '../components/button';
+import { Btton } from '../components/Button';
 import '../styles/Home.css';
 
 function Home () {

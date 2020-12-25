@@ -1,24 +1,28 @@
-import React, { useState } from 'react'
-import '../App.css'
+import React, { useState } from 'react';
+import '../App.css';
 import '../styles/Account.css'
-import { useHistory } from 'react-router-dom';
-import { FormGroup, FormControl, FormLabel} from 'react-bootstrap';
-import { Btton } from '../components/Button';
+import { Button, FormGroup, FormControl, FormLabel} from 'react-bootstrap';
+import axios from 'axios';
 
-export default function Account() {
-    const history = useHistory();
+export default function Register () {
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     function handleSubmit(event) {
-        // This is where the account information will be retrieved. If the email or password are wrong then the login is unsuccessful.
         if (email === '' || password === '') {
-            alert('Login Unsuccessful');
+            alert('Please fill out the required fields.');
             event.preventDefault();
         }
-        // If the authentication is successful, redirect to administration page.
         else {
-            history.push('/AdminPage');
+            const newEmail = email;
+            const newPassword = password;
+            const account = {
+                newEmail,
+                newPassword,
+            };
+            axios.post('/createAccount', account);
+            alert('Account creation successful'); 
         }
     }
 
@@ -41,12 +45,9 @@ export default function Account() {
                         onChange={e => setPassword(e.target.value)}
                     />
                 </FormGroup>
-                <Btton className='myButton' buttonStyle="login">
-                    Login
-                </Btton>
-                <Btton className='myregister' buttonStyle='register'>
-                    Register
-                </Btton>
+                <Button className='myregister' type='register'>
+                    Create Account
+                </Button>
             </form>
         </div>
     );

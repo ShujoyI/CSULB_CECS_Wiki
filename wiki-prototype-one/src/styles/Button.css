@@ -23,6 +23,26 @@
     cursor: pointer;
 }
 
+.register {
+    background: transparent;
+    color:  #000;
+    padding: 8px 20px;
+    border: 3px solid #ecaa00;
+    transition: all 0.3s ease-out;
+    border-radius: 98%;
+    margin-right: 3rem;
+}
+
+.createAccount {
+    background: transparent;
+    color:  #000;
+    padding: 8px 20px;
+    border: 3px solid #ecaa00;
+    transition: all 0.3s ease-out;
+    border-radius: 98%;
+    margin-right: 3rem;
+}
+
 .csulbbtn {
     background-color: transparent;
     color: #000;
