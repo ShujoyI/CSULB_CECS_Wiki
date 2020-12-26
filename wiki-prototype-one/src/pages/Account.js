@@ -1,24 +1,34 @@
 import React, { useState } from 'react'
 import '../App.css'
 import '../styles/Account.css'
-import { useHistory } from 'react-router-dom';
-import { FormGroup, FormControl, FormLabel} from 'react-bootstrap';
+import { Button, FormGroup, FormControl, FormLabel} from 'react-bootstrap';
 import { Btton } from '../components/Button';
+import axios from 'axios';
 
 export default function Account() {
-    const history = useHistory();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
     function handleSubmit(event) {
         // This is where the account information will be retrieved. If the email or password are wrong then the login is unsuccessful.
         if (email === '' || password === '') {
-            alert('Login Unsuccessful');
+            alert('Please fill out the required fields.');
             event.preventDefault();
         }
         // If the authentication is successful, redirect to administration page.
         else {
-            history.push('/AdminPage');
+            const newEmail = email;
+            const newPassword = password;
+            const account = {
+                newEmail,
+                newPassword,
+            };
+            axios.post('/createLogin', account);
+            axios.get("/verifyLogin").then(response => {
+                if (response.data.email === email) {
+                    alert('SUCCESS');
+                }
+            });
         }
     }
 
@@ -41,9 +51,9 @@ export default function Account() {
                         onChange={e => setPassword(e.target.value)}
                     />
                 </FormGroup>
-                <Btton className='myButton' buttonStyle="login">
+                <Button className='myButton' type="login">
                     Login
-                </Btton>
+                </Button>
                 <Btton className='myregister' buttonStyle='register'>
                     Register
                 </Btton>
