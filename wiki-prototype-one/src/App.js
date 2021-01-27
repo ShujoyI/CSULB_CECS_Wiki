@@ -14,6 +14,7 @@ import AdminPage from './pages/AdminPage';
 import SearchPage from './pages/SearchPage';
 import AboutUs from './pages/AboutUs';
 import DegreeRoadmap from './components/DegreeRoadmap';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <Route path='/searchPage' component={SearchPage} />
           <Route path='/aboutUs' component={AboutUs}/>
           <Route path='/degreeRoadMap' component={DegreeRoadmap}/>
+          <Route path='/register' component={Register}/>
         </Switch>
         <Footer />
       </Router>

@@ -9,6 +9,7 @@ export function CourseList() {
 
     const [courseNum, setCourseNum] = useState("")
     const [courseDes, setCourseDes] = useState("")
+    //const courses = ["ENGR 101", "ENGR 102", "CECS 100", "CECS 105", "CECS 174", "CECS 225", "CECS 228"]
 
     function setDetails(variableToQuery) {
 
@@ -28,15 +29,14 @@ export function CourseList() {
     // window.onload = addElement;
 
     // function addElement() {
-    //     const newButton = document.createElement("Btton");
-    //     newButton.innerHTML = 'CECS 100';
-    //     newButton.className = 'classbtns';
-    //     newButton.buttonStyle = 'classbtn';
-    //     newButton.buttonSize = 'classmedium';
-    //     newButton.onClick = node => setDetails('CECS 100');
-
-    //     const currentDiv = document.getElementById("lowerButtonsOne");
-    //     currentDiv.appendChild(newButton);
+    //     for (let i = 0; i < courses.length; i++) {
+    //         const newButton = document.createElement("Btton");
+    //         newButton.innerHTML = courses[i];
+    //         newButton.className = 'btn classbtn classmedium';
+    //         newButton.onClick = setDetails(courses[i]);
+    //         const currentDiv = document.getElementById("lowerButtonsOne");
+    //         currentDiv.appendChild(newButton);
+    //     }
     // }
 
     return(

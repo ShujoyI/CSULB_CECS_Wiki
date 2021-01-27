@@ -8,9 +8,7 @@ export const Btton = ({
     onClick, 
     buttonStyle, 
     buttonSize,
-    name
 }) => {
-    const getName = name;
     const checkButtonStyle = buttonStyle;
     const checkButtonSize = buttonSize;
 
@@ -41,12 +39,37 @@ export const Btton = ({
     else if (checkButtonStyle === 'classbtn') {
         return (
             <btton
-                className={`btn ${checkButtonStyle} ${checkButtonSize} ${getName}`}
+                className={`btn ${checkButtonStyle} ${checkButtonSize}`}
                 onClick={onClick}
                 type={type}
                 >
                     {children}
             </btton>
+        )
+    }
+    else if (checkButtonStyle === 'createAccount') {
+        return (
+            <btton
+                className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+                onClick={onClick}
+                type={type}
+                >
+                    {children}
+            </btton>
+        )
+    }
+
+    else if (checkButtonStyle === 'register') {
+        return (
+            <Link to='/register' className='btn-web'>
+                <btton
+                className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+                onClick={onClick}
+                type={type}
+                >
+                    {children}
+                </btton>
+            </Link>
         )
     }
     else {
