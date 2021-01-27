@@ -51,7 +51,7 @@ export default function Account() {
                         onChange={e => setPassword(e.target.value)}
                     />
                 </FormGroup>
-                <Button className='myButton' type="login">
+                <Button className='myButton' type='login'>
                     Login
                 </Button>
                 <Btton className='myregister' buttonStyle='register'>
