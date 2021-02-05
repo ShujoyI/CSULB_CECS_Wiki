@@ -18,7 +18,9 @@ export default function Career() {
                     <h1>Guides</h1>
                 </div>
                 <div className='career-links'>
-                    <li><Link to='/career/workfair'>Success workfairs</Link></li>
+                    <div className='workfair'>
+                        <Link className='workfairCalendar' to='/workfairCalendar'><li>Workfair Calendar</li></Link>
+                    </div>
                     <li><Link to='/career/crafting-resume'>Crafting your resume</Link></li>
                     <li><Link to='/career/job-success'>How to Succeed at your Job</Link></li>
                 </div>
