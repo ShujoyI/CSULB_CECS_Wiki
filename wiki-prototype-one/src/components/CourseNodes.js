@@ -56,7 +56,7 @@ nodes: [
     },
     {
       id: "11",
-      label: "<h3>ENGR 350</h3>",
+      label: "<h3>CECS 174</h3>",
       labelType: "html"
     },
     {
@@ -96,12 +96,12 @@ nodes: [
     },
     {
       id: "19",
-      label: "<h3>CECS 378</h3>",
+      label: "<h3>CECS 350</h3>",
       labelType: "html"
     },
     {
       id: "20",
-      label: "<h3>CECS 323</h3>",
+      label: "<h3>GE </h3>",
       labelType: "html"
     },
     {
@@ -110,8 +110,13 @@ nodes: [
       labelType: "html"
     },
     {
-      id: "23",
+      id: "22",
       label: "<h3>CECS 491B</h3>",
+      labelType: "html"
+    },
+    {
+      id: "23",
+      label: "<h3>CS Group 1 Elective</h3>",
       labelType: "html"
     },
     {
@@ -121,11 +126,6 @@ nodes: [
     },
     {
       id: "25",
-      label: "<h3>CS Group 1 Elective</h3>",
-      labelType: "html"
-    },
-    {
-      id: "26",
       label: "<h3>CS Group 1 or 2 Elective</h3>",
       labelType: "html"
     },
@@ -133,6 +133,21 @@ nodes: [
   ],
 
   links: [
+    {
+      // CECS 174 -> CECS 274
+      source: '11',
+      target: '4',
+    },
+    {
+      // CECS 174 -> CECS 277
+      source: '11',
+      target: '5',
+    },
+    {
+      // CECS 174 -> CECS 228
+      source: '11',
+      target: '2',
+    },
     {
       // CECS 225 -> CECS 341
       source: '1',
@@ -207,6 +222,31 @@ nodes: [
       // CECS 282 -> CECS 326
       source: '7',
       target: '18',
+    },
+    {
+      // CECS 491A -> CECS 491B
+      source: '21',
+      target: '22',
+    },
+    {
+      // CECS 229 -> CECS 378
+      source: '3',
+      target: '12',
+    },
+    {
+      // CECS 282 -> CECS 323
+      source: '7',
+      target: '14',
+    },
+    {
+      // CECS 343-> CECS 491A
+      source: '16',
+      target: '21',
+    },
+    {
+      // ENGR 350-> CECS 491A
+      source: '19',
+      target: '21',
     },
   ]
 })
