@@ -2,12 +2,20 @@ import React, { useState } from 'react'
 import '../App.css'
 import '../styles/Account.css'
 import { Button, FormGroup, FormControl, FormLabel} from 'react-bootstrap';
-import { Btton } from '../components/Button';
+import "bootstrap/dist/css/bootstrap.min.css";
+import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 export default function Account() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const history = useHistory();
+    
+    const routeChange = () => {
+        const path = '/login';
+        history.push(path);
+    }
 
     function handleSubmit(event) {
         // This is where the account information will be retrieved. If the email or password are wrong then the login is unsuccessful.
@@ -27,6 +35,10 @@ export default function Account() {
             axios.get("/verifyLogin").then(response => {
                 if (response.data.email === email) {
                     alert('SUCCESS');
+                    routeChange();
+                }
+                else {
+                    alert('FAILURE');
                 }
             });
         }
@@ -46,17 +58,19 @@ export default function Account() {
                 <FormGroup controlID='userPassword'>
                     <FormLabel className='passwordLabel'>Password</FormLabel>
                     <FormControl 
-                        type="password" 
+                        type="password"
                         placeholder="Password" 
                         onChange={e => setPassword(e.target.value)}
                     />
                 </FormGroup>
-                <Button className='myButton' type="login">
+                <Button className='login-button' type="login" variant="primary">
                     Login
                 </Button>
-                <Btton className='myregister' buttonStyle='register'>
-                    Register
-                </Btton>
+                <Link to='/register' className='btn-web'>
+                    <Button className='register-button'>
+                        Register
+                    </Button>
+                </Link>
             </form>
         </div>
     );

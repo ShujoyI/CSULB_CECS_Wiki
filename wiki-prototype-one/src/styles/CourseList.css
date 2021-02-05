@@ -1,3 +1,29 @@
+.course_list_button {
+    background: transparent;
+    color:  #000;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 3px solid #ecaa00;
+    transition: all 0.3s ease-out;
+    border-radius: 98%;
+    margin-right: 3rem;
+}
+
+.course_list_button:active {
+    background: white;
+    color: #fff;
+    border: none;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.course_list_button:hover {
+    background: #ecaa00;
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 .courseClicked {
     padding-left: 100px;
     padding-top: 100px;
