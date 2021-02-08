@@ -248,6 +248,11 @@ nodes: [
       source: '19',
       target: '21',
     },
+    {
+      // CECS 174 -> CECS 225
+      source: '11',
+      target: '1',
+    },
   ]
 })
 
