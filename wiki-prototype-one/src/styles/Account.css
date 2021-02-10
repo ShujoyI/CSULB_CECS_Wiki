@@ -35,4 +35,14 @@
         margin: 0 auto;
         max-width: 320px;
     }
+
+    .login-button {
+        background-color: red !important;
+        border: #fff !important;
+    }
+
+    .register-button {
+        background-color: red !important;
+        border: #fff !important;
+    }
 }

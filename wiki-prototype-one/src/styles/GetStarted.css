@@ -2,6 +2,7 @@
 .cards {
     padding: 8rem;
     background-color: rgba(187, 187, 187, 0.438);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
   
 /* code for the text at the top of the page */
@@ -35,15 +36,15 @@ h1 {
   flex: 1;
   margin: 0 1rem;
   border-radius: 10px;
+  margin-left: 10vh;
 }
 
 /* code for the actual box that contains the image, link description, and page description */
 .cards__item__link {
-  background-color:#ecaa00;
+  background-color: #da9c00;
   display: flex;
   flex-flow: column;
-  width: 100%;
-  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  width: 80%;
   -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
   border-radius: 10px;
@@ -102,7 +103,7 @@ h1 {
   }
   
   .cards__item__text {
-    color: #000;
+    color: black;
     font-size: 18px;
     line-height: 24px;
   }

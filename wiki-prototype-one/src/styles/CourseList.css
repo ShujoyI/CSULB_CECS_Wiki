@@ -1,12 +1,9 @@
-<<<<<<< Updated upstream
-=======
 .course_list_button {
-    background: dodgerblue;
-    color:  white;
+    background: transparent;
+    color:  #000;
     padding: 8px 10px;
     font-size: 15px;
-    font-weight: bold;
-    border: 3px solid rgb(2, 52, 102);
+    border: 3px solid #ecaa00;
     transition: all 0.3s ease-out;
     border-radius: 98%;
     margin-right: 3rem;
@@ -27,7 +24,6 @@
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
->>>>>>> Stashed changes
 .courseClicked {
     padding-left: 100px;
     padding-top: 100px;
