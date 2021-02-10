@@ -21,7 +21,8 @@ class WorkfairCalendar extends Component {
     }
 
     componentDidMount() {
-        axios.get('/events').then(response => {
+        axios.get('/events')
+          .then(response => {
             console.log(response.data);
             let appointments = response.data;
             
@@ -37,6 +38,9 @@ class WorkfairCalendar extends Component {
             })
       
           })
+          .catch(function (error) {
+            console.log(error);
+          });
     }
 
     render(){
