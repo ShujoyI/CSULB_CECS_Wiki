@@ -10,7 +10,6 @@ export function CourseList() {
 
     const [courseNum, setCourseNum] = useState("")
     const [courseDes, setCourseDes] = useState("")
-    const courses = ["ENGR 101", "ENGR 102", "CECS 100", "CECS 105", "CECS 174", "CECS 225", "CECS 228"]
 
     function setDetails(variableToQuery) {
 
@@ -27,18 +26,6 @@ export function CourseList() {
         });
     }
 
-    function addElement() {
-
-        for (let i = 0; i < courses.length; i++) {
-            const newButton = document.createElement("Button");
-            newButton.innerHTML = courses[i];
-            newButton.className = 'classbtns';
-            newButton.onClick = setDetails(courses[i]);
-            const currentDiv = document.getElementById('lowerButtonsOne');
-            currentDiv.appendChild(newButton);
-        }
-    }
-
     return(
         <div className='courseHeaders'>
             <h1>Courses</h1>
@@ -52,6 +39,13 @@ export function CourseList() {
             <div className='lowerDivision'>
                 <h2>Lower Division</h2>
                 <div className='lowerDivisionButtonsRowOne' id='lowerButtonsOne'>
+                    <Button className='course_list_button' onClick={node => setDetails("ENGR 101")}>ENGR 101</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("ENGR 102")}>ENGR 102</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 100")}>CECS 100</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 105")}>CECS 105</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 174")}>CECS 174</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 225")}>CECS 225</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 228")}>CECS 228</Button>
                 </div>
                 <div className='lowerDivisionButtonsRowTwo'>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 274")}>CECS 274</Button>

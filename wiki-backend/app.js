@@ -102,4 +102,15 @@ app.get('/selectCourse', (req, res) => {
     );
 });
 
+app.get('/events', function (req, res) {
+    var sql = 'SELECT * FROM events'
+    connection.query(sql, function (err, rows) {
+        if (err) {
+            res.json({ Error: true, Message: 'Error Execute Sql', err })
+        } else {
+            res.json(rows)
+        }
+    });
+});
+
 app.listen(port, () => console.log(`Example app listening on port "${port}"`));
