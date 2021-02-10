@@ -16,7 +16,7 @@ class WorkfairCalendar extends Component {
         }
     }
 
-    covertDate = (date) => {
+    convertDate = (date) => {
         return moment.utc(date).toDate()
     }
 
