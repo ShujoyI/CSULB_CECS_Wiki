@@ -256,4 +256,4 @@ nodes: [
   ]
 })
 
-  export default CourseNodes
+export default CourseNodes
