@@ -15,6 +15,11 @@ import SearchPage from './pages/SearchPage';
 import AboutUs from './pages/AboutUs';
 import DegreeRoadmap from './components/DegreeRoadmap';
 import Register from './pages/Register';
+<<<<<<< Updated upstream
+=======
+import Login from './pages/Login';
+import WorkfairCalendar from './components/WorkfairCalendar';
+>>>>>>> Stashed changes
 
 function App() {
   return (
@@ -34,6 +39,11 @@ function App() {
           <Route path='/aboutUs' component={AboutUs}/>
           <Route path='/degreeRoadMap' component={DegreeRoadmap}/>
           <Route path='/register' component={Register}/>
+<<<<<<< Updated upstream
+=======
+          <Route path='/login' component={Login}/>
+          <Route path='/workfairCalendar' component={WorkfairCalendar}/>
+>>>>>>> Stashed changes
         </Switch>
         <Footer />
       </Router>

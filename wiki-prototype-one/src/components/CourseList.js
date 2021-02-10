@@ -9,7 +9,10 @@ export function CourseList() {
 
     const [courseNum, setCourseNum] = useState("")
     const [courseDes, setCourseDes] = useState("")
+<<<<<<< Updated upstream
     //const courses = ["ENGR 101", "ENGR 102", "CECS 100", "CECS 105", "CECS 174", "CECS 225", "CECS 228"]
+=======
+>>>>>>> Stashed changes
 
     function setDetails(variableToQuery) {
 
@@ -26,6 +29,7 @@ export function CourseList() {
         });
     }
 
+<<<<<<< Updated upstream
     // window.onload = addElement;
 
     // function addElement() {
@@ -39,6 +43,8 @@ export function CourseList() {
     //     }
     // }
 
+=======
+>>>>>>> Stashed changes
     return(
         <div className='courseHeaders'>
             <h1>Courses</h1>
@@ -52,6 +58,7 @@ export function CourseList() {
             <div className='lowerDivision'>
                 <h2>Lower Division</h2>
                 <div className='lowerDivisionButtonsRowOne' id='lowerButtonsOne'>
+<<<<<<< Updated upstream
                     <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("ENGR 101")}>ENGR 101</Btton>
                     <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("ENGR 102")}>ENGR 102</Btton>
                     <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 100")}>CECS 100</Btton>
@@ -59,6 +66,15 @@ export function CourseList() {
                     <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 174")}>CECS 174</Btton>
                     <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 225")}>CECS 225</Btton>
                     <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 228")}>CECS 228</Btton>
+=======
+                    <Button className='course_list_button' onClick={node => setDetails("ENGR 101")}>ENGR 101</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("ENGR 102")}>ENGR 102</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 100")}>CECS 100</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 105")}>CECS 105</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 174")}>CECS 174</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 225")}>CECS 225</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 228")}>CECS 228</Button>
+>>>>>>> Stashed changes
                 </div>
                 <div className='lowerDivisionButtonsRowTwo'>
                     <Btton className='classbtns' buttonStyle='classbtn' buttonSize='classmedium' onClick={node => setDetails("CECS 274")}>CECS 274</Btton>
