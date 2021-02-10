@@ -9,10 +9,6 @@ import Course from "./Course.js"
 function DegreeRoadmap(){
   return (
     <div>
-      {/* <h1>Course Roadmap</h1>
-      <figure className='roadMap' data-category="Road Map">
-          <img src="images/img-roadmap.jpg" alt='Travel Image' className="roadMapImage"/>
-        </figure> */}
         <DagreGraph
           nodes={CourseNodes.nodes}
           links={CourseNodes.links}
