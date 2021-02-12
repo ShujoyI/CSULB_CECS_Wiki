@@ -69,6 +69,25 @@ class Guides extends Component
                         </div>
             
                     </div>
+
+                    <div className = "g_list">
+                       
+                        <ul>
+                            <li className = "list_toggle"><a href = "ls">Some help fun Links!</a></li>
+                                <div className ="sub_list">
+                                    <ul>
+                                        <li><a href = "ls">Programming Guides</a></li>
+                                        <li><a href = "ls">Possible interview Questions</a></li>
+                                        <li><a href = "ls">Ways to study!</a></li>
+                                        <li><a href = "ls">Staying Healthy!</a></li>
+                                        <li><a href = "ls">Recommended IDE's </a></li>
+                                        <li><a href = "ls">For Motivation!</a></li>
+                                    </ul>
+                                </div>
+                            
+                        </ul>
+                    </div>
+
                     <h1>Suggestions or Questions?</h1>
                     <p>Leave Comment  {comment}</p>
                     <form onSubmit ={this.handleSubmit}>
