@@ -17,13 +17,16 @@
 */
 
 import * as React from 'react';
+import {GraphView, 
+    type IEdgeType as IEdge, 
+    type INodeType as INode, 
+    type LayoutEngineType} from "react-digraph";
 
-import {
-  GraphView,
-  type IEdgeType as IEdge,
-  type INodeType as INode,
-  type LayoutEngineType,
-} from '../';
+// import {
+//   GraphView,
+//   type IEdgeType as IEdge,
+//   type INodeType as INode,
+//   type LayoutEngineType,
 
 import GraphConfig, {
   edgeTypes,
