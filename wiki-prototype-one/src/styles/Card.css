@@ -1,20 +1,25 @@
   .myCard {
     position: relative;
     display: block;
-    padding-top: 10px;
-    padding-left: 1100px;
-    width: 1400px;
+    width: 398px;
+    margin-left: 1050px;
+    margin-top: 125px;
     height: 0px;
+    padding-top: 10px;
+    background-color: rgb(155, 155, 155);
   }
   
   .cardTitle {
     padding-top: 15px;
+    background-color: rgb(129, 129, 129);
+    width: 100%;
     font-size: 24px;
     padding-bottom: 15px;
+    text-align: center;
   }
   
   .cardHead {
-    background-color: rgba(255, 255, 255, 0.404);
+    background-color: rgb(197, 197, 197);
     font-size: 17px;
     padding-left: 15px;
     padding-top: 10px;
@@ -22,8 +27,8 @@
   }
 
   .cardBody {
-      background-color: #fff;
-      box-shadow: 5px 10px #888888;
+      background-color: rgb(155, 155, 155);
+      box-shadow: 14px 13px 15px #525252;
       height: 400px;
       padding-left: 15px;
   }

@@ -1,7 +1,7 @@
 import React from "react"
 import DagreGraph from "dagre-d3-react"
 import CourseNodes from './CourseNodes.js'
-import './DegreeRoadmap.css'
+import '../styles/DegreeRoadmap.css'
 import Course from "./Course.js"
 // import PREREQS from "./Prereqs.json"
 // import CourseCard from "./CourseCard"

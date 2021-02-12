@@ -15,6 +15,8 @@ import SearchPage from './pages/SearchPage';
 import AboutUs from './pages/AboutUs';
 import DegreeRoadmap from './components/DegreeRoadmap';
 import Register from './pages/Register';
+import Login from './pages/Login';
+import WorkfairCalendar from './components/WorkfairCalendar';
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
           <Route path='/aboutUs' component={AboutUs}/>
           <Route path='/degreeRoadMap' component={DegreeRoadmap}/>
           <Route path='/register' component={Register}/>
+          <Route path='/login' component={Login}/>
+          <Route path='/workfairCalendar' component={WorkfairCalendar}/>
         </Switch>
         <Footer />
       </Router>

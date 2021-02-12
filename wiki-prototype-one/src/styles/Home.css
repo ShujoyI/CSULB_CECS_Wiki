@@ -1,46 +1,82 @@
 video {
     object-fit: cover;
     width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
+    height: 50vh;
+    position: absolute;
+    top: 0vh;
     z-index: -1;
 }
 
-.hero-container {
-    height: 100vh;
+.home {
+    height: 150vh;
     width: 100%;
+    background-color: transparent;
+}
+
+.home-top {
+    top: 50vh;
+    width: 100%;
+    display: grid;
+    background-color: purple;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+    height: 50vh;
+    position: absolute;
+    text-align: center;
+}
+
+.home-bottom {
+    top: 104vh;
+    width: 100%;
+    background-color: blue;
+    height: 50vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2);
-    object-fit: contain;
+    flex-direction: row;
+    position: absolute;
 }
 
-.hero-container > h1 {
-    color: #fff;
-    font-size: 30px;
-    margin-top: -100px;
+.home-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px;
+    width: 70%;
+    height: 54vh;
+    background-color: rgb(120, 67, 219);
 }
 
-.hero-container > p {
-    margin-top: 8px;
-    color: #fff;
-    font-size: 32px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+.home-container-two {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px;
+    width: 70%;
+    height: 54vh;
+    background-color: black;
 }
 
-.hero-btns {
-    margin-top: 32px;
+.home-container-header > p {
+    font-size: 35px;
+    color: black;
 }
 
-.hero-btns .btn {
-    margin: 6px;
+.home-container-text > p {
+    width: 50%;
+    font-size: 28px;
+    color: black;
 }
 
-.fa-play-circle {
-    margin-left: 4px;
+.home-button {
+    background-color: transparent;
+    color: black;
+    padding: 8px 20px;
+    border: 1px solid black;
+    transition: all 0.3s ease-out;
+}
+
+.home-button:hover {
+    background: #fff;
+    color: #242424;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
 }
 
 @media screen and (max-width: 1140px) {
