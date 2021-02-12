@@ -6,7 +6,7 @@ import Course from "./Course.js"
 // import PREREQS from "./Prereqs.json"
 // import CourseCard from "./CourseCard"
 
-function DegreeRoadmap(){
+function DegreeRoadmap() {
   return (
     <div>
         <DagreGraph

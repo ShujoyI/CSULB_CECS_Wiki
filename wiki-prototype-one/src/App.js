@@ -8,7 +8,6 @@ import CourseExplorer from './pages/CourseExplorer';
 import Career from './pages/Career';
 import Academics from './pages/Academics';
 import Guides from './pages/Guides';
-import GetStarted from './pages/GetStarted';
 import Account from './pages/Account';
 import AdminPage from './pages/AdminPage';
 import SearchPage from './pages/SearchPage';
@@ -29,7 +28,6 @@ function App() {
           <Route path='/career' component={Career} />
           <Route path='/courseExplorer' component={CourseExplorer} />
           <Route path='/guides' component={Guides} />
-          <Route path='/getStarted' component={GetStarted} />
           <Route path='/account' component={Account} />
           <Route path='/adminPage' component={AdminPage} />
           <Route path='/searchPage' component={SearchPage} />

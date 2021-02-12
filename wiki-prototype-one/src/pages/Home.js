@@ -1,37 +1,22 @@
 import React from 'react';
 import '../App.css';
-import { Button } from 'react-bootstrap';
+import { Button, Card } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../styles/Home.css';
 import GetStartedItem from '../components/GetStartedItem';
 import '../styles/GetStarted.css';
-import { Link } from 'react-router-dom';
 
 function Home () {
     return (
         <div className='home'>
             <video src="/videos/video-3.mp4" autoPlay loop muted />
             <div className='home-top'>
-                <div className='home-container'>
-                    <div className='home-container-header'>
-                        <p>BeachCS</p>
-                    </div>
-                    <Link to='/getStarted' className='home-get-started-link'>
-                        <Button className='home-button'>
-                            GET STARTED
-                        </Button>
-                    </Link>
-                </div>
-                <div className='home-containter-two'>
-                    <div className='home-container-text'>
-                        <p>An educational guide to succeeding as a CS undergraduate at CSULB. Click Get Started to dive right in.</p>
-                    </div>
-                    <Link to='/getStarted' className='home-get-started-link'>
-                        <Button className='home-button'>
-                            GET STARTED
-                        </Button>
-                    </Link>
-                </div>
+                <Card className='homeCard'>
+                    <Card.Header className='homeHead'>BeachCS</Card.Header>
+                        <Card.Body className='homeBody'>
+                            <Card.Text claassName='homeText'>A one-stop shop for all things Computer Science at CSU Long Beach.</Card.Text>
+                        </Card.Body>
+                </Card>
             </div>
             <div className='home-bottom'>
                 <ul className='cards__item'>
@@ -49,7 +34,7 @@ function Home () {
                     />
                     <GetStartedItem 
                         src="images/img-career.jpg"
-                        text="Discover how to succeed post-graduation"
+                        text="Discover resources to help you get a job"
                         label='Career'
                         path='/career'
                     />
