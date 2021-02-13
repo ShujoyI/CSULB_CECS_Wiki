@@ -3,8 +3,28 @@ import '../styles/Guide.css'
 import '../App.css'
 import 'react-router-dom';
 
+
+function useEffect()
+{
+    document.querySelectorAll('.button_list').forEach(button =>
+    {
+        button.addEventListener('click', () => 
+        {
+
+
+            button.classList.toggle('button_list_active');
+
+        });
+    });
+}
+
+
+
 class Guides extends Component
     {
+
+      
+    
         constructor(props)
         {
             super(props)
@@ -69,11 +89,11 @@ class Guides extends Component
                         </div>
             
                     </div>
-
-                    <div className = "g_list">
-                       
-                        <ul>
-                            <li className = "list_toggle"><a href = "ls">Some help fun Links!</a></li>
+    
+                    <body>
+                        <div className = "g_list">
+                            <button onClick={useEffect}  className = "button_list" > Some helpful Links! </button>
+                            
                                 <div className ="sub_list">
                                     <ul>
                                         <li><a href = "ls">Programming Guides</a></li>
@@ -85,16 +105,21 @@ class Guides extends Component
                                     </ul>
                                 </div>
                             
-                        </ul>
-                    </div>
+                        </div>
 
-                    <h1>Suggestions or Questions?</h1>
-                    <p>Leave Comment  {comment}</p>
-                    <form onSubmit ={this.handleSubmit}>
-                        <p> <input type = 'text'   name= 'name' placeholder = '350 Max Characters' onChange={this.handleInput} maxLength = '350' className = 'commentTxt'/> </p>
-                        <p><button> Submit Comment</button></p>
-                    </form>
+                        <h1>Suggestions or Questions?</h1>
+                        <p>Leave Comment  {comment}</p>
+                        <form onSubmit ={this.handleSubmit}>
+                            <p> <input type = 'text'   name= 'name' placeholder = '350 Max Characters' onChange={this.handleInput} maxLength = '350' className = 'commentTxt'/> </p>
+                            <p><button> Submit Comment</button></p>
+                        </form>
+
+                       
+                    </body>    
+                
+                    
                 </div>
+               
             )
         }
 
