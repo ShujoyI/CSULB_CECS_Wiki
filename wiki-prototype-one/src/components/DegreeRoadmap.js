@@ -1,101 +1,154 @@
-import React from "react"
+import React, { useState } from 'react';
+import ReactFlow, { removeElements, addEdge } from 'react-flow-renderer';
 
-import {
-    GraphView, // required
-    Edge, // optional
-    type IEdge, // optional
-    Node, // optional
-    type INode, // optional
-    type LayoutEngineType, // required to change the layoutEngineType, otherwise optional
-    BwdlTransformer, // optional, Example JSON transformer
-    GraphUtils, // optional, useful utility functions
-    sample, 
-  } from 'react-digraph';
 
-import CourseNodes from "./CourseNodes";
-  
-// import * from "react-digraph";
+const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
+const onNodeMouseEnter = (event, node) => console.log('mouse enter:', node);
+const onNodeMouseMove = (event, node) => console.log('mouse move:', node);
+const onNodeMouseLeave = (event, node) => console.log('mouse leave:', node);
+const onNodeContextMenu = (event, node) => {
+  event.preventDefault();
+  console.log('context menu:', node);
+};
+const onNodeClick = (e, node) => alert(node.id, node);
 
-  const GraphConfig =  {
-    NodeTypes: {
-      empty: { // required to show empty nodes
-        typeText: "None",
-        shapeId: "#empty", // relates to the type property of a node
-        shape: (
-          <symbol viewBox="0 0 100 100" id="empty" key="0">
-            <circle cx="50" cy="50" r="45"></circle>
-          </symbol>
-        )
-      },
-      custom: { // required to show empty nodes
-        typeText: "Custom",
-        shapeId: "#custom", // relates to the type property of a node
-        shape: (
-          <symbol viewBox="0 0 50 25" id="custom" key="0">
-            <ellipse cx="50" cy="25" rx="50" ry="25"></ellipse>
-          </symbol>
-        )
-      }
-    },
-    NodeSubtypes: {},
-    EdgeTypes: {
-      emptyEdge: {  // required to show empty edges
-        shapeId: "#emptyEdge",
-        shape: (
-          <symbol viewBox="0 0 50 50" id="emptyEdge" key="0">
-            <circle cx="25" cy="25" r="8" fill="currentColor"> </circle>
-          </symbol>
-        )
-      }
-    }
-  }
-  
-  const NODE_KEY = "id"       // Allows D3 to correctly update DOM
-  
-  class DegreeRoadmap extends React.Component<IGraphProps, IGraphState> {
-  
-    constructor(props) {
-      super(props);
-  
-      this.state = {
-        graph: sample,
-        selected: {}
-      }
-    }
-  
-    /* Define custom graph editing methods here */
-  
-    render() {
-    //   const nodes = this.state.graph.nodes;
-    //   const edges = this.state.graph.edges;
-      const selected = this.state.selected;
-  
-      const NodeTypes = GraphConfig.NodeTypes;
-      const NodeSubtypes = GraphConfig.NodeSubtypes;
-      const EdgeTypes = GraphConfig.EdgeTypes;
-  
-      return (
-        <div id='graph'>
-  
-          <GraphView  ref='GraphView'
-                      nodeKey={NODE_KEY}
-                      nodes={CourseNodes.nodes}
-                      edges={CourseNodes.links}
-                      selected={selected}
-                      nodeTypes={NodeTypes}
-                      nodeSubtypes={NodeSubtypes}
-                      edgeTypes={EdgeTypes}
-                      onSelectNode={this.onSelectNode}
-                      onCreateNode={this.onCreateNode}
-                      onUpdateNode={this.onUpdateNode}
-                      onDeleteNode={this.onDeleteNode}
-                      onSelectEdge={this.onSelectEdge}
-                      onCreateEdge={this.onCreateEdge}
-                      onSwapEdge={this.onSwapEdge}
-                      onDeleteEdge={this.onDeleteEdge}/>
-        </div>
-      );
-    }
-}
-
-export default DegreeRoadmap
+const initialElements = [
+  {
+    id: 'CECS 225',
+    sourcePosition: 'right',
+    type: 'input',
+    className: 'dark-node',
+    data: { label: 'Input' },
+    position: { x: 100, y: 80 },
+  },
+  {
+    id: 'horizontal-2',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'A Node' },
+    position: { x: 250, y: 0 },
+  },
+  {
+    id: 'horizontal-3',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'Node 3' },
+    position: { x: 250, y: 160 },
+  },
+  {
+    id: 'horizontal-4',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'Node 4' },
+    position: { x: 500, y: 0 },
+  },
+  {
+    id: 'horizontal-5',
+    sourcePosition: 'top',
+    targetPosition: 'bottom',
+    data: { label: 'Node 5' },
+    position: { x: 500, y: 100 },
+  },
+  {
+    id: 'horizontal-6',
+    sourcePosition: 'bottom',
+    targetPosition: 'top',
+    data: { label: 'Node 6' },
+    position: { x: 500, y: 230 },
+  },
+  {
+    id: 'horizontal-7',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'Node 7' },
+    position: { x: 750, y: 50 },
+  },
+  {
+    id: 'horizontal-8',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'Node 8' },
+    position: { x: 750, y: 300 },
+  },
+  {
+    id: 'horizontal-e1-2',
+    source: 'horizontal-1',
+    type: 'smoothstep',
+    target: 'horizontal-2',
+    animated: true,
+  },
+  {
+    id: 'horizontal-e1-3',
+    source: 'horizontal-1',
+    type: 'smoothstep',
+    target: 'horizontal-3',
+    animated: true,
+  },
+  {
+    id: 'horizontal-e1-4',
+    source: 'horizontal-2',
+    type: 'smoothstep',
+    target: 'horizontal-4',
+    label: 'edge label',
+  },
+  {
+    id: 'horizontal-e3-5',
+    source: 'horizontal-3',
+    type: 'smoothstep',
+    target: 'horizontal-5',
+    animated: true,
+  },
+  {
+    id: 'horizontal-e3-6',
+    source: 'horizontal-3',
+    type: 'smoothstep',
+    target: 'horizontal-6',
+    animated: true,
+  },
+  {
+    id: 'horizontal-e5-7',
+    source: 'horizontal-5',
+    type: 'smoothstep',
+    target: 'horizontal-7',
+    animated: true,
+  },
+  {
+    id: 'horizontal-e6-8',
+    source: 'horizontal-6',
+    type: 'smoothstep',
+    target: 'horizontal-8',
+    animated: true,
+  },
+];
+export default () => {
+  const [elements, setElements] = useState(initialElements);
+  const onElementsRemove = (elementsToRemove) =>
+    setElements((els) => removeElements(elementsToRemove, els));
+  const onConnect = (params) => setElements((els) => addEdge(params, els));
+  const changeClassName = () => {
+    setElements((elms) =>
+      elms.map((el) => {
+        if (el.type === 'input') {
+          el.className = el.className ? '' : 'dark-node';
+        }
+        return { ...el };
+      })
+    );
+  };
+  return (
+    <div style={{ height: 300 }}>
+      <ReactFlow
+        elements={elements}
+        onElementsRemove={onElementsRemove}
+        onConnect={onConnect}
+        onLoad={onLoad}
+        selectNodesOnDrag={false}
+        onElementClick={onNodeClick}
+        onNodeMouseEnter={onNodeMouseEnter}
+        onNodeMouseMove={onNodeMouseMove}
+        onNodeMouseLeave={onNodeMouseLeave}
+        onNodeContextMenu={onNodeContextMenu}
+      />
+    </div>
+  );
+};
