@@ -22,12 +22,6 @@ import {GraphView,
     type INodeType as INode, 
     type LayoutEngineType} from "react-digraph";
 
-// import {
-//   GraphView,
-//   type IEdgeType as IEdge,
-//   type INodeType as INode,
-//   type LayoutEngineType,
-
 import GraphConfig, {
   edgeTypes,
   EMPTY_EDGE_TYPE,
