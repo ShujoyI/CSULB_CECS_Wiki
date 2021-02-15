@@ -1,6 +1,7 @@
+import React from "react"
 import React, { useState } from 'react';
 import ReactFlow, { removeElements, addEdge } from 'react-flow-renderer';
-
+import CourseNodes from './CourseNodes.js';
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
 const onNodeMouseEnter = (event, node) => console.log('mouse enter:', node);
