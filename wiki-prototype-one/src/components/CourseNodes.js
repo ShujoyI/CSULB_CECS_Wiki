@@ -3,12 +3,101 @@ import DagreGraph from "dagre-d3-react"
 
 export const CourseNodes = ({
 nodes: [
-    
-    {
-      id: "1",
-      label: "<h3>CECS 225</h3>",
-      labelType: "html",
-    },
+  
+  // 1
+  {
+    id: 'CECS_174',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 174' },
+    position: { x: 0, y: 220 },
+  },
+
+  // 2
+  {
+    id: 'ENGR_361',
+    sourcePosition: 'right',
+    data: { label: 'ENGR 361' },
+    position: { x: 0, y: 300 },
+  },
+  // 3
+  {
+    id: 'GE',
+    sourcePosition: 'right',
+    data: { label: 'GE' },
+    position: { x: 0, y: 380 },
+  },
+  // 4
+  {
+    id: 'CS_g1',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CS Group 1 Elective' },
+    position: { x: 0, y: 460 },
+  },
+  // 5
+  {
+    id: 'CS_g2',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CS Group 2 Elective' },
+    position: { x: 0, y: 540 },
+  },
+  // 6
+  {
+    id: 'CS_g1_g2',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CS Group 1 or 2 Elective' },
+    position: { x: 0, y: 620 },
+  },
+  // 7
+  {
+    id: 'CECS_228',
+    sourcePosition: 'right',
+    data: { label: 'CECS 228' },
+    position: { x: 200, y: 140 },
+  },
+  // 8
+  {
+    id: 'CECS_274',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 274' },
+    position: { x: 200, y: 220 },
+  },
+  // 9
+  {
+    id: 'CECS_277',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 277' },
+    position: { x: 200, y: 220 },
+  },
+  // 10
+  {
+    id: 'CECS_274',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 274' },
+    position: { x: 200, y: 220 },
+  },
+  // 11
+  {
+    id: 'CECS_274',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 274' },
+    position: { x: 200, y: 220 },
+  },
+  // 12
+  {
+    id: 'CECS_274',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 274' },
+    position: { x: 200, y: 220 },
+  },
     {
       id: "2",
       label: "<h3>CECS 228</h3>",
@@ -54,11 +143,7 @@ nodes: [
       label: "<h3>CECS 342</h3>",
       labelType: "html"
     },
-    {
-      id: "11",
-      label: "<h3>CECS 174</h3>",
-      labelType: "html"
-    },
+    
     {
       id: "12",
       label: "<h3>CECS 378</h3>",

@@ -1,4 +1,3 @@
-import React from "react"
 import React, { useState } from 'react';
 import ReactFlow, { removeElements, addEdge } from 'react-flow-renderer';
 import CourseNodes from './CourseNodes.js';
@@ -14,55 +13,76 @@ const onNodeContextMenu = (event, node) => {
 const onNodeClick = (e, node) => alert(node.id, node);
 
 const initialElements = [
+  // 1
   {
-    id: 'CECS 225',
-    sourcePosition: 'right',
-    type: 'input',
-    className: 'dark-node',
-    data: { label: 'Input' },
-    position: { x: 100, y: 80 },
-  },
-  {
-    id: 'horizontal-2',
+    id: 'CECS_174',
     sourcePosition: 'right',
     targetPosition: 'left',
-    data: { label: 'A Node' },
-    position: { x: 250, y: 0 },
+    data: { label: 'CECS 174' },
+    position: { x: 0, y: 220 },
   },
+
+  // 2
   {
-    id: 'horizontal-3',
+    id: 'ENGR_361',
     sourcePosition: 'right',
     targetPosition: 'left',
-    data: { label: 'Node 3' },
-    position: { x: 250, y: 160 },
+    data: { label: 'ENGR 361' },
+    position: { x: 0, y: 300 },
   },
+  // 3
   {
-    id: 'horizontal-4',
+    id: 'GE',
+    sourcePosition: 'right',
+    data: { label: 'GE' },
+    position: { x: 0, y: 380 },
+  },
+  // 4
+  {
+    id: 'CS_g1',
     sourcePosition: 'right',
     targetPosition: 'left',
-    data: { label: 'Node 4' },
-    position: { x: 500, y: 0 },
+    data: { label: 'CS Group 1 Elective' },
+    position: { x: 0, y: 460 },
   },
+  // 5
   {
-    id: 'horizontal-5',
-    sourcePosition: 'top',
-    targetPosition: 'bottom',
-    data: { label: 'Node 5' },
-    position: { x: 500, y: 100 },
+    id: 'CS_g2',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CS Group 2 Elective' },
+    position: { x: 0, y: 540 },
   },
+  // 6
   {
-    id: 'horizontal-6',
-    sourcePosition: 'bottom',
-    targetPosition: 'top',
-    data: { label: 'Node 6' },
-    position: { x: 500, y: 230 },
+    id: 'CS_g1_g2',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CS Group 1 or 2 Elective' },
+    position: { x: 0, y: 620 },
+  },
+  // 7
+  {
+    id: 'CECS_228',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 228' },
+    position: { x: 200, y: 140 },
+  },
+  // 8
+  {
+    id: 'CECS_274',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 274' },
+    position: { x: 200, y: 220 },
   },
   {
     id: 'horizontal-7',
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'Node 7' },
-    position: { x: 750, y: 50 },
+    position: { x: 1000, y: 50 },
   },
   {
     id: 'horizontal-8',
@@ -72,10 +92,10 @@ const initialElements = [
     position: { x: 750, y: 300 },
   },
   {
-    id: 'horizontal-e1-2',
-    source: 'horizontal-1',
+    id: 'e_CECS_174_CECS_274',
+    source: 'CECS_174',
     type: 'smoothstep',
-    target: 'horizontal-2',
+    target: 'CECS_274',
     animated: true,
   },
   {
@@ -137,13 +157,14 @@ export default () => {
     );
   };
   return (
-    <div style={{ height: 300 }}>
+    <div style={{ height: 800 }}>
       <ReactFlow
         elements={elements}
         onElementsRemove={onElementsRemove}
         onConnect={onConnect}
         onLoad={onLoad}
         selectNodesOnDrag={false}
+        zoomOnScroll = {false}
         onElementClick={onNodeClick}
         onNodeMouseEnter={onNodeMouseEnter}
         onNodeMouseMove={onNodeMouseMove}
