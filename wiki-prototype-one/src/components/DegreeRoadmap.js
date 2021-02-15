@@ -142,7 +142,7 @@ const initialElements = [
   },
 ];
 export default () => {
-  const [elements, setElements] = useState(initialElements);
+  const [elements, setElements] = useState(CourseNodes.elements);
   const onElementsRemove = (elementsToRemove) =>
     setElements((els) => removeElements(elementsToRemove, els));
   const onConnect = (params) => setElements((els) => addEdge(params, els));
