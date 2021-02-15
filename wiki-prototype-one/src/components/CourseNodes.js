@@ -1,5 +1,5 @@
-import React from "react"
-import DagreGraph from "dagre-d3-react"
+const position = { x: 0, y: 0 };
+const edgeType = 'smoothstep';
 
 export const CourseNodes = ({
 elements: [
@@ -10,7 +10,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 174' },
-    position: { x: 0, y: 720 },
+    position,
   },
 
   // 2
@@ -18,14 +18,14 @@ elements: [
     id: 'ENGR_361',
     sourcePosition: 'right',
     data: { label: 'ENGR 361' },
-    position: { x: 0, y: 800 },
+    position,
   },
   // 3
   {
     id: 'GE',
     sourcePosition: 'right',
     data: { label: 'GE' },
-    position: { x: 0, y: 880 },
+    position,
   },
   // 4
   {
@@ -33,7 +33,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CS Group 1 Elective' },
-    position: { x: 0, y: 960 },
+    position,
   },
   // 5
   {
@@ -41,7 +41,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CS Group 2 Elective' },
-    position: { x: 0, y: 1020 },
+    position,
   },
   // 6
   {
@@ -49,14 +49,14 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CS Group 1 or 2 Elective' },
-    position: { x: 0, y: 1080 },
+    position,
   },
   // 7
   {
     id: 'CECS_228',
     sourcePosition: 'right',
     data: { label: 'CECS 228' },
-    position: { x: 200, y: 140 },
+    position,
   },
   // 8
   {
@@ -64,7 +64,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 274' },
-    position: { x: 200, y: 220 },
+    position,
   },
   // 9
   {
@@ -72,7 +72,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 277' },
-    position: { x: 200, y: 300 },
+    position,
   },
   // 10
   {
@@ -80,7 +80,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 225' },
-    position: { x: 200, y: 380 },
+    position,
   },
   // 11
   {
@@ -88,7 +88,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 328' },
-    position: { x: 400, y: 60 },
+    position,
   },
   // 12
   {
@@ -96,7 +96,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 229' },
-    position: { x: 400, y: 140 },
+    position,
   },
   // 13
   {
@@ -104,7 +104,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 282' },
-    position: { x: 400, y: 220 },
+    position,
   },
   // 14
   {
@@ -112,7 +112,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 341' },
-    position: { x: 400, y: 380 },
+    position,
   },
   // 15
   {
@@ -120,7 +120,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 329' },
-    position: { x: 600, y: 60 },
+    position,
   },
   // 16
   {
@@ -128,7 +128,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 342' },
-    position: { x: 600, y: 140 },
+    position,
   },
   // 17
   {
@@ -136,7 +136,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 378' },
-    position: { x: 600, y: 220 },
+    position,
   },
   // 18
   {
@@ -144,7 +144,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 323' },
-    position: { x: 600, y: 300 },
+    position,
   },
   // 19
   {
@@ -152,7 +152,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 326' },
-    position: { x: 600, y: 380 },
+    position,
   },
   // 20
   {
@@ -160,7 +160,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'EE 381' },
-    position: { x: 600, y: 460 },
+    position,
   },
   // 21
   {
@@ -168,7 +168,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 350' },
-    position: { x: 600, y: 540 },
+    position,
   },
   // 22
   {
@@ -176,7 +176,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 343' },
-    position: { x: 600, y: 600 },
+    position,
   },
   // 23
   {
@@ -184,7 +184,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 327' },
-    position: { x: 800, y: 600 },
+    position,
   },
   // 24
   {
@@ -192,7 +192,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 491A' },
-    position: { x: 800, y: 720 },
+    position,
   },
   // 25
   {
@@ -200,7 +200,7 @@ elements: [
     sourcePosition: 'right',
     targetPosition: 'left',
     data: { label: 'CECS 491B' },
-    position: { x: 1000, y: 720 },
+    position,
   },
    
 
@@ -208,17 +208,158 @@ elements: [
     {
       id: 'e_CECS_174_CECS_274',
       source: 'CECS_174',
-      type: 'smoothstep',
+      type: edgeType,
       target: 'CECS_274',
       animated: true,
     },
     {
       id: 'e_CECS_174_CECS_228',
       source: 'CECS_174',
-      type: 'smoothstep',
+      type: edgeType,
       target: 'CECS_228',
       animated: true,
     },
+    {
+      id: 'e_CECS_174_CECS_277',
+      source: 'CECS_174',
+      type: edgeType,
+      target: 'CECS_277',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_228_CECS_328',
+      source: 'CECS_228',
+      type: edgeType,
+      target: 'CECS_328',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_228_CECS_323',
+      source: 'CECS_228',
+      type: edgeType,
+      target: 'CECS_323',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_228_CECS_229',
+      source: 'CECS_228',
+      type: edgeType,
+      target: 'CECS_229',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_274_CECS_328',
+      source: 'CECS_274',
+      type: edgeType,
+      target: 'CECS_328',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_274_CECS_282',
+      source: 'CECS_274',
+      type: edgeType,
+      target: 'CECS_282',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_277_CECS_282',
+      source: 'CECS_277',
+      type: edgeType,
+      target: 'CECS_282',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_225_CECS_341',
+      source: 'CECS_225',
+      type: edgeType,
+      target: 'CECS_341',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_328_CECS_329',
+      source: 'CECS_328',
+      type: edgeType,
+      target: 'CECS_329',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_328_CECS_342',
+      source: 'CECS_328',
+      type: edgeType,
+      target: 'CECS_342',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_229_CECS_378',
+      source: 'CECS_229',
+      type: edgeType,
+      target: 'CECS_378',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_229_CECS_381',
+      source: 'CECS_229',
+      type: edgeType,
+      target: 'CECS_378',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_282_CECS_323',
+      source: 'CECS_282',
+      type: edgeType,
+      target: 'CECS_323',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_282_CECS_326',
+      source: 'CECS_282',
+      type: edgeType,
+      target: 'CECS_326',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_282_CECS_343',
+      source: 'CECS_282',
+      type: edgeType,
+      target: 'CECS_343',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_341_CECS_326',
+      source: 'CECS_341',
+      type: edgeType,
+      target: 'CECS_326',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_326_CECS_327',
+      source: 'CECS_326',
+      type: edgeType,
+      target: 'CECS_327',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_350_CECS_491A',
+      source: 'CECS_350',
+      type: edgeType,
+      target: 'CECS_491A',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_343_CECS_491A',
+      source: 'CECS_343',
+      type: edgeType,
+      target: 'CECS_491A',
+      animated: true,
+    },
+    {
+      id: 'e_CECS_491A_CECS_491B',
+      source: 'CECS_491A',
+      type: edgeType,
+      target: 'CECS_491B',
+      animated: true,
+    },
+    // 22
     
   ],
 
