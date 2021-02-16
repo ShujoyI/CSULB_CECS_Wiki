@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ReactFlow, { removeElements, addEdge, isNode, getOutgoers } from 'react-flow-renderer';
+import ReactFlow, { removeElements, addEdge, isNode, getConnectedEdges, getOutgoers } from 'react-flow-renderer';
 import dagre from 'dagre';
 import CourseNodes from './CourseNodes.js';
 import '../styles/DegreeRoadmap.css';
@@ -50,7 +50,7 @@ export default () => {
   const onElementsRemove = (elementsToRemove) =>
     setElements((els) => removeElements(elementsToRemove, els));
   const onConnect = (params) => setElements((els) => addEdge(params, els));
-  const onElementClick = (e, node) => console.log(node.id);
+  const onElementClick = (e, node) => console.log(getOutgoers(node, elements));
 
   return (
     <div style={{ height: 800 }}>
