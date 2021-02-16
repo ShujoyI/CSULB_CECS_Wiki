@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import ReactFlow, { removeElements, addEdge, isNode } from 'react-flow-renderer';
+import ReactFlow, { removeElements, addEdge, isNode, getConnectedEdges } from 'react-flow-renderer';
 import dagre from 'dagre';
 import CourseNodes from './CourseNodes.js';
 import '../styles/DegreeRoadmap.css';
@@ -32,7 +32,7 @@ const getLayoutedElements = (elements, direction = 'LR') => {
       const nodeWithPosition = dagreGraph.node(el.id);
       el.targetPosition = isVertical ? 'left' : 'top';
       el.sourcePosition = isVertical ? 'right' : 'bottom';
-      // unfortunately we need this little hack to pass a slighltiy different position
+      // unfortunately we need this little hack to pass a slightly different position
       // in order to notify react flow about the change
       el.position = {
         x: nodeWithPosition.x + Math.random() / 1000,
