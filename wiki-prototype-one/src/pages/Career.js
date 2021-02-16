@@ -6,7 +6,11 @@ import { Link } from 'react-router-dom';
 export default function Career() {
     return (
         
-        <div className='career-container'> 
+        <div className='career-container'>
+            <ul class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li>Career</li>
+            </ul> 
             <div className='career-title'>
                 <h1>Career</h1>
             </div>
@@ -18,10 +22,12 @@ export default function Career() {
                     <h1>Guides</h1>
                 </div>
                 <div className='career-links'>
-                    <div className='workfair'>
-                        <Link className='workfairCalendar' to='/workfairCalendar'><li>Workfair Calendar</li></Link>
+                    <div className='workfair-link'>
+                        <li><Link className='workfairCalednar' to='workfair-calendar'>Workshop & Workfair calendar</Link></li>
                     </div>
-                    <li><Link to='/career/crafting-resume'>Crafting your resume</Link></li>
+                    <div className='resume-link'>
+                        <li><Link className='Resume' to='resume'>Resume</Link></li>
+                    </div>
                     <li><Link to='/career/job-success'>How to Succeed at your Job</Link></li>
                 </div>
             </div>
