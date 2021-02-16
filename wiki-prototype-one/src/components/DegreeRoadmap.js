@@ -11,7 +11,7 @@ const onNodeContextMenu = (event, node) => {
   event.preventDefault();
   console.log('context menu:', node);
 };
-const onNodeClick = (e, node) => alert(node.id, node);
+const onElementClick = (e, node) => alert(node.id, node);
 
 /**** Using Dagre to automatically position nodes efficiently */
 const dagreGraph = new dagre.graphlib.Graph();
@@ -50,16 +50,7 @@ export default () => {
   const onElementsRemove = (elementsToRemove) =>
     setElements((els) => removeElements(elementsToRemove, els));
   const onConnect = (params) => setElements((els) => addEdge(params, els));
-  const changeClassName = () => {
-    setElements((elms) =>
-      elms.map((el) => {
-        if (el.type === 'input') {
-          el.className = el.className ? '' : 'dark-node';
-        }
-        return { ...el };
-      })
-    );
-  };
+
   return (
     <div style={{ height: 800 }}>
       <ReactFlow
@@ -69,7 +60,7 @@ export default () => {
         onLoad={onLoad}
         selectNodesOnDrag={false}
         zoomOnScroll = {false}
-        onElementClick={onNodeClick}
+        onElementClick={onElementClick}
         onNodeMouseEnter={onNodeMouseEnter}
         onNodeMouseMove={onNodeMouseMove}
         onNodeMouseLeave={onNodeMouseLeave}
