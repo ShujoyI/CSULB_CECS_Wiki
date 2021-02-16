@@ -52,7 +52,6 @@ export default () => {
   const onConnect = (params) => setElements((els) => addEdge(params, els));
   const onElementClick = (e, node) => console.log(getOutgoers(node, elements));
 
-function DegreeRoadmap() {
   return (
     <div style={{ height: 800 }}>
       <ReactFlow
