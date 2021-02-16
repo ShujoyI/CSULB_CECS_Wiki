@@ -300,7 +300,7 @@ elements: [
       id: 'e_CECS_229_CECS_381',
       source: 'CECS_229',
       type: edgeType,
-      target: 'CECS_378',
+      target: 'CECS_381',
       animated: true,
     },
     {
