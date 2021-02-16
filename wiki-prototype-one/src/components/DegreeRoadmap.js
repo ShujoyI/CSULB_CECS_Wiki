@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactFlow, { removeElements, addEdge, isNode } from 'react-flow-renderer';
 import dagre from 'dagre';
 import CourseNodes from './CourseNodes.js';
+import '../styles/DegreeRoadmap.css';
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
-const onNodeMouseEnter = (event, node) => console.log('mouse enter:', node);
-const onNodeMouseMove = (event, node) => console.log('mouse move:', node);
-const onNodeMouseLeave = (event, node) => console.log('mouse leave:', node);
+// const onNodeMouseEnter = (event, node) => console.log('mouse enter:', node);
+// const onNodeMouseMove = (event, node) => console.log('mouse move:', node);
+// const onNodeMouseLeave = (event, node) => console.log('mouse leave:', node);
 const onNodeContextMenu = (event, node) => {
   event.preventDefault();
   console.log('context menu:', node);
 };
-const onElementClick = (e, node) => alert(node.id, node);
 
 /**** Using Dagre to automatically position nodes efficiently */
 const dagreGraph = new dagre.graphlib.Graph();
@@ -50,6 +50,7 @@ export default () => {
   const onElementsRemove = (elementsToRemove) =>
     setElements((els) => removeElements(elementsToRemove, els));
   const onConnect = (params) => setElements((els) => addEdge(params, els));
+  const onElementClick = (e, node) => console.log(node.id);
 
   return (
     <div style={{ height: 800 }}>
@@ -61,9 +62,8 @@ export default () => {
         selectNodesOnDrag={false}
         zoomOnScroll = {false}
         onElementClick={onElementClick}
-        onNodeMouseEnter={onNodeMouseEnter}
-        onNodeMouseMove={onNodeMouseMove}
-        onNodeMouseLeave={onNodeMouseLeave}
+        //onNodeMouseEnter={onNodeMouseEnter}
+        //onNodeMouseLeave={onNodeMouseLeave}
         onNodeContextMenu={onNodeContextMenu}
       />
     </div>
