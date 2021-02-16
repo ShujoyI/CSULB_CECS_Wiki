@@ -1,9 +1,64 @@
-.display{
+
+.display
+{
     background-image: url( ../images/guide1.jpg) ;
     background-repeat: no-repeat;
     min-height: 100v;
     display: flex;
     justify-content: space-around;
+}
+
+
+.sub_list
+{
+    overflow: auto;
+    display: none;
+
+
+    padding: 0 10px; /* (top/botton ) (left/right*/
+    font-family: sans-serif;
+    background:antiquewhite ;
+}
+
+.button_list
+{
+    overflow: auto;
+    display:inline-block;
+    align-content: center;
+    width: 15%;
+    padding: 10px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    background: #c4c4c4;
+    color:#ffffff;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.button_list::after
+{
+    content: '\25be';
+    float:center;
+    transform: scale(1.5);
+
+
+}
+
+.button_list_active + .sub_list
+{
+    display: block;
+}
+
+.button_list_active
+{
+    background: #c4c4c4;
+}
+
+.button_list_active::after
+{
+    content: '\25b4';
+
 }
 
 .commentTxt
@@ -14,7 +69,16 @@
      width:200px;
 }
 
+.g_list
+{
+    background-color: antiquewhite;
+    text-align: center;
+
+}
+
+
 .tutoring{
+    overflow:auto ;
     font-style: oblique;
     font-size: 24px ;
     color: rgb(184, 153, 15);
@@ -33,6 +97,7 @@
     opacity: .75;
 }
 .student_a{
+    overflow:auto;
     font-style: oblique;
     font-size: 24px ;
     color: rgb(184, 153, 15);
@@ -52,6 +117,7 @@
 }
 
 .clubs{
+    overflow: auto;
     font-style: oblique;
     font-size: 24px ;
     color: rgb(184, 153, 15);
