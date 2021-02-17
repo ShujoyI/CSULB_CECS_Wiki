@@ -8,16 +8,14 @@ function useEffect()
 {
     document.querySelectorAll('.button_list').forEach(button =>
     {
-        button.addEventListener('click', () => 
-        {
+       
 
 
             button.classList.toggle('button_list_active');
 
-        });
+        
     });
 }
-
 
 
 class Guides extends Component
@@ -113,10 +111,12 @@ class Guides extends Component
                             <p> <input type = 'text'   name= 'name' placeholder = '350 Max Characters' onChange={this.handleInput} maxLength = '350' className = 'commentTxt'/> </p>
                             <p><button> Submit Comment</button></p>
                         </form>
+    
 
                        
                     </body>    
-                
+
+               
                     
                 </div>
                

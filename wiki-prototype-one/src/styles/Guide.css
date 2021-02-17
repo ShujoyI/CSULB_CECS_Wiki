@@ -71,6 +71,7 @@
 
 .g_list
 {
+    position: relative;
     background-color: antiquewhite;
     text-align: center;
 

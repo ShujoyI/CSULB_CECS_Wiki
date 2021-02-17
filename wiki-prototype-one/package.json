@@ -15,6 +15,7 @@
     "react": "^17.0.1",
     "react-big-calendar": "^0.31.0",
     "react-bootstrap": "^1.0.0",
+    "react-bootstrap-validation": "^0.1.11",
     "react-digraph": "^7.2.1",
     "react-dom": "^17.0.1",
     "react-flow-renderer": "^8.8.0",
