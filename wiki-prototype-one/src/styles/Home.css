@@ -1,215 +1,100 @@
 .home {
-    height: 260vh;
+    height: 237vh;
     width: auto;
 }
 
 .video-container {
-    width: inherit;
-    height: 100vh;
     background-color: rgba(0, 0, 0, 0.658);
+    position: static;
+    height: 50%;
+    width: 100%;
+    z-index: 0;
 }
 
 .video-container > video {
     width: 100%;
-    height: auto;
-    position: absolute;
+    height: 100%;
     z-index: -1;
-    bottom: -8vh;
+    position: relative;
+    top: 0px;
 }
 
 .text-container {
-    width: 50%;
-    margin-left: 17%;
-    position: relative;
-    bottom: 60vh;
-}
-
-.text-container > h1 {  
-    font-size: 54px;
-    color: white;
-    font-family: 'Poppins', sans-serif; 
-    width: 67%;
+    position: absolute;
+    top: 55%;
+    width: 100%;
     text-align: center;
-    margin-left: 35%;
-    z-index: 0;
-}
-
-/* code for the 4 boxes that doesn't include the container */
-.list_images {
-    height: 117vh;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 0;
-    row-gap: 0;
+    font-size: 54px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    z-index: 1;
 }
 
 .image_link {
-    position: relative;
-    height: 58.5vh;
-    margin-top: -7px;
-}
-
-.dimmer_one {
-    width: inherit;
-    height: 59vh;
-    background-color: rgba(0, 0, 0, 0.658);
-    position: relative;
-    bottom: 119vh;
-    z-index: 1;
-}
-
-.academics_text_container {
-    height: 10;
-    width: 42%;
-    position: relative;
-    bottom: 157vh;
-    left: 33vh;
-    z-index: 2;
-    border: solid white 10px;
-    border-top: royalblue;
-    border-left: royalblue;
-    border-right: royalblue;
-}
-
-.academics_text_container > h1 {
-    font-size: 54px;
-    color: white;
-    font-family: 'Poppins', sans-serif; 
-    width: 0%;
-    text-align: center;
-}
-
-.dimmer_two {
-    width: inherit;
-    height: 59vh;
-    background-color: rgba(0, 0, 0, 0.658);
-    position: relative;
-    bottom: 119vh;
-    z-index: 1;
-}
-
-.career_text_container {
-    height: 10;
-    width: 27%;
-    position: relative;
-    bottom: 157vh;
-    left: 41vh;
-    z-index: 2;
-    border: solid white 10px;
-    border-top: royalblue;
-    border-left: royalblue;
-    border-right: royalblue;
-}
-
-.career_text_container > h1 {
-    font-size: 54px;
-    color: white;
-    font-family: 'Poppins', sans-serif; 
-    width: 0%;
-    text-align: center;
-}
-
-.dimmer_three {
-    width: inherit;
-    height: 59vh;
-    background-color: rgba(0, 0, 0, 0.658);
-    position: relative;
-    bottom: 117.7vh;
-    z-index: 1;
-}
-
-.guides_text_container {
-    height: 10;
-    width: 25%;
-    position: relative;
-    bottom: 157vh;
-    left: 41vh;
-    z-index: 2;
-    border: solid white 10px;
-    border-top: royalblue;
-    border-left: royalblue;
-    border-right: royalblue;
-}
-
-.guides_text_container > h1 {
-    font-size: 54px;
-    color: white;
-    font-family: 'Poppins', sans-serif; 
-    width: 0%;
-    text-align: center;
-}
-
-.dimmer_four {
-    width: inherit;
-    height: 59vh;
-    background-color: rgba(0, 0, 0, 0.658);
-    position: relative;
-    bottom: 117.7vh;
-    z-index: 1;
-}
-
-.cexplorer_text_container {
-    height: 10;
-    width: 65%;
-    position: relative;
-    bottom: 157vh;
-    left: 21vh;
-    z-index: 2;
-    border: solid white 10px;
-    border-top: royalblue;
-    border-left: royalblue;
-    border-right: royalblue;
-}
-
-.cexplorer_text_container > h1 {
-    font-size: 54px;
-    color: white;
-    font-family: 'Poppins', sans-serif; 
+    position: static;
+    height: 50%;
     width: 100%;
+    background-color: blue;
+    z-index: 0;
+    display: flex;
 }
 
-.list_image_item_one {
-    grid-column: 1 / 2;
-    grid-row: 1;
-}
-
-.list_image_item_two {
-    grid-column: 2 / 3;
-    grid-row: 1;
-}
-
-.list_image_item_three {
-    grid-column: 1 / 2;
-    grid-row: 2;
-    margin-top: -2.3vh;
-}
-
-.list_image_item_four {
-    grid-column: 2 / 3;
-    grid-row: 2;
-    margin-top: -2.3vh;
+.dimmer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.466);
+    position: static;
+    z-index: 0;
 }
 
 /* code for the picture itself */
 .list_figure {
     position: relative;
     width: 100%;
-    overflow: hidden;
-    object-fit: cover;
+    height: 100%;
     transition: all 0.2s linear;
-    z-index: 0;
 }
 
-.list_image {
-    position: relative;
+.list_figure > img {
+    position: absolute;
     width: 100%;
-    object-fit: cover;
+    height: 100%;
     transition: all 0.2s linear;
     overflow: hidden;
-    max-height: 59vh;
-    margin-bottom: 0vh;
+    z-index: -1;
+}
+
+.link_text_container {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.link_text_container > h1 {
+    text-align: center;
+    font-size: 54px;
+    width: 50%;
+    color: white;
+    font-family: 'Poppins', sans-serif; 
+    border: solid white 10px;
+    border-top: royalblue;
+    border-left: royalblue;
+    border-right: royalblue;
 }
 
 .list_image:hover {
     transform: scale(1.1);
+}
+
+/* code for the 4 boxes that doesn't include the container */
+.list_images {
+    height: 50%;
+    width: 100%;
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+    row-gap: 0;
 }
