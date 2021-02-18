@@ -17,12 +17,14 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import WorkfairCalendar from './components/WorkfairCalendar';
 import Resume from './pages/Resume';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
+        <ScrollToTop>
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/academics' component={Academics} />
@@ -39,6 +41,7 @@ function App() {
           <Route path='/workfair-calendar' component={WorkfairCalendar}/>
           <Route path='/resume' component={Resume}/>
         </Switch>
+        </ScrollToTop>
         <Footer />
       </Router>
     </>

@@ -18,6 +18,7 @@
     "react-digraph": "^7.2.1",
     "react-dom": "^17.0.1",
     "react-flow-renderer": "^8.8.0",
+    "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
     "react-vis": "^1.11.7",
