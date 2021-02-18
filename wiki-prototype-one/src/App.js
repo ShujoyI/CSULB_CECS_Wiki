@@ -17,6 +17,12 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import WorkfairCalendar from './components/WorkfairCalendar';
 import Resume from './pages/Resume';
+import Programming_guide from './pages/Programming_guide';
+import Possible_IQ from './pages/Possible_IQ';
+import Study from './pages/Study';
+import Ides from './pages/Ides';
+import Motivation from './pages/Motivation';
+
 
 function App() {
   return (
@@ -38,6 +44,11 @@ function App() {
           <Route path='/login' component={Login}/>
           <Route path='/workfair-calendar' component={WorkfairCalendar}/>
           <Route path='/resume' component={Resume}/>
+          <Route path='/pg_guide' component={Programming_guide}/>
+          <Route  path='/interview_q' component = {Possible_IQ}/>
+          <Route path='/study_g' component = {Study}/>
+          <Route path='/ides_g' component={Ides}/>
+          <Route path='/motivated' component={Motivation}/>
         </Switch>
         <Footer />
       </Router>

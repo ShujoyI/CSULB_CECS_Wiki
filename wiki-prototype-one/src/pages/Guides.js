@@ -1,7 +1,8 @@
-import React, {Component} from 'react'
-import '../styles/Guide.css'
-import '../App.css'
+import React, {Component} from 'react';
+import '../styles/Guide.css';
+import '../App.css';
 import 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 function useEffect()
@@ -94,12 +95,11 @@ class Guides extends Component
                             
                                 <div className ="sub_list">
                                     <ul>
-                                        <li><a href = "ls">Programming Guides</a></li>
-                                        <li><a href = "ls">Possible interview Questions</a></li>
-                                        <li><a href = "ls">Ways to study!</a></li>
-                                        <li><a href = "ls">Staying Healthy!</a></li>
-                                        <li><a href = "ls">Recommended IDE's </a></li>
-                                        <li><a href = "ls">For Motivation!</a></li>
+                                        <li><Link to="/pg_guide">Programming Guides</Link></li>
+                                        <li><Link to="/interview_q">Possible interview Questions</Link></li>
+                                        <li><Link to='/study_g'>Ways to study!</Link></li>
+                                        <li><Link to='/ides_g'>Recommended IDE's </Link></li>
+                                        <li><Link to='/motivated'>For Motivation!</Link></li>
                                     </ul>
                                 </div>
                             
