@@ -57,7 +57,8 @@ function Home () {
                         </figure>
                     </div>
                 </Link>              
-          </div>
+            </div>
+        </div>
     );
 }
 
