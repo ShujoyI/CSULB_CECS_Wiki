@@ -1,51 +1,69 @@
 import React from 'react';
 import '../App.css';
-import { Button, Card } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../styles/Home.css';
-import GetStartedItem from '../components/GetStartedItem';
-import '../styles/GetStarted.css';
+import { Link } from 'react-router-dom';
 
 function Home () {
     return (
         <div className='home'>
-            <video src="/videos/video-3.mp4" autoPlay loop muted />
-            <div className='home-top'>
-                <Card className='homeCard'>
-                    <Card.Header className='homeHead'>BeachCS</Card.Header>
-                        <Card.Body className='homeBody'>
-                            <Card.Text claassName='homeText'>A one-stop shop for all things Computer Science at CSU Long Beach.</Card.Text>
-                        </Card.Body>
-                </Card>
+            <div className='video-container'>
+                <video src="/videos/video-3.mp4" autoPlay loop muted />
             </div>
-            <div className='home-bottom'>
-                <ul className='cards__item'>
-                    <GetStartedItem 
-                        src="images/img-course-explorer.jpg"
-                        text="View CS courses currently offered at CSULB"
-                        label='Course Explorer'
-                        path='/courseExplorer'
-                    />
-                    <GetStartedItem
-                        src="images/img-guides.jpg"
-                        text="Explore helpful tutorials for students"
-                        label='Guides'
-                        path='/guides'
-                    />
-                    <GetStartedItem 
-                        src="images/img-career.jpg"
-                        text="Discover resources to help you get a job"
-                        label='Career'
-                        path='/career'
-                    />
-                    <GetStartedItem
-                        src="images/img-academics.png"
-                        text="Learn how to succeed at CSULB"
-                        label='Academics'
-                        path='/academics'
-                    />
-                </ul>
+            <div className='text-container'>
+                <h1>Computer Science @ The Beach</h1>
             </div>
+
+            <div className='list_images'>
+                <Link className='image_link' to='/academics' style={{ textDecoration: 'none' }}>
+                    <div className='dimmer_one'/>
+                    <div className='academics_text_container'>
+                        <h1>ACADEMICS</h1>
+                    </div>
+                </Link>
+                <div className='list_image_item_one'>
+                    <figure className='list_figure' data-category="Academics">
+                        <img src='images/img-academics.png' alt='Academics' className="list_image"/>
+                    </figure>
+                </div>
+
+                <Link className='image_link' to='/career' style={{ textDecoration: 'none' }}>
+                    <div className='dimmer_two'/>
+                    <div className='career_text_container'>
+                        <h1>CAREER</h1>
+                    </div>
+                </Link>
+                <div className='list_image_item_two'>
+                    <figure className='list_figure'>
+                        <img src='images/img-career.jpg' alt='Career' className="list_image"/>
+                    </figure>
+                </div>
+
+                <Link className='image_link' to='/guides' style={{ textDecoration: 'none' }}>
+                    <div className='dimmer_three'/>
+                    <div className='guides_text_container'>
+                        <h1>GUIDES</h1>
+                    </div>
+                </Link>
+                <div className='list_image_item_three'>
+                        <figure className='list_figure'>
+                            <img src='images/img-guides.jpg' alt='Guides' className="list_image"/>
+                        </figure>
+                </div>
+
+                <Link className='image_link' to='/courseExplorer' style={{ textDecoration: 'none' }}>
+                    <div className='dimmer_four'/>
+                    <div className='cexplorer_text_container'>
+                        <h1>COURSE EXPLORER</h1>
+                    </div>
+                </Link>  
+                <div className='list_image_item_four'>
+                        <figure className='list_figure'>
+                            <img src='images/img-course-explorer.jpg' alt='Course Explorer' className="list_image"/>
+                        </figure>
+                </div>
+
+            </div>            
         </div>
     );
 }
