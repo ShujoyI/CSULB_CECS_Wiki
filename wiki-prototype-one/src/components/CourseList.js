@@ -8,22 +8,63 @@ import axios from "axios";
 
 export function CourseList() {
 
-    const [courseNum, setCourseNum] = useState("")
-    const [courseDes, setCourseDes] = useState("")
+    const [courseOneNum, setCourseOneNum] = useState("")
+    const [courseOneDes, setCourseOneDes] = useState("")
+    const [courseOnePre, setCourseOnePre] = useState("")
+    const [courseTwoNum, setCourseTwoNum] = useState("")
+    const [courseTwoDes, setCourseTwoDes] = useState("")
+    const [courseTwoPre, setCourseTwoPre] = useState("")
+ 
+    /*const courses = ["ENGR 101", "ENGR 102", "CECS 100", "CECS 105", "CECS 174", "CECS 225", "CECS 228"]
+    function addElement() {
+        for (let i = 0; i < courses.length; i++) {
+            const newButton = document.createElement("Button");
+            newButton.innerHTML = courses[i];
+            newButton.className = 'course_list_button';
+            newButton.onClick = setDetails(courses[i]);
+            const currentDiv = document.getElementById("lowerButtonsOne");
+            currentDiv.appendChild(newButton);
+        }
+    }*/
 
     function setDetails(variableToQuery) {
 
-        const courseNum = variableToQuery;
-        const course = {
-            courseNum,
-        };
-      
-        axios.post('/create', course);
+        // To deselect a course
+        if (courseOneNum === variableToQuery) {
+            setCourseOneNum('');
+            setCourseOneDes('');
+            setCourseOnePre('');
+            setCourseTwoNum('');
+            setCourseTwoDes('');
+            setCourseTwoPre('');
+        }
 
-        axios.get("/selectCourse").then(response => {
-            setCourseNum(response.data.courseNumber);
-            setCourseDes(response.data.courseDescription);
-        });
+        // If a course has not been selected yet
+        else {
+            const courseNum = variableToQuery;
+            const course = {
+                courseNum,
+            };
+            // Create temp course using course number clicked
+            axios.post('/create', course);
+
+            // If the first course has not been clicked yet
+            if (courseOneNum === "") {
+                axios.get("/selectCourse").then(response => {
+                    setCourseOneNum(response.data.courseNumber);
+                    setCourseOneDes(response.data.courseDescription);
+                    setCourseOnePre(response.data.coursePrerequisites);
+                });
+            }
+            // If the first course was clicked then fill the second course card
+            else {
+                axios.get("/selectCourse").then(response => {
+                    setCourseTwoNum(response.data.courseNumber);
+                    setCourseTwoDes(response.data.courseDescription);
+                    setCourseTwoPre(response.data.coursePrerequisites);
+                });
+            }
+        }
     }
 
     return(
@@ -35,7 +76,12 @@ export function CourseList() {
             </div>
             <h2>Below are all CS courses available at CSULB.</h2>
             <h3>* All courses listed under 'lower division' and 'upper division' are mandatory courses.</h3>
-            <Course className="selectedCourse" courseNumber={courseNum} courseDescription={courseDes}/>
+            <div className='cardOne'>
+                <Course className="selectedCourseOne" courseNumber={courseOneNum} courseDescription={courseOneDes} coursePrerequisites={courseOnePre}/>
+            </div>
+            <div className='cardTwo'>
+                <Course className="selectedCourseTwo" courseNumber={courseTwoNum} courseDescription={courseTwoDes} coursePrerequisites={courseTwoPre}/>
+            </div>
             <div className='lowerDivision'>
                 <h2>Lower Division</h2>
                 <div className='lowerDivisionButtonsRowOne' id='lowerButtonsOne'>
@@ -104,6 +150,7 @@ export function CourseList() {
                     <Button className='course_list_button' onClick={node => setDetails("EE 495")}>EE 495</Button>
                 </div>
             </div>
+            {/* {addElement()} */}
         </div>
     );
 }
