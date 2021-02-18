@@ -1,259 +1,369 @@
-import React from "react"
-import DagreGraph from "dagre-d3-react"
+const position = { x: 0, y: 0 };
+const edgeType = 'smoothstep';
 
 export const CourseNodes = ({
-nodes: [
-    
+elements: [
+  
+  // 1
+  {
+    id: 'CECS_174',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 174' },
+    position,
+  },
+
+  // 2
+  {
+    id: 'ENGR_361',
+    sourcePosition: 'right',
+    data: { label: 'ENGR 361' },
+    position,
+  },
+  // 3
+  {
+    id: 'GE',
+    sourcePosition: 'right',
+    data: { label: 'GE' },
+    position,
+  },
+  // 4
+  {
+    id: 'CS_g1',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CS Group 1 Elective' },
+    position,
+  },
+  // 5
+  {
+    id: 'CS_g2',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CS Group 2 Elective' },
+    position,
+  },
+  // 6
+  {
+    id: 'CS_g1_g2',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CS Group 1 or 2 Elective' },
+    position,
+  },
+  // 7
+  {
+    id: 'CECS_228',
+    sourcePosition: 'right',
+    data: { label: 'CECS 228' },
+    position,
+  },
+  // 8
+  {
+    id: 'CECS_274',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 274' },
+    position,
+  },
+  // 9
+  {
+    id: 'CECS_277',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 277' },
+    position,
+  },
+  // 10
+  {
+    id: 'CECS_225',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 225' },
+    position,
+  },
+  // 11
+  {
+    id: 'CECS_328',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 328' },
+    position,
+  },
+  // 12
+  {
+    id: 'CECS_229',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 229' },
+    position,
+  },
+  // 13
+  {
+    id: 'CECS_282',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 282' },
+    position,
+  },
+  // 14
+  {
+    id: 'CECS_341',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 341' },
+    position,
+  },
+  // 15
+  {
+    id: 'CECS_329',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 329' },
+    position,
+  },
+  // 16
+  {
+    id: 'CECS_342',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 342' },
+    position,
+  },
+  // 17
+  {
+    id: 'CECS_378',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 378' },
+    position,
+  },
+  // 18
+  {
+    id: 'CECS_323',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 323' },
+    position,
+  },
+  // 19
+  {
+    id: 'CECS_326',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 326' },
+    position,
+  },
+  // 20
+  {
+    id: 'EE_381',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'EE 381' },
+    position,
+  },
+  // 21
+  {
+    id: 'CECS_350',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 350' },
+    position,
+  },
+  // 22
+  {
+    id: 'CECS_343',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 343' },
+    position,
+  },
+  // 23
+  {
+    id: 'CECS_327',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 327' },
+    position,
+  },
+  // 24
+  {
+    id: 'CECS_491A',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 491A' },
+    position,
+  },
+  // 25
+  {
+    id: 'CECS_491B',
+    sourcePosition: 'right',
+    targetPosition: 'left',
+    data: { label: 'CECS 491B' },
+    position,
+  },
+   
+
+    /**********************Course Links*************************/
     {
-      id: "1",
-      label: "<h3>CECS 225</h3>",
-      labelType: "html",
+      id: 'e_CECS_174_CECS_274',
+      source: 'CECS_174',
+      type: edgeType,
+      target: 'CECS_274',
+      animated: true,
     },
     {
-      id: "2",
-      label: "<h3>CECS 228</h3>",
-      labelType: "html",
+      id: 'e_CECS_174_CECS_228',
+      source: 'CECS_174',
+      type: edgeType,
+      target: 'CECS_228',
+      animated: true,
     },
     {
-      id: "3",
-      label: "<h3>CECS 229</h3>",
-      labelType: "html",
+      id: 'e_CECS_174_CECS_277',
+      source: 'CECS_174',
+      type: edgeType,
+      target: 'CECS_277',
+      animated: true,
     },
     {
-      id: "4",
-      label: "<h3>CECS 274</h3>",
-      labelType: "html",
+      id: 'e_CECS_228_CECS_328',
+      source: 'CECS_228',
+      type: edgeType,
+      target: 'CECS_328',
+      animated: true,
     },
     {
-      id: "5",
-      label: "<h3>CECS 277</h3>",
-      labelType: "html",
+      id: 'e_CECS_228_CECS_323',
+      source: 'CECS_228',
+      type: edgeType,
+      target: 'CECS_323',
+      animated: true,
     },
     {
-      id: "6",
-      label: "<h3>CECS 328</h3>",
-      labelType: "html",
+      id: 'e_CECS_228_CECS_229',
+      source: 'CECS_228',
+      type: edgeType,
+      target: 'CECS_229',
+      animated: true,
     },
     {
-      id: "7",
-      label: "<h3>CECS 282</h3>",
-      labelType: "html"
+      id: 'e_CECS_274_CECS_328',
+      source: 'CECS_274',
+      type: edgeType,
+      target: 'CECS_328',
+      animated: true,
     },
     {
-      id: "8",
-      label: "<h3>CECS 341</h3>",
-      labelType: "html"
-    }, 
-    {
-      id: "9",
-      label: "<h3>CECS 329</h3>",
-      labelType: "html"
+      id: 'e_CECS_274_CECS_282',
+      source: 'CECS_274',
+      type: edgeType,
+      target: 'CECS_282',
+      animated: true,
     },
     {
-      id: "10",
-      label: "<h3>CECS 342</h3>",
-      labelType: "html"
+      id: 'e_CECS_277_CECS_282',
+      source: 'CECS_277',
+      type: edgeType,
+      target: 'CECS_282',
+      animated: true,
     },
     {
-      id: "11",
-      label: "<h3>CECS 174</h3>",
-      labelType: "html"
+      id: 'e_CECS_225_CECS_341',
+      source: 'CECS_225',
+      type: edgeType,
+      target: 'CECS_341',
+      animated: true,
     },
     {
-      id: "12",
-      label: "<h3>CECS 378</h3>",
-      labelType: "html"
+      id: 'e_CECS_328_CECS_329',
+      source: 'CECS_328',
+      type: edgeType,
+      target: 'CECS_329',
+      animated: true,
     },
     {
-      id: "13",
-      label: "<h3>ENGR 361</h3>",
-      labelType: "html"
+      id: 'e_CECS_328_CECS_342',
+      source: 'CECS_328',
+      type: edgeType,
+      target: 'CECS_342',
+      animated: true,
     },
     {
-      id: "14",
-      label: "<h3>CECS 323</h3>",
-      labelType: "html"
+      id: 'e_CECS_229_CECS_378',
+      source: 'CECS_229',
+      type: edgeType,
+      target: 'CECS_378',
+      animated: true,
     },
     {
-      id: "15",
-      label: "<h3>CECS 327</h3>",
-      labelType: "html"
+      id: 'e_CECS_229_CECS_381',
+      source: 'CECS_229',
+      type: edgeType,
+      target: 'CECS_381',
+      animated: true,
     },
     {
-      id: "16",
-      label: "<h3>CECS 343</h3>",
-      labelType: "html"
+      id: 'e_CECS_282_CECS_323',
+      source: 'CECS_282',
+      type: edgeType,
+      target: 'CECS_323',
+      animated: true,
     },
     {
-      id: "17",
-      label: "<h3>EE 381</h3>",
-      labelType: "html"
+      id: 'e_CECS_282_CECS_326',
+      source: 'CECS_282',
+      type: edgeType,
+      target: 'CECS_326',
+      animated: true,
     },
     {
-      id: "18",
-      label: "<h3>CECS 326</h3>",
-      labelType: "html"
+      id: 'e_CECS_282_CECS_343',
+      source: 'CECS_282',
+      type: edgeType,
+      target: 'CECS_343',
+      animated: true,
     },
     {
-      id: "19",
-      label: "<h3>CECS 350</h3>",
-      labelType: "html"
+      id: 'e_CECS_341_CECS_326',
+      source: 'CECS_341',
+      type: edgeType,
+      target: 'CECS_326',
+      animated: true,
     },
     {
-      id: "20",
-      label: "<h3>GE </h3>",
-      labelType: "html"
+      id: 'e_CECS_326_CECS_327',
+      source: 'CECS_326',
+      type: edgeType,
+      target: 'CECS_327',
+      animated: true,
     },
     {
-      id: "21",
-      label: "<h3>CECS 491A</h3>",
-      labelType: "html"
+      id: 'e_CECS_350_CECS_491A',
+      source: 'CECS_350',
+      type: edgeType,
+      target: 'CECS_491A',
+      animated: true,
     },
     {
-      id: "22",
-      label: "<h3>CECS 491B</h3>",
-      labelType: "html"
+      id: 'e_CECS_343_CECS_491A',
+      source: 'CECS_343',
+      type: edgeType,
+      target: 'CECS_491A',
+      animated: true,
     },
     {
-      id: "23",
-      label: "<h3>CS Group 1 Elective</h3>",
-      labelType: "html"
+      id: 'e_CECS_491A_CECS_491B',
+      source: 'CECS_491A',
+      type: edgeType,
+      target: 'CECS_491B',
+      animated: true,
     },
-    {
-      id: "24",
-      label: "<h3>CS Group 1 Elective</h3>",
-      labelType: "html"
-    },
-    {
-      id: "25",
-      label: "<h3>CS Group 1 or 2 Elective</h3>",
-      labelType: "html"
-    },
+    // 22
     
   ],
 
-  links: [
-    {
-      // CECS 174 -> CECS 274
-      source: '11',
-      target: '4',
-    },
-    {
-      // CECS 174 -> CECS 277
-      source: '11',
-      target: '5',
-    },
-    {
-      // CECS 174 -> CECS 228
-      source: '11',
-      target: '2',
-    },
-    {
-      // CECS 225 -> CECS 341
-      source: '1',
-      target: '8',
-    },
-    {
-      // CECS 274 -> CECS 282
-      source: '4',
-      target: '7',
-    },
-    {
-      // CECS 274 -> CECS 328
-      source: '4',
-      target: '6',
-    },
-    {
-      // CECS 328 -> CECS 329
-      source: '6',
-      target: '9',
-    },
-    {
-      // CECS 228 -> CECS 229
-      source: '2',
-      target: '3',
-    },
-    {
-      // CECS 328 -> CECS 342
-      source: '6',
-      target: '10',
-    },
-    {
-      // CECS 228 -> CECS 328
-      source: '2',
-      target: '6',
-    },
-    {
-      // CECS 277 -> CECS 282
-      source: '5',
-      target: '7',
-    },
-    {
-      // CECS 282 -> CECS 343
-      source: '7',
-      target: '16',
-    },
-    {
-      // CECS 228 -> CECS 323
-      source: '7',
-      target: '14',
-    },
-    {
-      // CECS 282 -> CECS 323
-      source: '2',
-      target: '14',
-    },
-    {
-      // CECS 229 -> CECS 381
-      source: '3',
-      target: '17',
-    },
-    {
-      // CECS 326 -> CECS 327
-      source: '18',
-      target: '15',
-    },
-    {
-      // CECS 341 -> CECS 326
-      source: '8',
-      target: '18',
-    },
-    {
-      // CECS 282 -> CECS 326
-      source: '7',
-      target: '18',
-    },
-    {
-      // CECS 491A -> CECS 491B
-      source: '21',
-      target: '22',
-    },
-    {
-      // CECS 229 -> CECS 378
-      source: '3',
-      target: '12',
-    },
-    {
-      // CECS 282 -> CECS 323
-      source: '7',
-      target: '14',
-    },
-    {
-      // CECS 343-> CECS 491A
-      source: '16',
-      target: '21',
-    },
-    {
-      // ENGR 350-> CECS 491A
-      source: '19',
-      target: '21',
-    },
-    {
-      // CECS 174 -> CECS 225
-      source: '11',
-      target: '1',
-    },
-  ]
+  
 })
 
 export default CourseNodes

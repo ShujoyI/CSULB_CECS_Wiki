@@ -47,7 +47,12 @@ class WorkfairCalendar extends Component {
         const {events} = this.state
         return(
             <div className='workfairCalendar-container'> 
-                <div style={{ height: 500 }}>
+              <ul class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><a href="career">Career</a></li>
+                <li>Workshop & Workfair calendar</li>
+              </ul>
+              <div style={{ height: 500 }}>
                 <Calendar
                     events={events}
                     step={60}

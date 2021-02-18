@@ -1,52 +1,39 @@
-.career-container {
-    background-color: white;
+.resumeContainer {
+    font-family: Arial, sans-serif;
+    margin-left: auto;
+    margin-right: auto;
     height: 75vh;
-    width: 100%;
+    width: 50em;
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center; 
+    align-items: center;
 }
 
-.career-title {
-    width: 100%;
-    max-width: 1000px;
-    display: flex;
-    justify-content: center;
+.resumeHeaders h1 {
+    margin-top: 15px;
+    color: #000;
     text-align: left;
+    font-size: 45px;
+    padding-bottom: 10px;
 }
 
-.career-title h1 {
-    display: flex;
-    align-items: flex-end;
-    text-align: left;
+.resumeHeaders h2 {
+    padding-top: 15px;
+    font-size: 35px;
+    font-weight:normal;
 }
 
-.career-description {
-    display: flex;
-    align-items: flex-end;
-    margin: 16px;
-    text-align: left;
-    width: 500px;
-}
-
-.career-guides{
-    display: flex;
-    align-items: flex-end;
-}
-
-.career-links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 20px;
-    text-align: left;
-    width: 400px;
-    box-sizing: border-box;
-}
-
-.career-links li {
+.resumeHeaders h3 {
+    padding-top: 15px;
     font-size: 20px;
+}
+
+.resumeHeaders li {
+    padding-top: 15px;
+    font-size: 20px;
+    line-height: .5;
 }
 
 /* Style the list */

@@ -1,36 +1,71 @@
-import React from "react"
-import DagreGraph from "dagre-d3-react"
-import CourseNodes from './CourseNodes.js'
-import '../styles/DegreeRoadmap.css'
-import Course from "./Course.js"
-// import PREREQS from "./Prereqs.json"
-// import CourseCard from "./CourseCard"
+import React, { useEffect, useState } from 'react';
+import ReactFlow, { removeElements, addEdge, isNode, getConnectedEdges, getOutgoers } from 'react-flow-renderer';
+import dagre from 'dagre';
+import CourseNodes from './CourseNodes.js';
+import '../styles/DegreeRoadmap.css';
 
-function DegreeRoadmap() {
+const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
+// const onNodeMouseEnter = (event, node) => console.log('mouse enter:', node);
+// const onNodeMouseMove = (event, node) => console.log('mouse move:', node);
+// const onNodeMouseLeave = (event, node) => console.log('mouse leave:', node);
+const onNodeContextMenu = (event, node) => {
+  event.preventDefault();
+  console.log('context menu:', node);
+};
+
+/**** Using Dagre to automatically position nodes efficiently */
+const dagreGraph = new dagre.graphlib.Graph();
+dagreGraph.setDefaultEdgeLabel(() => ({}));
+const getLayoutedElements = (elements, direction = 'LR') => {
+  const isVertical = direction === 'LR';
+  dagreGraph.setGraph({ rankdir: direction });
+  elements.forEach((el) => {
+    if (isNode(el)) {
+      dagreGraph.setNode(el.id, { width: 150, height: 50 });
+    } else {
+      dagreGraph.setEdge(el.source, el.target);
+    }
+  });
+  dagre.layout(dagreGraph);
+  return elements.map((el) => {
+    if (isNode(el)) {
+      const nodeWithPosition = dagreGraph.node(el.id);
+      el.targetPosition = isVertical ? 'left' : 'top';
+      el.sourcePosition = isVertical ? 'right' : 'bottom';
+      // unfortunately we need this little hack to pass a slightly different position
+      // in order to notify react flow about the change
+      el.position = {
+        x: nodeWithPosition.x + Math.random() / 1000,
+        y: nodeWithPosition.y,
+      };
+    }
+    return el;
+  });
+};
+
+const layoutedElements = getLayoutedElements(CourseNodes.elements);
+
+export default () => {
+  const [elements, setElements] = useState(layoutedElements);
+  const onElementsRemove = (elementsToRemove) =>
+    setElements((els) => removeElements(elementsToRemove, els));
+  const onConnect = (params) => setElements((els) => addEdge(params, els));
+  const onElementClick = (e, node) => console.log(getOutgoers(node, elements));
+
   return (
-    <div>
-        <DagreGraph
-          nodes={CourseNodes.nodes}
-          links={CourseNodes.links}
-          config={{
-              rankdir: 'LR',
-              align: 'DL',
-              ranker: 'tight-tree',
-              edgesep: 70,
-              ranksep: 200,
-          }}
-          width='900'
-          height='900'
-          animate={1000}
-          shape='rect'
-          fitBoundaries='true'
-          //zoomable
-          // onNodeClick={e => alert("I was clicked\n" + tempData.nodes[0].id)}
-          onRelationshipClick={e => console.log(e)}
+    <div style={{ height: 800 }}>
+      <ReactFlow
+        elements={elements}
+        onElementsRemove={onElementsRemove}
+        onConnect={onConnect}
+        onLoad={onLoad}
+        selectNodesOnDrag={false}
+        zoomOnScroll = {false}
+        onElementClick={onElementClick}
+        //onNodeMouseEnter={onNodeMouseEnter}
+        //onNodeMouseLeave={onNodeMouseLeave}
+        onNodeContextMenu={onNodeContextMenu}
       />
-      
     </div>
   );
-}
-
-export default DegreeRoadmap
+};
