@@ -49,6 +49,7 @@ app.post('/create', function(req, res) {
         CourseNumber: req.body.courseNum,
     };
     createQuery(newCourse);
+    res.send("DONE");
 });
 
 app.post('/createAccount', function(req, res) {
@@ -69,27 +70,22 @@ app.post('/createLogin', function(req, res) {
 });
 
 app.get('/verifyLogin', (req, res) => {
-    try {
-        connection.query(VERIFY_ACCOUNT, 
-            function(err, results) {
-                if (results === null) {
-                    // res.send("EMAIL DOES NOT EXIST")
-                    console.log("1");
-                }
-                else if (newLogin.password != results[0].password) {
-                    // res.send("INCORRECT PASSWORD")
-                    console.log("2");
-                }
-                else if (newLogin.email === results[0].email && newLogin.password === results[0].password) {
-                    let verified = results[0].email;
-                    res.send(verified);
-                }
+    connection.query(VERIFY_ACCOUNT, 
+        function(err, results) {
+            if (results[0].password === null) {
+                // res.send("EMAIL DOES NOT EXIST")
+                console.log("1");
             }
-        );
-    }
-    catch(TypeError) {
-        console.log("EROOR");
-    }
+            else if (newLogin.password != results[0].password) {
+                // res.send("INCORRECT PASSWORD")
+                console.log("2");
+            }
+            else if (newLogin.email === results[0].email && newLogin.password === results[0].password) {
+                var email = results[0].email;
+                res.send({email});
+            }
+        }
+    );
 });
 
 app.get('/selectCourse', (req, res) => {
@@ -97,7 +93,8 @@ app.get('/selectCourse', (req, res) => {
         function(err, results) {
             var courseNumber = results[0].courseName;
             var courseDescription = results[0].description;
-            res.send({ courseNumber, courseDescription });
+            var coursePrerequisites = results[0].prereqs;
+            res.send({ courseNumber, courseDescription, coursePrerequisites });
         }
     );
 });
@@ -108,6 +105,7 @@ app.get('/events', function (req, res) {
         if (err) {
             res.json({ Error: true, Message: 'Error Execute Sql', err })
         } else {
+            // res.json({ "Error": false, "Message": "Success", "Visitors": rows });
             res.json(rows)
         }
     });

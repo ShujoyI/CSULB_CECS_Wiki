@@ -1,0 +1,13 @@
+.react-flow__node:hover {
+
+    background-color: rgb(98, 0, 255);
+    font-size: small;
+    color: white;
+    border: solid black;
+    transition: all 0.3s ease-out;
+}
+
+.react-flow__node.selected {
+
+    background-color: lightblue;
+}

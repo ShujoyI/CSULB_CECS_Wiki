@@ -21,7 +21,8 @@ class WorkfairCalendar extends Component {
     }
 
     componentDidMount() {
-        axios.get('/events').then(response => {
+        axios.get('/events')
+          .then(response => {
             console.log(response.data);
             let appointments = response.data;
             
@@ -37,13 +38,21 @@ class WorkfairCalendar extends Component {
             })
       
           })
+          .catch(function (error) {
+            console.log(error);
+          });
     }
 
     render(){
         const {events} = this.state
         return(
             <div className='workfairCalendar-container'> 
-                <div style={{ height: 500 }}>
+              <ul class="breadcrumb">
+                <li><a href="/">Home</a></li>
+                <li><a href="career">Career</a></li>
+                <li>Workshop & Workfair calendar</li>
+              </ul>
+              <div style={{ height: 500 }}>
                 <Calendar
                     events={events}
                     step={60}

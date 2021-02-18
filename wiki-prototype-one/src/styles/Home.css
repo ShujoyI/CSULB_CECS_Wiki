@@ -1,23 +1,3 @@
-<<<<<<< Updated upstream
-video {
-    object-fit: cover;
-    width: 100%;
-    height: 50vh;
-    position: absolute;
-    top: 0vh;
-    z-index: -1;
-}
-
-.home {
-    height: 150vh;
-    width: 100%;
-    background-color: transparent;
-}
-
-.home-top {
-    top: 50vh;
-    width: 100%;
-=======
 .home {
     height: 237vh;
     width: auto;
@@ -48,89 +28,6 @@ video {
     font-family: 'Poppins', sans-serif;
     color: white;
     z-index: 1;
-}
-
-/* code for the 4 boxes that doesn't include the container */
-.list_images {
-    height: 50%;
-    width: 100%;
-    position: static;
->>>>>>> Stashed changes
-    display: grid;
-    background-color: purple;
-    grid-template-columns: repeat(2, 1fr);
-<<<<<<< Updated upstream
-    gap: 0px;
-    height: 50vh;
-    position: absolute;
-    text-align: center;
-}
-
-.home-bottom {
-    top: 104vh;
-    width: 100%;
-    background-color: blue;
-    height: 50vh;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-}
-
-.home-container {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 0px;
-    width: 70%;
-    height: 54vh;
-    background-color: rgb(120, 67, 219);
-}
-
-.home-container-two {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    gap: 0px;
-    width: 70%;
-    height: 54vh;
-    background-color: black;
-}
-
-.home-container-header > p {
-    font-size: 35px;
-    color: black;
-}
-
-.home-container-text > p {
-    width: 50%;
-    font-size: 28px;
-    color: black;
-}
-
-.home-button {
-    background-color: transparent;
-    color: black;
-    padding: 8px 20px;
-    border: 1px solid black;
-    transition: all 0.3s ease-out;
-}
-
-.home-button:hover {
-    background: #fff;
-    color: #242424;
-    border: 1px solid #fff;
-    transition: all 0.3s ease-out;
-}
-
-@media screen and (max-width: 1140px) {
-    .hero-btns {
-        display: none;
-    }
-
-    h1 {
-        display: none;
-    }
-=======
-    column-gap: 0;
-    row-gap: 0;
 }
 
 .image_link {
@@ -189,5 +86,15 @@ video {
 
 .list_image:hover {
     transform: scale(1.1);
->>>>>>> Stashed changes
+}
+
+/* code for the 4 boxes that doesn't include the container */
+.list_images {
+    height: 50%;
+    width: 100%;
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0;
+    row-gap: 0;
 }
