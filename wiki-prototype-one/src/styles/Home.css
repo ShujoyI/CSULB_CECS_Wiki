@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 video {
     object-fit: cover;
     width: 100%;
@@ -16,9 +17,49 @@ video {
 .home-top {
     top: 50vh;
     width: 100%;
+=======
+.home {
+    height: 237vh;
+    width: auto;
+}
+
+.video-container {
+    background-color: rgba(0, 0, 0, 0.658);
+    position: static;
+    height: 50%;
+    width: 100%;
+    z-index: 0;
+}
+
+.video-container > video {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: relative;
+    top: 0px;
+}
+
+.text-container {
+    position: absolute;
+    top: 55%;
+    width: 100%;
+    text-align: center;
+    font-size: 54px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    z-index: 1;
+}
+
+/* code for the 4 boxes that doesn't include the container */
+.list_images {
+    height: 50%;
+    width: 100%;
+    position: static;
+>>>>>>> Stashed changes
     display: grid;
     background-color: purple;
     grid-template-columns: repeat(2, 1fr);
+<<<<<<< Updated upstream
     gap: 0px;
     height: 50vh;
     position: absolute;
@@ -87,4 +128,66 @@ video {
     h1 {
         display: none;
     }
+=======
+    column-gap: 0;
+    row-gap: 0;
+}
+
+.image_link {
+    position: static;
+    height: 50%;
+    width: 100%;
+    background-color: blue;
+    z-index: 0;
+    display: flex;
+}
+
+.dimmer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.466);
+    position: static;
+    z-index: 0;
+}
+
+/* code for the picture itself */
+.list_figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s linear;
+}
+
+.list_figure > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s linear;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.link_text_container {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.link_text_container > h1 {
+    text-align: center;
+    font-size: 54px;
+    width: 50%;
+    color: white;
+    font-family: 'Poppins', sans-serif; 
+    border: solid white 10px;
+    border-top: royalblue;
+    border-left: royalblue;
+    border-right: royalblue;
+}
+
+.list_image:hover {
+    transform: scale(1.1);
+>>>>>>> Stashed changes
 }
