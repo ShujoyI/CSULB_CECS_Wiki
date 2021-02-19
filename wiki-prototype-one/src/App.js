@@ -17,12 +17,12 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import WorkfairCalendar from './components/WorkfairCalendar';
 import Resume from './pages/Resume';
+import ScrollToTop from './components/ScrollToTop';
 import Programming_guide from './pages/Programming_guide';
 import Possible_IQ from './pages/Possible_IQ';
 import Study from './pages/Study';
 import Ides from './pages/Ides';
 import Motivation from './pages/Motivation';
-
 
 function App() {
   return (
