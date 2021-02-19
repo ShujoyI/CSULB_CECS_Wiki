@@ -1,6 +1,7 @@
 .navbar {
     background: #ecaa00;
     height: 55px;
+    width: 100%;
     font-size: 1.2rem;
     position: sticky;
 }

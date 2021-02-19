@@ -49,6 +49,7 @@ app.post('/create', function(req, res) {
         CourseNumber: req.body.courseNum,
     };
     createQuery(newCourse);
+    res.send("DONE");
 });
 
 app.post('/createAccount', function(req, res) {
@@ -92,7 +93,8 @@ app.get('/selectCourse', (req, res) => {
         function(err, results) {
             var courseNumber = results[0].courseName;
             var courseDescription = results[0].description;
-            res.send({ courseNumber, courseDescription });
+            var coursePrerequisites = results[0].prereqs;
+            res.send({ courseNumber, courseDescription, coursePrerequisites });
         }
     );
 });

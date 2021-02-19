@@ -29,6 +29,7 @@ function App() {
     <>
       <Router>
         <Navbar />
+        <ScrollToTop>
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/academics' component={Academics} />
@@ -50,6 +51,7 @@ function App() {
           <Route path='/ides_g' component={Ides}/>
           <Route path='/motivated' component={Motivation}/>
         </Switch>
+        </ScrollToTop>
         <Footer />
       </Router>
     </>
