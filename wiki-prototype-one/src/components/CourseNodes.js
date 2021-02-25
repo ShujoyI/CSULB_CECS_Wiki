@@ -297,10 +297,10 @@ elements: [
       animated: true,
     },
     {
-      id: 'e_CECS_229_CECS_381',
+      id: 'e_CECS_229_EE_381',
       source: 'CECS_229',
       type: edgeType,
-      target: 'CECS_378',
+      target: 'EE_381',
       animated: true,
     },
     {
