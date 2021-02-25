@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactFlow, { removeElements, 
   addEdge, 
   isNode, 
+  isEdge,
   getConnectedEdges, 
   getOutgoers } from 'react-flow-renderer';
 import dagre from 'dagre';
