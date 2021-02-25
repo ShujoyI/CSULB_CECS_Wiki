@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import ReactFlow, { removeElements, 
+  Background,
+  Controls,
   addEdge, 
   isNode, 
   isEdge,
   getConnectedEdges, 
-  getOutgoers } from 'react-flow-renderer';
+  getOutgoers,
+} from 'react-flow-renderer';
 import dagre from 'dagre';
 import CourseNodes from './CourseNodes.js';
 import '../styles/DegreeRoadmap.css';
@@ -58,7 +61,7 @@ export default () => {
   const onElementClick = (e, node) => console.log(getOutgoers(node, elements));
 
   return (
-    <div style={{ height: 1600 }}>
+    <div style={{ height: 800 }}>
       <ReactFlow
         elements={elements}
         onElementsRemove={onElementsRemove}
@@ -71,7 +74,17 @@ export default () => {
         //onNodeMouseEnter={onNodeMouseEnter}
         //onNodeMouseLeave={onNodeMouseLeave}
         onNodeContextMenu={onNodeContextMenu}
-      />
+      >
+        <Controls
+        showInteractive = {false}
+        />
+        <Background
+        variant = "dots"
+        gap = {16}
+        size = {1}
+        color = "#02decc" 
+        />
+      </ReactFlow>
     </div>
   );
 };
