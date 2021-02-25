@@ -53,12 +53,13 @@ export default () => {
   const onElementClick = (e, node) => console.log(getOutgoers(node, elements));
 
   return (
-    <div style={{ height: 800 }}>
+    <div style={{ height: 1600 }}>
       <ReactFlow
         elements={elements}
         onElementsRemove={onElementsRemove}
         onConnect={onConnect}
         onLoad={onLoad}
+        nodesDraggable = {false}
         selectNodesOnDrag={false}
         zoomOnScroll = {false}
         onElementClick={onElementClick}
