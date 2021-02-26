@@ -7,9 +7,175 @@
     text-align: center;
 
 }
-
 */
 
+.pro_list
+{
+    overflow: auto;
+    display: none;
+
+
+    padding: 0 100px; /* (top/botton ) (left/right*/
+    font-family: sans-serif;
+    background:antiquewhite ;
+}
+
+.button_list_pro
+{
+    overflow: auto;
+    display:inline-block;
+    align-content: center;
+    width: 15%;
+    padding: 10px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    background: #c4c4c4;
+    color:#ffffff;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.button_list_pro::after
+{
+    content: '\25be';
+    float:center;
+    transform: scale(1.5);
+
+
+}
+
+
+.button_list_active_pro + .pro_list
+{
+    display: block;
+}
+
+.button_list_active_pro
+{
+    background: #c4c4c4;
+}
+
+.button_list_active_pro::after
+{
+    content: '\25b4';
+
+}
+
+
+
+/*///////////////////////////////////////////////////////////////////////////Prolog/////////////////////////////////////////////////////////*/
+.py_list
+{
+    overflow: auto;
+    display: none;
+
+
+    padding: 0 100px; /* (top/botton ) (left/right*/
+    font-family: sans-serif;
+    background:antiquewhite ;
+}
+
+.button_list_py
+{
+    overflow: auto;
+    display:inline-block;
+    align-content: center;
+    width: 15%;
+    padding: 10px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    background: #c4c4c4;
+    color:#ffffff;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.button_list_py::after
+{
+    content: '\25be';
+    float:center;
+    transform: scale(1.5);
+
+
+}
+
+
+.button_list_active_py + .py_list
+{
+    display: block;
+}
+
+.button_list_active_py
+{
+    background: #c4c4c4;
+}
+
+.button_list_active_py::after
+{
+    content: '\25b4';
+
+}
+
+
+/*////////////////////////////////////////////////////////////////// Haskell ////////////////////////////////////////////////////*/
+
+.hs_list
+{
+    overflow: auto;
+    display: none;
+
+
+    padding: 0 100px; /* (top/botton ) (left/right*/
+    font-family: sans-serif;
+    background:antiquewhite ;
+}
+
+.button_list_hs
+{
+    overflow: auto;
+    display:inline-block;
+    align-content: center;
+    width: 15%;
+    padding: 10px;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    background: #c4c4c4;
+    color:#ffffff;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.button_list_hs::after
+{
+    content: '\25be';
+    float:center;
+    transform: scale(1.5);
+
+
+}
+
+
+.button_list_active_hs + .hs_list
+{
+    display: block;
+}
+
+.button_list_active_hs
+{
+    background: #c4c4c4;
+}
+
+.button_list_active_hs::after
+{
+    content: '\25b4';
+
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////Java //////////////////////////////////////////////////////////*/
 .java_list
 {
     overflow: auto;
@@ -62,9 +228,6 @@
     content: '\25b4';
 
 }
-
-
-
 
 
 /*////////////////////////////////////////////////////////////////// C++ list//////////////////////////////////////////////////////////////////*/
