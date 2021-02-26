@@ -1,6 +1,7 @@
 .home {
     height: 237vh;
     width: auto;
+    overflow: hidden;
 }
 
 .video-container {
