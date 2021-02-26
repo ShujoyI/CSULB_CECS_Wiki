@@ -4,10 +4,35 @@
     font-size: small;
     color: white;
     border: solid black;
-    transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;  
+}
+
+.react-flow__node{
+
+    border-color: #ff0072;
+
+    .react-flow__handle {
+        background: #0041d0;
+      }
+}
+
+.react-flow__handle {
+    
+    background: #ff0072;
+    border-color: yellow;
+    width: 8px;
+    height: 8px;
 }
 
 .react-flow__node.selected {
 
     background-color: lightblue;
+    padding: 10px;
+    border-radius: 3px;
+    width: 150px;
+    font-size: 12px;
+    color: green;
+    text-align: center;
+    border-color: #0041d0;
+    border-style: solid;
 }
