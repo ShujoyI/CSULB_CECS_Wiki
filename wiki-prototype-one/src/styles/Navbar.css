@@ -1,48 +1,23 @@
-.navbar {
-    background: #ecaa00;
-    height: 55px;
-    width: 100%;
-    font-size: 1.2rem;
-    position: sticky;
-}
-
 .navbar-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #ecaa00;
   height: 55px;
+  width: auto;
 }
 
-.navbar-left {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-gap: 10px;
-  list-style: none;
-  margin-left: 0.5rem;
-}
-
-.navbar-right {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-gap: 10px;
-  list-style: none;
-  margin-left: 50rem;
-}
-
-.navbar-search {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0.5rem;
-    height: 100%;
-}
-  
-.navbar-links {
-  color: #000;
-  display: flex;
-  align-items: center;
-  padding: 0.5rem 1rem;
+.navbar-items {
   height: 100%;
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.navbar-links {
+  position: absolute;
+  top: 25%;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
 }
 
 .navbar-links:hover {
@@ -50,8 +25,17 @@
   transition: all 0.3s ease-out;
 }
 
+.navbar-items > input {
+  position: absolute;
+  width: 40%;
+  top: 25%;
+  left: 9%;
+}
+
 .navbar-csulb-link {
-  margin-bottom: 15px;
+  position: absolute;
+  top: 15%;
+  left: 88%;
 }
 
 Button.csulb-button {
@@ -66,7 +50,7 @@ Button.csulb-button {
   transition: all 0.3s ease-out;
 }
 
-@media screen and (max-width: 1140px) {
+/*@media screen and (max-width: 1140px) {
   .NavbarItems {
     position: relative;
   }
@@ -135,4 +119,4 @@ Button.csulb-button {
   .fa-bars {
     color: #000;
   }
-}
+}*/
