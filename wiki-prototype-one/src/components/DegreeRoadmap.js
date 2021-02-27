@@ -9,6 +9,8 @@ import ReactFlow, { removeElements,
   getOutgoers,
 } from 'react-flow-renderer';
 import dagre from 'dagre';
+import { Card } from 'react-bootstrap';
+import '../styles/Card.css';
 import CourseNodes from './CourseNodes.js';
 import '../styles/DegreeRoadmap.css';
 
@@ -62,6 +64,14 @@ export default () => {
 
   return (
     <div style={{ height: 800 }}>
+      <div className='courseCard'>
+        <Card className='myCard'>
+          <Card.Header className='cardHead'>Course Not Selected Yet</Card.Header>
+              <Card.Body className='cardBody'>
+                  <Card.Text claassName='cardText'>Select a class from the list to learn more about it.</Card.Text>
+              </Card.Body>
+        </Card>
+      </div>
       <ReactFlow
         elements={elements}
         onElementsRemove={onElementsRemove}
