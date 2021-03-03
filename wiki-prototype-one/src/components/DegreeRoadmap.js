@@ -60,7 +60,18 @@ export default () => {
   const onElementsRemove = (elementsToRemove) =>
     setElements((els) => removeElements(elementsToRemove, els));
   const onConnect = (params) => setElements((els) => addEdge(params, els));
-  const onElementClick = (e, node) => console.log(getOutgoers(node, elements));
+  const onElementClick = (e, node) => setDetails(node);
+
+  function setDetails(courseNode) {
+
+    const children = getOutgoers(courseNode, elements);
+
+    for (var child of children) {
+
+      console.log(child.id);
+    }
+  
+  }
 
   return (
     <div style={{ height: 800 }}>
@@ -68,7 +79,7 @@ export default () => {
         <Card className='myCard'>
           <Card.Header className='cardHead'>Course Not Selected Yet</Card.Header>
               <Card.Body className='cardBody'>
-                  <Card.Text claassName='cardText'>Select a class from the list to learn more about it.</Card.Text>
+                  <Card.Text className='cardText'>Select a class from the list to learn more about it.</Card.Text>
               </Card.Body>
         </Card>
       </div>
@@ -81,8 +92,6 @@ export default () => {
         selectNodesOnDrag={false}
         zoomOnScroll = {false}
         onElementClick={onElementClick}
-        //onNodeMouseEnter={onNodeMouseEnter}
-        //onNodeMouseLeave={onNodeMouseLeave}
         onNodeContextMenu={onNodeContextMenu}
       >
         <Controls
