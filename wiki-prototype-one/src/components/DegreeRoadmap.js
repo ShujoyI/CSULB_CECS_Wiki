@@ -10,6 +10,7 @@ import ReactFlow, { removeElements,
 } from 'react-flow-renderer';
 import dagre from 'dagre';
 import { Card } from 'react-bootstrap';
+import Course from './Course';
 import '../styles/Card.css';
 import CourseNodes from './CourseNodes.js';
 import '../styles/DegreeRoadmap.css';
@@ -57,6 +58,9 @@ const layoutedElements = getLayoutedElements(CourseNodes.elements);
 
 export default () => {
   const [elements, setElements] = useState(layoutedElements);
+  const [courseNum, setCourseNum] = useState("");
+  const [courseDes, setCourseDes] = useState("");
+  const [courseSucc, setCourseSucc] = useState([]);
   const onElementsRemove = (elementsToRemove) =>
     setElements((els) => removeElements(elementsToRemove, els));
   const onConnect = (params) => setElements((els) => addEdge(params, els));
@@ -64,24 +68,24 @@ export default () => {
 
   function setDetails(courseNode) {
 
+    setCourseNum(courseNode.data.label);
     const children = getOutgoers(courseNode, elements);
 
-    for (var child of children) {
+    let courses = [];
 
+    for (var child of children) {   
+       
+      courses.push(child.data.label);
       console.log(child.id);
     }
-  
+
+    setCourseSucc(courses);
   }
 
   return (
     <div style={{ height: 800 }}>
       <div className='courseCard'>
-        <Card className='myCard'>
-          <Card.Header className='cardHead'>Course Not Selected Yet</Card.Header>
-              <Card.Body className='cardBody'>
-                  <Card.Text className='cardText'>Select a class from the list to learn more about it.</Card.Text>
-              </Card.Body>
-        </Card>
+        <Course className="selectedCourse" courseNumber={courseNum} courseDescription={courseDes} successors={courseSucc}/>
       </div>
       <ReactFlow
         elements={elements}
