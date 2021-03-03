@@ -4,36 +4,29 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-    <div className='footer-container'>
-      <div class='footer-links'>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-            <h2>Service</h2>
-            <Link to='/CourseExplorer'>Course Explorer</Link>
-            <Link to='/Guides'>Guides</Link>
-            <Link to='/Career'>Career</Link>
-            <Link to='/Academics'>Academics</Link>
-          </div>
-          <div class='footer-link-items'>
-            <h2>Resources</h2>
-            <Link to='/AboutUs'>About us</Link>
-            <Link to='/'>Contact</Link>
-            <Link to='/'>Sitemap</Link>
-            <Link to='/'>Feedback</Link>
-          </div>
-        </div>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-            <h2>Temp</h2>
-            <Link to='/'>Temp</Link>
-            <Link to='/'>Temp</Link>
-            <Link to='/'>Temp</Link>
-            <Link to='/'>Temp</Link>
-          </div>
-        </div>
+  <div className='footer-container'>
+    <div className="footer-copyright text-center">
+      <div >
+        &copy; {(new Date().getFullYear())} Copyright: <a href=""> BeachCS </a>
       </div>
-          <small class='website-rights'>© 2020, built by BeachCS</small>
+    </div>
+    <div class='footer-links'>
+      <div className='footer-link-wrapper'>
+        <div class='footer-link-items'>
+          <Link to='/About'>About</Link>
         </div>
+        <div class='footer-link-items'>
+          <Link to='/Contact'>Contact</Link>
+        </div>
+        <div class='footer-link-items'>
+          <Link to='/Sitemap'>Sitemap</Link>
+        </div>
+        <div class='footer-link-items'>
+          <Link to='/Feedback'>Feedback</Link>
+        </div>
+      </div> 
+    </div>
+  </div>
   );
 }
 

@@ -11,7 +11,7 @@ import Guides from './pages/Guides';
 import Account from './pages/Account';
 import AdminPage from './pages/AdminPage';
 import SearchPage from './pages/SearchPage';
-import AboutUs from './pages/AboutUs';
+import About from './pages/About';
 import DegreeRoadmap from './components/DegreeRoadmap';
 import Register from './pages/Register';
 import Login from './pages/Login';
@@ -39,7 +39,7 @@ function App() {
           <Route path='/account' component={Account} />
           <Route path='/adminPage' component={AdminPage} />
           <Route path='/searchPage' component={SearchPage} />
-          <Route path='/aboutUs' component={AboutUs}/>
+          <Route path='/about' component={About}/>
           <Route path='/degreeRoadMap' component={DegreeRoadmap}/>
           <Route path='/register' component={Register}/>
           <Route path='/login' component={Login}/>
