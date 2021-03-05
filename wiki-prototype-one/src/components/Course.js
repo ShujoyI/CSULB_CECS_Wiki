@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function Course(props) {
 
-    if (props.courseDescription === "" && props.successors === "") {
+    if (props.courseDescription === "" && props.successors == null) {
         return (
             <Card className='myCard'>
                 <Card.Header className='cardHead'>Course Not Selected Yet</Card.Header>
@@ -15,7 +15,7 @@ function Course(props) {
             </Card>
         );
     }
-    else if (props.successors === "") {
+    else if (props.successors == null) {
         return (
             <Card className='myCard'>
                 <Card.Header className='cardHead'>Course Info</Card.Header>
