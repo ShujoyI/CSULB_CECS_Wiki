@@ -76,11 +76,32 @@ export default () => {
     for (var child of children) {   
        
       courses.push(child.data.label);
-      console.log(child.id);
     }
 
     setCourseSucc(courses);
+    highlightSuccessors(courses);
   }
+
+
+  function highlightSuccessors(courses) {
+
+    setElements((els) =>
+      els.map((e) => {
+
+        // check if element is a node in "successors"
+        if (isNode(e) && courses.includes(e.data.label)) {
+
+          e.style = {backgroundColor: 'yellow'};
+        }
+
+        else if (isNode(e) && !(courses.includes(e.data.label))) {
+
+          e.style = {backgroundColor: ''};
+        }
+
+        return e;
+      })
+    )}
 
   return (
     <div style={{ height: 800 }}>
