@@ -34,14 +34,12 @@ function Course(props) {
                 <Card.Header className='cardHead'>Course Prerequisites</Card.Header>
                     <Card.Body className='cardBody'>
                         <Card.Title className='cardTitle'>{props.courseNumber}</Card.Title>
-                        <Card.Text className='cardText'> Courses you can take after are:
-                            <p>{
+                        <Card.Text className='cardText'> Courses you can take after are: {
                                 successors.map((successor, index) => (
                                     <li key={index}>
                                         {successor}
                                     </li>
                                 ))}
-                            </p>
                         </Card.Text>
                     </Card.Body>
             </Card>
