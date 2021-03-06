@@ -12,6 +12,11 @@
     border-color: #ff0072;
 }
 
+.react-flow__edge-path {
+
+    stroke: green;
+}
+
 .react-flow__handle {
     
     background: #ff0072;
