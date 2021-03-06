@@ -79,11 +79,11 @@ export default () => {
     }
 
     setCourseSucc(courses);
-    highlightSuccessors(courses);
+    highlightSuccessors(courseNode, courses);
   }
 
 
-  function highlightSuccessors(courses) {
+  function highlightSuccessors(clickedNode, courses) {
 
     setElements((els) =>
       els.map((e) => {
@@ -97,6 +97,19 @@ export default () => {
         else if (isNode(e) && !(courses.includes(e.data.label))) {
 
           e.style = {backgroundColor: ''};
+        }
+
+        // check if element is an edge that starts from the clicked node
+        else if (isEdge(e) && (e.source == clickedNode.id)) {
+
+          e.animated = false;
+          e.style = {stroke: 'purple'};
+        }
+
+        else if (isEdge(e) && (e.source != clickedNode.id)) {
+
+          e.animated = true;
+          e.style = {stroke: ''};
         }
 
         return e;
