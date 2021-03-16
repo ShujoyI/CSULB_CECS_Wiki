@@ -1,32 +1,7 @@
-.course_list_button {
-    background: transparent;
-    color:  #000;
-    padding: 8px 10px;
-    font-size: 15px;
-    border: 3px solid #ecaa00;
-    transition: all 0.3s ease-out;
-    border-radius: 98%;
-    margin-right: 3rem;
-}
-
-.course_list_button:active {
-    background: white;
-    color: #fff;
-    border: none;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-.course_list_button:hover {
-    background: rgb(98, 0, 255);
-    color: white;
-    border: 3px solid black;
-    transition: all 0.3s ease-out;
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-.courseClicked {
-    padding-left: 100px;
-    padding-top: 100px;
+.courseHeaders {
+    background-color: white;
+    padding-left: 20px;
+    height: 115vh;
 }
 
 .courseHeaders h1 {
@@ -34,6 +9,15 @@
     color: #000;
     text-align: left;
     font-size: 28px;
+    padding-bottom: 10px;
+}
+
+.roadMap h2 {
+    margin-top: -3vh;
+}
+
+.roadMapLink {
+    padding-left: 15px;
     padding-bottom: 10px;
 }
 
@@ -47,18 +31,22 @@
     padding-left: 30px;
 }
 
-.courseHeaders {
-    background-color: white;
-    padding-left: 20px;
-}
-
 .lowerDivision {
     padding-left: 60px;
-    margin-top: -125px;
+    margin-top: -290px;
 }
 
 .lowerDivision h2 {
     padding-bottom: 15px;
+}
+
+.lowerDivisionButtonsRowOne {
+    padding-bottom: 1rem;
+    padding-left: 20px;
+}
+
+.lowerDivisionButtonsRowTwo {
+    padding-left: 20px;
 }
 
 .upperDivision {
@@ -69,6 +57,15 @@
     padding-bottom: 15px;
 }
 
+.upperDivisionButtonsRowOne {
+    padding-bottom: 1rem;
+    padding-left: 20px;
+}
+
+.upperDivisionButtonsRowTwo {
+    padding-left: 20px;
+}
+
 .elective {
     padding-left: 60px;
 }
@@ -77,46 +74,80 @@
     padding-bottom: 15px;
 }
 
-.lowerDivisionButtonsRowOne {
-    padding-bottom: 2rem;
-    padding-left: 30px;
-}
-
-.lowerDivisionButtonsRowTwo {
-    padding-bottom: 2rem;
-    padding-left: 30px;
-}
-
-.upperDivisionButtonsRowOne {
-    padding-bottom: 2rem;
-    padding-left: 30px;
-}
-
-.upperDivisionButtonsRowTwo {
-    padding-bottom: 2rem;
-    padding-left: 30px;
-}
-
 .electiveButtonsRowOne {
-    padding-bottom: 2rem;
-    padding-left: 30px;
+    padding-bottom: 1rem;
+    padding-left: 20px;
 }
 
 .electiveButtonsRowTwo {
-    padding-bottom: 2rem;
-    padding-left: 30px;
+    padding-bottom: 1rem;
+    padding-left: 20px;
 }
 
 .electiveButtonsRowThree {
-    padding-bottom: 30px;
-    padding-left: 30px;
+    padding-left: 20px;
 }
 
-.roadMap h2 {
+.course_list_button {
+    background: transparent;
+    color:  #000;
+    padding: 4px 7px;
+    font-size: 14px;
+    border: 3px solid #ecaa00;
+    transition: all 0.3s ease-out;
+    border-radius: 98%;
+    margin-right: 1.3rem;
+}
+
+.course_list_button:hover {
+    background: rgb(98, 0, 255);
+    color: white;
+    border: 3px solid black;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.cardOne {
+    margin-left: 900px;
+    margin-top: -50px;
+}
+
+.cardTwo {
+    margin-left: 905px;
+    margin-top: 300px;
+}
+
+.myCard {
+    position: relative;
+    display: block;
+    width: 500px;
+    height: 0px;
     padding-top: 10px;
-}
-
-.roadMapLink {
+    background-color: rgb(155, 155, 155);
+  }
+  
+  .cardTitle {
+    background-color: rgb(129, 129, 129);
+    width: 30%;
+    font-size: 18px;
+    margin-left: 163px;
+    margin-top: -10px;
+    text-align: center;
+  }
+  
+  .cardHead {
+    background-color: rgb(197, 197, 197);
+    font-size: 15px;
     padding-left: 15px;
-    padding-bottom: 10px;
-}
+    padding-top: 0px;
+    height: 20px;
+    text-align: center;
+  }
+
+  .cardBody {
+      background-color: rgb(155, 155, 155);
+      box-shadow: 14px 13px 15px #525252;
+      height: 250px;
+      padding-left: 15px;
+      font-size: 14px;
+  }

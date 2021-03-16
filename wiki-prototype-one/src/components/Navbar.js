@@ -8,30 +8,20 @@ import { Link } from 'react-router-dom';
 function Navbar() {
    
     return (
-        <div className='navbar'>
-            <div className='navbar-container'>
-                <ul className='navbar-left'>
-                    <li className='navbar-home'>
-                        <Link to='/' className='navbar-links'>
-                            Home
-                        </Link>
-                    </li>
-                    <li className='navbar-search'>
-                        <input type="text" className="navbar-search-box" placeholder="Search..." />
-                    </li>
-                </ul>
-                <ul className='navbar-right'>
-                    <li className='navbar-account'>
-                        <Link to='/account' className='navbar-links'>
-                            Account
-                        </Link>
-                    </li>
-                </ul>    
+        <div className='navbar-container'>
+            <div className='navbar-items'>
+                <Link to='/' className='navbar-links' style={{ textDecoration: 'none', left: '3%'}}>
+                    Home
+                </Link>
+                <input type="text" className="navbar-search-box" placeholder="Search..." />
+                <Link to='/account' className='navbar-links' style={{ textDecoration: 'none', left: '80%'}}>
+                    Account
+                </Link>    
                 <a href='https://www.csulb.edu/' className='navbar-csulb-link'>
                     <Button className='csulb-button' style={{borderColor:'#000'}}>
                         CSULB HOME
                     </Button>
-                </a>        
+                </a>
             </div>
         </div>
     )

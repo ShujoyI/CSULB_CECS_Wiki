@@ -1,10 +1,29 @@
-import React, {Component} from 'react'
-import '../styles/Guide.css'
-import '../App.css'
+import React, {Component} from 'react';
+import '../styles/Guide.css';
+import '../App.css';
 import 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+
+function useEffect()
+{
+    document.querySelectorAll('.button_list').forEach(button =>
+    {
+       
+
+
+            button.classList.toggle('button_list_active');
+
+        
+    });
+}
+
 
 class Guides extends Component
     {
+
+      
+    
         constructor(props)
         {
             super(props)
@@ -69,13 +88,38 @@ class Guides extends Component
                         </div>
             
                     </div>
-                    <h1>Suggestions or Questions?</h1>
-                    <p>Leave Comment  {comment}</p>
-                    <form onSubmit ={this.handleSubmit}>
-                        <p> <input type = 'text'   name= 'name' placeholder = '350 Max Characters' onChange={this.handleInput} maxLength = '350' className = 'commentTxt'/> </p>
-                        <p><button> Submit Comment</button></p>
-                    </form>
+    
+                    <body>
+                        <div className = "g_list">
+                            <button onClick={useEffect}  className = "button_list" > Some helpful Links! </button>
+                            
+                                <div className ="sub_list">
+                                    <ul>
+                                        <li><Link to="/pg_guide">Programming Guides</Link></li>
+                                        <li><Link to="/interview_q">Possible interview Questions</Link></li>
+                                        <li><Link to='/study_g'>Ways to study!</Link></li>
+                                        <li><Link to='/ides_g'>Recommended IDE's </Link></li>
+                                        <li><Link to='/motivated'>For Motivation!</Link></li>
+                                    </ul>
+                                </div>
+                            
+                        </div>
+
+                        <h1>Suggestions or Questions?</h1>
+                        <p>Leave Comment  {comment}</p>
+                        <form onSubmit ={this.handleSubmit}>
+                            <p> <input type = 'text'   name= 'name' placeholder = '350 Max Characters' onChange={this.handleInput} maxLength = '350' className = 'commentTxt'/> </p>
+                            <p><button> Submit Comment</button></p>
+                        </form>
+    
+
+                       
+                    </body>    
+
+               
+                    
                 </div>
+               
             )
         }
 

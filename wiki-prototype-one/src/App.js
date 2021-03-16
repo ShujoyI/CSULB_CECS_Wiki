@@ -11,18 +11,25 @@ import Guides from './pages/Guides';
 import Account from './pages/Account';
 import AdminPage from './pages/AdminPage';
 import SearchPage from './pages/SearchPage';
-import AboutUs from './pages/AboutUs';
+import About from './pages/About';
 import DegreeRoadmap from './components/DegreeRoadmap';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import WorkfairCalendar from './components/WorkfairCalendar';
 import Resume from './pages/Resume';
+import ScrollToTop from './components/ScrollToTop';
+import Programming_guide from './pages/Programming_guide';
+import Possible_IQ from './pages/Possible_IQ';
+import Study from './pages/Study';
+import Ides from './pages/Ides';
+import Motivation from './pages/Motivation';
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
+        <ScrollToTop>
         <Switch>
           <Route path='/' exact component={Home} />
           <Route path='/academics' component={Academics} />
@@ -32,13 +39,19 @@ function App() {
           <Route path='/account' component={Account} />
           <Route path='/adminPage' component={AdminPage} />
           <Route path='/searchPage' component={SearchPage} />
-          <Route path='/aboutUs' component={AboutUs}/>
+          <Route path='/about' component={About}/>
           <Route path='/degreeRoadMap' component={DegreeRoadmap}/>
           <Route path='/register' component={Register}/>
           <Route path='/login' component={Login}/>
           <Route path='/workfair-calendar' component={WorkfairCalendar}/>
           <Route path='/resume' component={Resume}/>
+          <Route path='/pg_guide' component={Programming_guide}/>
+          <Route  path='/interview_q' component = {Possible_IQ}/>
+          <Route path='/study_g' component = {Study}/>
+          <Route path='/ides_g' component={Ides}/>
+          <Route path='/motivated' component={Motivation}/>
         </Switch>
+        </ScrollToTop>
         <Footer />
       </Router>
     </>
