@@ -10,11 +10,11 @@ function Navbar() {
     return (
         <div className='navbar-container'>
             <div className='navbar-items'>
-                <Link to='/' className='navbar-links' style={{ textDecoration: 'none', left: '3%'}}>
+                <Link to='/' className='navbar-link-one' style={{ textDecoration: 'none' }}>
                     Home
                 </Link>
                 <input type="text" className="navbar-search-box" placeholder="Search..." />
-                <Link to='/account' className='navbar-links' style={{ textDecoration: 'none', left: '80%'}}>
+                <Link to='/account' className='navbar-link-two' style={{ textDecoration: 'none' }}>
                     Account
                 </Link>    
                 <a href='https://www.csulb.edu/' className='navbar-csulb-link'>

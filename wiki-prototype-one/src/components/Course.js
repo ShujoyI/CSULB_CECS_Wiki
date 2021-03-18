@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
 import '../styles/CourseList.css';
-//import '../styles/Card.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import '../styles/DegreeRoadmap.css';
 
 function Course(props) {
 
@@ -32,11 +32,11 @@ function Course(props) {
     else {
         const successors = props.successors;
         return (
-            <Card className='myCard'>
-                <Card.Header className='cardHead'>Course Prerequisites</Card.Header>
-                    <Card.Body className='cardBody'>
-                        <Card.Title className='cardTitle'>{props.courseNumber}</Card.Title>
-                        <Card.Text className='cardText'> Courses you can take after are: {
+            <Card className='myCardRoadMap'>
+                <Card.Header className='cardRoadHead'>Course Prerequisites</Card.Header>
+                    <Card.Body className='cardRoadBody'>
+                        <Card.Title className='cardRoadTitle'>{props.courseNumber}</Card.Title>
+                        <Card.Text className='cardSuc'> Courses you can take after are: {
                                 successors.map((successor, index) => (
                                     <li key={index}>
                                         {successor}
