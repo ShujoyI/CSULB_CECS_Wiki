@@ -14,6 +14,7 @@ import Course from './Course';
 import '../styles/Card.css';
 import CourseNodes from './CourseNodes.js';
 import '../styles/DegreeRoadmap.css';
+import '@aws-amplify/ui/dist/DegreeRoadmap.css'
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
 // const onNodeMouseEnter = (event, node) => console.log('mouse enter:', node);
