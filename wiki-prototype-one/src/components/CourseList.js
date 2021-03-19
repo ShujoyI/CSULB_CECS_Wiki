@@ -110,44 +110,47 @@ export function CourseList() {
                     <Button className='course_list_button' onClick={node => setDetails("CECS 327")}>CECS 327</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 328")}>CECS 328</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 341")}>CECS 341</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 342")}>CECS 342</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 343")}>CECS 343</Button>
-                    <Button className='course_list_button' onClick={node => setDetails("CECS 378")}>CECS 378</Button>
                 </div>
                 <div className='upperDivisionButtonsRowTwo'>
                     <Button className='course_list_button' onClick={node => setDetails("ENGR 350")}>ENGR 350</Button>
                     <Button className='course_list_button' onClick={node => setDetails("EE 381")}>EE 381</Button>
                     <Button className='course_list_button' onClick={node => setDetails("ENGR 361")}>ENGR 361</Button>
-                    <Button className='course_list_button' onClick={node => setDetails("CECS 342")}>CECS 342</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 378")}>CECS 378</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 491A")}>CECS 491A</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 491B")}>CECS 491B</Button>
                 </div>
             </div>
             <div className='elective'>
                 <h2>Electives</h2>
-                <div className='electiveButtonsRowOne'>
-                    <Button className='course_list_button' onClick={node => setDetails("CECS 456")}>CECS 456</Button>
-                    <Button className='course_list_button' onClick={node => setDetails("CECS 451")}>CECS 451</Button>
+                <h3>Group One</h3>
+                <div className='groupOne'>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 419")}>CECS 419</Button>
-                    <Button className='course_list_button' onClick={node => setDetails("CECS 428")}>CECS 428</Button>
-                    <Button className='course_list_button' onClick={node => setDetails("CECS 429")}>CECS 429</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 444")}>CECS 444</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 445")}>CECS 445</Button>
-                </div>
-                <div className='electiveButtonsRowTwo'>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 448")}>CECS 448</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 449")}>CECS 449</Button>
-                    <Button className='course_list_button' onClick={node => setDetails("CECS 455")}>CECS 455</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 451")}>CECS 451</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("MATH 323")}>MATH 323</Button>
+                </div>
+                <h3>Group Two</h3>
+                <div className='groupTwo'>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 450")}>CECS 450</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 453")}>CECS 453</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 470")}>CECS 470</Button>
-                </div>
-                <div className='electiveButtonsRowThree'>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 475")}>CECS 475</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 476")}>CECS 476</Button>
+                </div>
+                <h3>Both</h3>
+                <div className='bothGroups'>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 428")}>CECS 428</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 429")}>CECS 429</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 455")}>CECS 455</Button>
+                    <Button className='course_list_button' onClick={node => setDetails("CECS 456")}>CECS 456</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 478")}>CECS 478</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 495")}>CECS 495</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 497")}>CECS 497</Button>
-                    <Button className='course_list_button' onClick={node => setDetails("EE 495")}>EE 495</Button>
                 </div>
             </div>
             {/* {addElement()} */}
