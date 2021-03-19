@@ -85,7 +85,7 @@ function useEffectpro()
 const Programming_guide = () =>
 {
     return (
-    <div>
+    <div className="programming_page">
         <h3>
             Welcome to Programming Guides!
         </h3>

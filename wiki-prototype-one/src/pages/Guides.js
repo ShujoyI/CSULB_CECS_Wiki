@@ -59,7 +59,7 @@ class Guides extends Component
             const {comment} = this.state
             return (
                 
-                <div>
+                <div className ="guides_page">
                      <div className="display"> 
                         <div className="student_a" >
                             <h3>Student Affairs </h3>

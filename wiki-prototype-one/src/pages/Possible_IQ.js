@@ -8,7 +8,7 @@ import {Link} from "react-router-dom";
 const Possible_IQ = () =>
 {
     return (
-    <div>
+    <div className="possible_iq">
         <h3>
             Welcome Interview Question.
         </h3>

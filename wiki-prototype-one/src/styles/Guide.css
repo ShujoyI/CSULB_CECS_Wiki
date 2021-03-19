@@ -1,9 +1,10 @@
 
 .display
 {
+    height: 50vh;
     background-image: url( ../images/guide1.jpg) ;
     background-repeat: no-repeat;
-    min-height: 100v;
+    min-height: 150v;
     display: flex;
     justify-content: space-around;
 }
@@ -183,6 +184,7 @@
 {
     height: 180%;
 }
+
 
 *{
     margin: 0;
