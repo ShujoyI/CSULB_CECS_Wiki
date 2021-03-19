@@ -7,7 +7,7 @@ function Footer() {
   <div className='footer-container'>
     <div className="footer-copyright text-center">
       <div >
-        &copy; {(new Date().getFullYear())} Copyright: <a href=""> BeachCS </a>
+        &copy; {(new Date().getFullYear())} Built by: <a href="https://www.beachcs.wiki/"> BeachCS </a>
       </div>
     </div>
     <div class='footer-links'>
