@@ -2,7 +2,6 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 import '../styles/CourseList.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-import '../styles/DegreeRoadmap.css';
 
 function Course(props) {
 

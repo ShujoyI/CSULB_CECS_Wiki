@@ -11,9 +11,8 @@ import ReactFlow, { removeElements,
 import dagre from 'dagre';
 import { Card } from 'react-bootstrap';
 import Course from './Course';
-import '../styles/Card.css';
 import CourseNodes from './CourseNodes.js';
-import '../styles/DegreeRoadmap.css';
+import '../styles/CourseGraph.css';
 
 
 const onLoad = (reactFlowInstance) => reactFlowInstance.fitView();
