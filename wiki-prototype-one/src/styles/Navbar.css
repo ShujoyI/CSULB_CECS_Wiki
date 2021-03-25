@@ -1,3 +1,4 @@
+
 .navbar-container {
   background-color: #ecaa00;
   height: 55px;
@@ -12,9 +13,19 @@
   left: 0;
 }
 
-.navbar-links {
+.navbar-link-one {
   position: absolute;
   top: 25%;
+  left: 3%;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+}
+
+.navbar-link-two {
+  position: absolute;
+  top: 25%;
+  left: 80%;
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
   color: #000;
@@ -48,6 +59,31 @@ Button.csulb-button {
   background: #000;
   color:  #ecaa00;
   transition: all 0.3s ease-out;
+}
+
+.csulb-button.btn.btn-primary:focus {
+  border: #000;
+  background-color: #000;
+  color: #ecaa00;
+}
+
+/*@media screen and (min-width: 839px) {
+
+  .navbar-items > input {
+    left: 13%;
+  }
+  
+  .navbar-csulb-link {
+    left: 75%;
+  }
+
+  .navbar-link-one {
+    left: 3%;
+  }
+
+  .navbar-link-two {
+    left: 60%;
+  }
 }
 
 /*@media screen and (max-width: 1140px) {
