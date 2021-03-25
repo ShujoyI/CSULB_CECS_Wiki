@@ -11,10 +11,12 @@ export function CourseList() {
     const [courseOneNum, setCourseOneNum] = useState("")
     const [courseOneDes, setCourseOneDes] = useState("")
     const [courseOnePre, setCourseOnePre] = useState("")
+    const [courseOneCred, setCourseOneCred] = useState("")
     const [courseTwoNum, setCourseTwoNum] = useState("")
     const [courseTwoDes, setCourseTwoDes] = useState("")
     const [courseTwoPre, setCourseTwoPre] = useState("")
- 
+    const [courseTwoCred, setCourseTwoCred] = useState("")
+
     /*const courses = ["ENGR 101", "ENGR 102", "CECS 100", "CECS 105", "CECS 174", "CECS 225", "CECS 228"]
     function addElement() {
         for (let i = 0; i < courses.length; i++) {
@@ -34,9 +36,11 @@ export function CourseList() {
             setCourseOneNum('');
             setCourseOneDes('');
             setCourseOnePre('');
+            setCourseOneCred('');
             setCourseTwoNum('');
             setCourseTwoDes('');
             setCourseTwoPre('');
+            setCourseTwoCred('');
         }
 
         // If a course has not been selected yet
@@ -54,6 +58,7 @@ export function CourseList() {
                     setCourseOneNum(response.data.courseNumber);
                     setCourseOneDes(response.data.courseDescription);
                     setCourseOnePre(response.data.coursePrerequisites);
+                    setCourseOneCred(response.data.courseCredits);
                 });
             }
             // If the first course was clicked then fill the second course card
@@ -62,6 +67,7 @@ export function CourseList() {
                     setCourseTwoNum(response.data.courseNumber);
                     setCourseTwoDes(response.data.courseDescription);
                     setCourseTwoPre(response.data.coursePrerequisites);
+                    setCourseTwoCred(response.data.courseCredits);
                 });
             }
         }
@@ -77,10 +83,10 @@ export function CourseList() {
             <h2>Below are all CS courses available at CSULB.</h2>
             <h3>* All courses listed under 'lower division' and 'upper division' are mandatory courses.</h3>
             <div className='cardOne'>
-                <Course className="selectedCourseOne" courseNumber={courseOneNum} courseDescription={courseOneDes} coursePrerequisites={courseOnePre}/>
+                <Course className="selectedCourseOne" courseNumber={courseOneNum} courseDescription={courseOneDes} coursePrerequisites={courseOnePre} courseCredits={courseOneCred}/>
             </div>
             <div className='cardTwo'>
-                <Course className="selectedCourseTwo" courseNumber={courseTwoNum} courseDescription={courseTwoDes} coursePrerequisites={courseTwoPre}/>
+                <Course className="selectedCourseTwo" courseNumber={courseTwoNum} courseDescription={courseTwoDes} coursePrerequisites={courseTwoPre} courseCredits={courseTwoCred}/>
             </div>
             <div className='lowerDivision'>
                 <h2>Lower Division</h2>
