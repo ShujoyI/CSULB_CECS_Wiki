@@ -12,7 +12,7 @@ import Account from './pages/Account';
 import AdminPage from './pages/AdminPage';
 import SearchPage from './pages/SearchPage';
 import About from './pages/About';
-import DegreeRoadmap from './components/DegreeRoadmap';
+import DegreeRoadmap from './pages/DegreeRoadmap';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import WorkfairCalendar from './components/WorkfairCalendar';
