@@ -1,0 +1,17 @@
+.feedback {
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .feedback-container {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }

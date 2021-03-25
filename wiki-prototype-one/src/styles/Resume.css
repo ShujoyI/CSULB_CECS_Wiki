@@ -1,8 +1,6 @@
 .resumeContainer {
-    margin-left: auto;
-    margin-right: auto;
     height: flex;
-    width: 100%;
+    width: auto;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -15,8 +13,11 @@
 }
 
 .nav {
-    width:40%;
+    height: flex;
+    width: auto;
     font-size: small;
+    justify-content: column;
+    position: sticky;
 }
 
 .Article {

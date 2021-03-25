@@ -1,0 +1,19 @@
+.sitemap {
+    background-color: white;
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+  
+.sitemap-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-indent: 5%;
+}
+
+.sitemap-calendar-link{
+    text-indent: 5%;
+}

@@ -12,7 +12,13 @@ import Account from './pages/Account';
 import AdminPage from './pages/AdminPage';
 import SearchPage from './pages/SearchPage';
 import About from './pages/About';
+<<<<<<< Updated upstream
 import DegreeRoadmap from './pages/DegreeRoadmap';
+=======
+import Feedback from './pages/Feedback';
+import Sitemap from './pages/Sitemap';
+import DegreeRoadmap from './components/DegreeRoadmap';
+>>>>>>> Stashed changes
 import Register from './pages/Register';
 import Login from './pages/Login';
 import WorkfairCalendar from './components/WorkfairCalendar';
@@ -23,6 +29,7 @@ import Possible_IQ from './pages/Possible_IQ';
 import Study from './pages/Study';
 import Ides from './pages/Ides';
 import Motivation from './pages/Motivation';
+
 
 function App() {
   return (
@@ -40,6 +47,8 @@ function App() {
           <Route path='/adminPage' component={AdminPage} />
           <Route path='/searchPage' component={SearchPage} />
           <Route path='/about' component={About}/>
+          <Route path='/feedback' component={Feedback}/>
+          <Route path='/sitemap' component={Sitemap}/>
           <Route path='/degreeRoadMap' component={DegreeRoadmap}/>
           <Route path='/register' component={Register}/>
           <Route path='/login' component={Login}/>

@@ -1,24 +1,58 @@
-
+.career {
+    height: 85vh;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+  
 .career-container {
     margin-left: auto;
     margin-right: auto;
-    height:fit-content;
-    height: 500px;
-    width: 100%;
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    overflow: hidden;
+}
+
+/* Style the list */
+ul.breadcrumb {
+    background-color: white;
+}
+  
+/* Display list items side by side */
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+  
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+    padding: 0px;
+    color: black;
+    content: "/\00a0";
+}
+  
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+}
+  
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
 }
 
 .career-title {
-    width: 100%;
-    max-width: 1000px;
+    width: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: left;
+    align-items: flex-end;
+    margin: 16px;
 }
 
 .career-title h1 {
@@ -27,61 +61,21 @@
     text-align: left;
 }
 
-.career-description {
-    display: flex;
-    align-items: flex-end;
-    margin: 16px;
-    text-align: left;
-    width: 500px;
-}
-
 .career-guides{
     display: flex;
     align-items: flex-end;
 }
 
+
 .career-links {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 20px;
-    text-align: left;
-    width: 400px;
+    width: auto;
     box-sizing: border-box;
 }
 
 .career-links li {
     font-size: 20px;
-}
-
-/* Style the list */
-ul.breadcrumb {
-    padding: 10px 16px;
-    list-style: none;
-    background-color: white;
-}
-
-/* Display list items side by side */
-ul.breadcrumb li {
-    display: inline;
-    font-size: 18px;
-}
-
-/* Add a slash symbol (/) before/behind each list item */
-ul.breadcrumb li+li:before {
-    padding: 8px;
-    color: black;
-    content: "/\00a0";
-}
-
-/* Add a color to all links inside the list */
-ul.breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
-}
-
-/* Add a color on mouse-over */
-ul.breadcrumb li a:hover {
-    color: #01447e;
-    text-decoration: underline;
+    text-indent: 25;
 }
