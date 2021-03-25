@@ -10,12 +10,7 @@ import { Link } from 'react-router-dom';
 export default function Account() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const history = useHistory();
-    
-    const routeChange = () => {
-        const path = '/login';
-        history.push(path);
-    }
+    let history = useHistory();
 
     function handleSubmit(event) {
         // This is where the account information will be retrieved. If the email or password are wrong then the login is unsuccessful.
@@ -34,8 +29,8 @@ export default function Account() {
             axios.post('/createLogin', account);
             axios.get("/verifyLogin").then(response => {
                 if (response.data.email === email) {
-                    alert('SUCCESS');
-                    routeChange();
+                    console.log('Welcome!');
+                    history.push('/login');
                 }
                 else {
                     alert('FAILURE');

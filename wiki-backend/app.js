@@ -59,6 +59,7 @@ app.post('/createAccount', function(req, res) {
     };
     addAccount(newAccount);
     connection.query(ADD_ACCOUNT);
+    res.send("DONE");
 });
 
 app.post('/createLogin', function(req, res) {
@@ -67,22 +68,26 @@ app.post('/createLogin', function(req, res) {
         password: req.body.newPassword,
     };
     createLogin(newLogin);
+    res.send("DONE");
 });
 
 app.get('/verifyLogin', (req, res) => {
     connection.query(VERIFY_ACCOUNT, 
         function(err, results) {
-            if (results[0].password === null) {
-                // res.send("EMAIL DOES NOT EXIST")
-                console.log("1");
+            try {
+                if (newLogin.password != results[0].password) {
+                    console.log("Incorrect Password");
+                    res.send("INCORRECT PASSWORD");
+                }
+                else if (newLogin.email === results[0].email && newLogin.password === results[0].password) {
+                    var email = results[0].email;
+                    console.log("Success");
+                    res.send({email});
+                }
             }
-            else if (newLogin.password != results[0].password) {
-                // res.send("INCORRECT PASSWORD")
-                console.log("2");
-            }
-            else if (newLogin.email === results[0].email && newLogin.password === results[0].password) {
-                var email = results[0].email;
-                res.send({email});
+            catch (TypeError) {
+                console.log("Incorrect Email");
+                res.send("INCORRECT EMAIL");
             }
         }
     );
@@ -94,7 +99,8 @@ app.get('/selectCourse', (req, res) => {
             var courseNumber = results[0].courseName;
             var courseDescription = results[0].description;
             var coursePrerequisites = results[0].prereqs;
-            res.send({ courseNumber, courseDescription, coursePrerequisites });
+            var courseCredits = results[0].credits;
+            res.send({ courseNumber, courseDescription, coursePrerequisites, courseCredits });
         }
     );
 });

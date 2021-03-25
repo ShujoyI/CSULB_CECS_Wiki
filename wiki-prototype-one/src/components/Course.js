@@ -23,6 +23,7 @@ function Course(props) {
                         <Card.Title className='cardTitle'>{props.courseNumber}</Card.Title>
                         <Card.Text className='cardDes'>{props.courseDescription}</Card.Text>
                         <Card.Text className='cardPre'>Prequisites: {props.coursePrerequisites}</Card.Text>
+                        <Card.Text className='cardCred'>Credits: {props.courseCredits}</Card.Text>
                     </Card.Body>
             </Card>
         );
