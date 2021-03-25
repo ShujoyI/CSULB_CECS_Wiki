@@ -72,7 +72,7 @@ export function CourseList() {
             <h1>Courses</h1>
             <div className='roadMap'>
                 <h2>For information on how to build your schedule, check out this interactive Road Map.</h2>
-                <Link className='roadMapLink' to='/degreeRoadMap'>BeachCS Road Map 2020</Link>
+                <Link className='roadMapLink' to='/DegreeRoadMap'>BeachCS Road Map 2020</Link>
             </div>
             <h2>Below are all CS courses available at CSULB.</h2>
             <h3>* All courses listed under 'lower division' and 'upper division' are mandatory courses.</h3>
