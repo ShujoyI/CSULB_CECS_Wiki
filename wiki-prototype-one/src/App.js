@@ -12,13 +12,10 @@ import Account from './pages/Account';
 import AdminPage from './pages/AdminPage';
 import SearchPage from './pages/SearchPage';
 import About from './pages/About';
-<<<<<<< Updated upstream
 import DegreeRoadmap from './pages/DegreeRoadmap';
-=======
 import Feedback from './pages/Feedback';
 import Sitemap from './pages/Sitemap';
 import DegreeRoadmap from './components/DegreeRoadmap';
->>>>>>> Stashed changes
 import Register from './pages/Register';
 import Login from './pages/Login';
 import WorkfairCalendar from './components/WorkfairCalendar';
