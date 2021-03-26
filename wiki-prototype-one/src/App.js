@@ -24,6 +24,7 @@ import Study from './pages/Study';
 import Ides from './pages/Ides';
 import Motivation from './pages/Motivation';
 
+
 function App() {
   return (
     <>

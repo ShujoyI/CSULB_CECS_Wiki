@@ -105,13 +105,13 @@ class Guides extends Component
                             
                         </div>
 
-                        <h1>Suggestions or Questions?</h1>
+                        {/* <h1>Suggestions or Questions?</h1>
                         <p>Leave Comment  {comment}</p>
                         <form onSubmit ={this.handleSubmit}>
                             <p> <input type = 'text'   name= 'name' placeholder = '350 Max Characters' onChange={this.handleInput} maxLength = '350' className = 'commentTxt'/> </p>
                             <p><button> Submit Comment</button></p>
-                        </form>
-    
+                        </form> */}
+                        
 
                        
                     </body>    
