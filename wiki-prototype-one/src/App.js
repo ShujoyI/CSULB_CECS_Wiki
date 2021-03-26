@@ -14,7 +14,7 @@ import SearchPage from './pages/SearchPage';
 import About from './pages/About';
 import Feedback from './pages/Feedback';
 import Sitemap from './pages/Sitemap';
-import DegreeRoadmap from './components/DegreeRoadmap';
+import DegreeRoadmap from './pages/DegreeRoadmap';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import WorkfairCalendar from './components/WorkfairCalendar';
