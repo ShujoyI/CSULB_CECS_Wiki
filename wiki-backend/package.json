@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon index.js --ignore client"
+    "server": "nodemon index.js --ignore client",
+    "start": "nodemon --exec babel-node app.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +14,13 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mysql": "^2.18.1",
-    "nodeman": "^1.1.2",
+    "nodeman": "^1.1.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/core": "^7.13.13",
+    "@babel/node": "^7.13.13",
+    "@babel/preset-env": "^7.13.12",
     "nodemon": "^2.0.7"
   }
 }
