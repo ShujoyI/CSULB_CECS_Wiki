@@ -1,5 +1,5 @@
 .feedback {
-    height: 100vh;
+    height: 135vh;
     width: auto;
     overflow: hidden;
     display: flex;
@@ -7,8 +7,7 @@
   }
   
   .feedback-container {
-    margin-left: auto;
-    margin-right: auto;
+    width: auto;
     background-color: white;
     display: flex;
     flex-direction: column;
