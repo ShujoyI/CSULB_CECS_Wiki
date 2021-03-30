@@ -17,7 +17,7 @@ export function CourseList() {
     const [courseTwoPre, setCourseTwoPre] = useState("")
     const [courseTwoCred, setCourseTwoCred] = useState("")
 
-    /*const courses = ["ENGR 101", "ENGR 102", "CECS 100", "CECS 105", "CECS 174", "CECS 225", "CECS 228"]
+    const courses = ["ENGR 101", "ENGR 102", "CECS 100", "CECS 105", "CECS 174", "CECS 225", "CECS 228"]
     function addElement() {
         for (let i = 0; i < courses.length; i++) {
             const newButton = document.createElement("Button");
@@ -27,7 +27,7 @@ export function CourseList() {
             const currentDiv = document.getElementById("lowerButtonsOne");
             currentDiv.appendChild(newButton);
         }
-    }*/
+    }
 
     function setDetails(variableToQuery) {
 
