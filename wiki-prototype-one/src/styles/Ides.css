@@ -4,6 +4,71 @@
     box-sizing: border-box;
   }
   
+
+
+ .vs_pic
+{ 
+    height: 5vh;
+    background-image: url( ../images/visualstudio.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+   
+    
+
+}
+
+.vs_code
+{
+    height: 15vh;
+    background-image: url( ../images/vscode.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.python
+{
+    height: 15vh;
+    background-image: url( ../images/python.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.replit
+{
+    height: 15vh;
+    background-image: url( ../images/replit.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.virtualb
+{
+    height: 15vh;
+    background-image: url( ../images/virtualbox.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.online
+{
+    height: 15vh;
+    background-image: url( ../images/onlinegdb.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
+}
+
 .heading
 {
     text-align: center;

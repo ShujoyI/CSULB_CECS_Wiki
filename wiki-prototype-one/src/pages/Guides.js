@@ -60,36 +60,38 @@ class Guides extends Component
             return (
                 
                 <div className ="guides_page">
-                     <div className="display"> 
-                        <div className="student_a" >
-                            <h3>Student Affairs </h3>
-                            <p>Enhance your professional and personal growth at CSULB. Would you like to know more? </p>
-                            <form action="https://web.csulb.edu/divisions/students/">
-                                <button className="btng btn1">Show me</button>
-                            </form>
-                        </div>
+                    <div className = "cards">
+                        <div className="display"> 
+                            <div className="g_card" >
+                                <h3>Student Affairs </h3>
+                                <p>Enhance your professional and personal growth at CSULB. Would you like to know more? </p>
+                                <form action="https://web.csulb.edu/divisions/students/">
+                                    <button className="btng btn1">Show me</button>
+                                </form>
+                            </div>
 
-                        <div className="clubs" >
-                            <h3>Clubs</h3>
-                            <p>Find clubs around the university and stay connected with fellow Sharks!
+                            
+                            <div className="g_card" >
+                                <h3>Clubs</h3>
+                                <p>Find clubs around the university and stay connected with fellow Sharks!
 
-                            </p>
-                            <form action="https://www.csulb.edu/sustainability/get-involved/clubs-organizations">
-                                <button className="btng btn2">Find Clubs!</button>
-                            </form>
-                        </div>
+                                </p>
+                                <form action="https://www.csulb.edu/sustainability/get-involved/clubs-organizations">
+                                    <button className="btng btn2">Find Clubs!</button>
+                                </form>
+                            </div>
 
-                        <div className="tutoring" >
-                            <h3>Tutoring Center</h3>
-                            <p>Need help? Click below to find tutoring support</p>
-                            <form action="https://www.csulb.edu/college-of-engineering/engineering-tutoring">
-                                <button className="btng btn3">CSULB TUTORING CENTER</button>
-                            </form>
+                            <div className="g_card" >
+                                <h3>Tutoring Center</h3>
+                                <p>Need help? Click below to find tutoring support</p>
+                                <form action="https://www.csulb.edu/college-of-engineering/engineering-tutoring">
+                                    <button className="btng btn3">CSULB TUTORING CENTER</button>
+                                </form>
+                            </div>
+                
                         </div>
-            
-                    </div>
-    
-                    <body>
+                     </div>
+                     <body>
                         <div className = "g_list">
                             <button onClick={useEffect}  className = "button_list" > Some helpful Links! </button>
                             
@@ -114,7 +116,7 @@ class Guides extends Component
                         
 
                        
-                    </body>    
+                     </body>    
 
                
                     

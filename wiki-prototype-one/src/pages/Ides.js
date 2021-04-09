@@ -17,10 +17,8 @@ const Ides = () =>
                     </h3>
                     <div className="row">
                         <div className="card">
-                            <div className="card_header">
-                                <h1>Card 1</h1>
-
-                            </div>
+                           
+                            <div className="vs_pic"></div>
 
                             <div className="card_body">
                                 <p>Hello Students </p>
@@ -29,10 +27,7 @@ const Ides = () =>
                         </div>
 
                         <div className="card">
-                            <div className="card_header">
-                                <h1>Card 2</h1>
-
-                            </div>
+                            <div className="vs_code"></div>
 
                             <div className="card_body">
                                 <p>Hello Students </p>
@@ -41,10 +36,7 @@ const Ides = () =>
                         </div>
 
                         <div className="card">
-                            <div className="card_header">
-                                <h1>Card 3</h1>
-
-                            </div>
+                            <div className="python"></div>
 
                             <div className="card_body">
                                 <p>Hello Students </p>
@@ -53,10 +45,7 @@ const Ides = () =>
                         </div>
 
                         <div className="card">
-                            <div className="card_header">
-                                <h1>Card 4</h1>
-
-                            </div>
+                            <div className="replit"></div>
 
                             <div className="card_body">
                                 <p>Hello Students </p>
@@ -65,10 +54,16 @@ const Ides = () =>
                         </div>
 
                         <div className="card">
-                            <div className="card_header">
-                                <h1>Card 5</h1>
+                            <div className="virtualb"></div>
+
+                            <div className="card_body">
+                                <p>Hello Students </p>
 
                             </div>
+                        </div>
+
+                        <div className="card">
+                            <div className="online"></div>
 
                             <div className="card_body">
                                 <p>Hello Students </p>

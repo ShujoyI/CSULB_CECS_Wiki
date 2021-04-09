@@ -6,10 +6,10 @@ const port = 5000
 const app = express();
 
 const connection = mysql.createConnection({
-    host: '127.0.0.1',
-    user: 'root',
-    password: 'greenboy668',
-    database: 'react_sql'
+    host: 'beachcs.csvzol9wwuhi.us-west-1.rds.amazonaws.com',
+    user: 'admin',
+    password: 'FeiHoffman123',
+    database: 'BeachCS'
 });
 
 connection.connect(err => {

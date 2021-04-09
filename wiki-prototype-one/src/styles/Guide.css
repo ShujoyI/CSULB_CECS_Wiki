@@ -1,4 +1,34 @@
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+@media screen and (max-width:1000px)
+{
+    .g_card
+    {
+        width: 40%;
+
+    }
+    
+}
+
+@media screen and (max-width:620px)
+{
+    .guides_page
+    {
+        width: 100%;
+    }
+    .g_card
+    {
+        width: 80%;
+        
+    }
+   
+}
+
 .display
 {
     height: 50vh;
@@ -6,7 +36,9 @@
     background-repeat: no-repeat;
     min-height: 150v;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    flex-flow: wrap; 
 }
 
 
@@ -79,7 +111,9 @@
 }
 
 
-.tutoring{
+/* .tutoring */
+.g_card
+{
     overflow:auto ;
     font-style: oblique;
     font-size: 24px ;
@@ -98,7 +132,7 @@
     align-items: center;
     opacity: .75;
 }
-.student_a{
+/* .student_a{
     overflow:auto;
     font-style: oblique;
     font-size: 24px ;
@@ -136,7 +170,7 @@
     justify-content: space-around;
     align-items: center;
     opacity: .75;
-}
+} */
 
 .btng {
     border: 1px solid rgb(18, 63, 10);
