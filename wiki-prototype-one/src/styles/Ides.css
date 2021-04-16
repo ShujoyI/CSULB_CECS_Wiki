@@ -5,6 +5,10 @@
   }
   
 
+  .h2
+  {
+      text-align: center;
+  }
 
  .vs_pic
 { 
@@ -17,6 +21,16 @@
    
     
 
+}
+
+.eclipse
+{
+    height: 15vh;
+    background-image: url( ../images/eclipse.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 .vs_code
