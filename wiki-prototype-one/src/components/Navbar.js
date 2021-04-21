@@ -13,10 +13,7 @@ function Navbar() {
                 <Link to='/' className='navbar-link-one' style={{ textDecoration: 'none' }}>
                     Home
                 </Link>
-                <input type="text" className="navbar-search-box" placeholder="Search..." />
-                <Link to='/account' className='navbar-link-two' style={{ textDecoration: 'none' }}>
-                    Account
-                </Link>    
+                <input type="text" className="navbar-search-box" placeholder="Search..." /> 
                 <a href='https://www.csulb.edu/' className='navbar-csulb-link'>
                     <Button className='csulb-button' style={{borderColor:'#000'}}>
                         CSULB HOME

@@ -16,6 +16,8 @@ export function CourseList() {
     const [courseTwoDes, setCourseTwoDes] = useState("")
     const [courseTwoPre, setCourseTwoPre] = useState("")
     const [courseTwoCred, setCourseTwoCred] = useState("")
+    const [displayCardOne, setDisplayCardOne] = useState("")
+    const [displayCardTwo, setDisplayCardTwo] = useState("")
 
     /*const courses = ["ENGR 101", "ENGR 102", "CECS 100", "CECS 105", "CECS 174", "CECS 225", "CECS 228"]
     function addElement() {
@@ -83,10 +85,10 @@ export function CourseList() {
             <h2>Below are all CS courses available at CSULB.</h2>
             <h3>* All courses listed under 'lower division' and 'upper division' are mandatory courses.</h3>
             <div className='cardOne'>
-                <Course className="selectedCourseOne" courseNumber={courseOneNum} courseDescription={courseOneDes} coursePrerequisites={courseOnePre} courseCredits={courseOneCred}/>
+                <Course className="selectedCourseOne" courseNumber={courseOneNum} courseDescription={courseOneDes} coursePrerequisites={courseOnePre} courseCredits={courseOneCred} />
             </div>
             <div className='cardTwo'>
-                <Course className="selectedCourseTwo" courseNumber={courseTwoNum} courseDescription={courseTwoDes} coursePrerequisites={courseTwoPre} courseCredits={courseTwoCred}/>
+                <Course className="selectedCourseTwo" courseNumber={courseTwoNum} courseDescription={courseTwoDes} coursePrerequisites={courseTwoPre} courseCredits={courseTwoCred} />
             </div>
             <div className='lowerDivision'>
                 <h2>Lower Division</h2>

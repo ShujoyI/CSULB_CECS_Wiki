@@ -6,15 +6,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function Course(props) {
 
     if (props.courseDescription === "" && props.successors == null) {
-        return (
-            <Card className='myCard'>
-                <Card.Header className='cardHead'>Course Not Selected Yet</Card.Header>
-                    <Card.Body className='cardBody'>
-                        <Card.Text className='cardText'>Select a class from the list to learn more about it.</Card.Text>
-                    </Card.Body>
-            </Card>
-        );
+        return null;
     }
+    
     else if (props.successors == null) {
         return (
             <Card className='myCard'>
