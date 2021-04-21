@@ -20,7 +20,7 @@ connection.connect(err => {
 
 app.use(
     cors({
-        origin: "http://localhost:3000/",
+        origin: "http://54.219.79.20/",
     })
 );
 
