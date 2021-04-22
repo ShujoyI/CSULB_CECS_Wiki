@@ -1,10 +1,4 @@
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
 @media screen and (max-width:1000px)
 {
     .g_card
@@ -94,13 +88,7 @@
 
 }
 
-.commentTxt
-{
-    display: flex;
-    font-size:12pt;
-     height:150px;
-     width:200px;
-}
+
 
 .g_list
 {
@@ -221,6 +209,7 @@
 
 
 *{
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
