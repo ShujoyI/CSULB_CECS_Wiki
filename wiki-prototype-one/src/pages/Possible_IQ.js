@@ -1,4 +1,3 @@
-import React, {Component} from 'react';
 import '../styles/Possible_IQ.css';
 import {Link} from "react-router-dom";
 

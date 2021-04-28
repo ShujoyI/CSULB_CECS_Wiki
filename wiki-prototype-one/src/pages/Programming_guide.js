@@ -1,4 +1,3 @@
-import React, {Component} from 'react';
 import '../styles/Programming_g.css';
 import {Link} from "react-router-dom";
 
