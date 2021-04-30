@@ -1,0 +1,8 @@
+.resume {
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+  

@@ -1,6 +1,16 @@
-.resumeContainer {
+.resume {
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+  
+.resume-container {
     height: flex;
     width: auto;
+    margin-left: auto;
+    margin-right: auto;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -8,76 +18,73 @@
     align-items: center;
 }
 
-.navbar-container {
-    justify-content: left;
-}
-
-.nav {
-    height: flex;
+.career-headers{
     width: auto;
-    font-size: small;
-    justify-content: column;
-    position: sticky;
-}
-
-.Article {
-    width: 50%;
-    
-}
-
-.resumeHeaders h1 {
-    margin-top: 15px;
-    color: #000;
-    text-align: left;
-    font-size: 45px;
-    padding-bottom: 10px;
-}
-
-.resumeHeaders h2 {
-    padding-top: 15px;
-    font-size: 35px;
-    font-weight:normal;
-}
-
-.resumeHeaders h3 {
-    padding-top: 15px;
-    font-size: 20px;
-}
-
-.resumeHeaders li {
-    padding-top: 15px;
-    font-size: 20px;
-    line-height: .5;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Style the list */
 ul.breadcrumb {
-    padding: 10px 16px;
-    list-style: none;
     background-color: white;
 }
-
+  
 /* Display list items side by side */
 ul.breadcrumb li {
     display: inline;
     font-size: 18px;
 }
-
+  
 /* Add a slash symbol (/) before/behind each list item */
 ul.breadcrumb li+li:before {
-    padding: 8px;
+    padding: 0px;
     color: black;
     content: "/\00a0";
 }
-
+  
 /* Add a color to all links inside the list */
 ul.breadcrumb li a {
     color: #0275d8;
     text-decoration: none;
 }
-
+  
 /* Add a color on mouse-over */
 ul.breadcrumb li a:hover {
     color: #01447e;
     text-decoration: underline;
+}
+
+.career-title {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 16px;
+}
+
+.career-title h1 {
+    display: flex;
+    align-items: flex-end;
+    text-align: left;
+}
+
+.career-guides{
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.career-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: auto;
+    box-sizing: border-box;
+}
+
+.career-links li {
+    font-size: 20px;
+    text-indent: 25;
 }
