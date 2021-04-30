@@ -1,66 +1,46 @@
-.footer-container {
-  height: 15vh;
-  width: auto;
-  background-color: #ecaa00;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: static;
+body{
+  margin: 0;
+  padding: 0;
 }
 
-.footer-links {
-  width: 100%;
-  max-width: 1000px;
-  display: flex;
-  justify-content: center;
-}
-
-.footer-link-wrapper {
-  display: flex;
-  margin: auto 0;
-}
-
-.footer-link-items {
-  display: center;
-  flex-direction: column;
-  align-items: flex-start;
+.inner-footer{
+  background-color: #171c24;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  width: 75px;
-  box-sizing: border-box;
 }
 
-.footer-link-items a {
-  color: black;
+.quick-links{
+  display: flex;
+  width: 560px;
+  height: 70px;
+  margin: auto;
+}
+
+.quick-links ul{
+  display: flex;
+}
+
+.quick-items{
+  list-style: none;
+}
+
+.quick-items a{
   text-decoration: none;
-  margin-bottom: 0.5rem;
+  padding: 20px 30px;
+  font-size: 20px;
+  color: #fff;
+  transition: all .25s;
 }
 
-.footer-link-items a:hover {
-  color: #e9e9e9;
-  transition: 0.3s ease-out;
+.quick-items a:hover{
+  color: #ff3d00;
 }
 
-.footer-email-form h2 {
-  margin-bottom: 2rem;
-}
-
-.footer-input::placeholder {
-  color: #b1b1b1;
-}
-
-.footer.rights.wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  max-width: 1000px;
-  margin: 40px auto 0 auto;
-}
-
-.website-rights {
-  color: black;
-  display: flex;
-  margin-bottom: 16px;
-  align-items: center;
+.outer-footer{
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  background-color: #171c24;
 }

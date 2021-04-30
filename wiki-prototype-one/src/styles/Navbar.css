@@ -1,59 +1,201 @@
-
-.navbar-container {
-  background-color: #ecaa00;
-  height: 55px;
-  width: auto;
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.navbar-items {
+nav{
+  background: #171c24;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 100px;
+}
+
+nav .logo{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+nav.logo navbar-link-one{
+  color: #fff;
+}
+
+nav .nav-items{
+  display: flex;
+  flex: 1;
+  list-style: none;
+  padding: 0 0 0 40px;
+}
+
+nav nav-items-lb{
+  display: flex;
+  flex: 1;
+  list-style: none;
+  padding: 0 0 0 40px;
+}
+
+nav .nav-items li{
+  padding: 0 15px;
+}
+
+nav .nav-items-lb li{
+  padding: 0 15px;
+}
+
+nav .nav-items li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+nav .nav-items-lb li a{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+nav .nav-items li a:hover{
+  color: #ff3d00;
+}
+
+nav .nav-items-lb li a:hover{
+  color: #ff3d00;
+}
+
+
+nav form{
+  display: flex;
+  height: 40px;
+  background: #1e232b;
+  min-width: 18%! important;
+  border: 1px solid rgba(155,155,155,0.2);
+}
+
+nav form .search-data{
   height: 100%;
   width: 100%;
-  position: relative;
-  top: 0;
-  left: 0;
+  padding: 0 10px;
+  color: #fff;
+  font-weight: 500;
+  background: none;
+  border: none;
+  font-size: 17px;
 }
 
-.navbar-link-one {
-  position: absolute;
-  top: 25%;
-  left: 3%;
-  font-size: 20px;
-  font-family: 'Poppins', sans-serif;
-  color: #000;
+nav form button{
+  padding: 0 15px;
+  background: #ff3d00;
+  border: none;
+  cursor: pointer;
 }
 
-.navbar-links:hover {
-  color: #000;
-  transition: all 0.3s ease-out;
+nav .menu-icon, 
+nav .search-icon,
+nav .cancel-icon{
+  width: 40px;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
 }
 
-.navbar-items > input {
-  position: absolute;
-  width: 25%;
-  top: 25%;
-  left: 9%;
+nav .menu-icon span, 
+nav .search-icon span,
+nav .cancel-icon span{
+  display: none;
 }
 
-.navbar-csulb-link {
-  position: absolute;
-  top: 15%;
-  left: 88%;
+@media (max-width: 1245px) {
+  nav{
+    padding: 0 50px;
+  }
 }
 
-Button.csulb-button {
-  background-color: transparent;
-  color: #000;
-}
+@media (max-width: 1140px) {
+  nav{
+    padding: 0px;
+  }
+  nav .logo{
+    flex: 2;
+    text-align: center;
+  }
+  nav .nav-items{
+    position: fixed;
+    z-index: 99;
+    top: 70px;
+    width: 100%;
+    left: -100%;
+    height: 100%;
+    background: #14141f;
+    display: inline-block;
+    padding: 10px 50px 0 50px;
+    text-align: center;
+    transition: left 0.3s ease;
+  }
+  
+  nav .nav-items-lb{
+    display: none;
+  }
+  
+  /* nav .nav-items.active{
+    left: 0%;
+  } */
 
-.csulb-button:hover {
-  border: #000;
-  background: #000;
-  color:  #ecaa00;
-  transition: all 0.3s ease-out;
-}
-
-.csulb-button.btn.btn-primary:focus {
-  border: #000;
-  background-color: #000;
-  color: #ecaa00;
+  nav .nav-items li{
+    line-height: 40px;
+    margin: 30px 0;
+  }
+  nav .nav items li a{
+    font-size: 20px;
+  }
+  nav form{
+    position: absolute;
+    top: 95px;
+    right: 50px;
+    display: none;
+  }
+  /* nav form:before{
+    position: absolute;
+    content: "";
+    top: -13px;
+    right: 0;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    margin: -20px 0 0;
+    border: 10px solid transparent;
+    border-bottom-color: #1e232b;
+  }
+  nav form:after{
+    position: absolute;
+    content: "";
+    height: 60px;
+    width: calc(100% + 20px);
+    padding: 2px;
+    background: #1e232b;
+    border-radius: 2px;
+    z-index: -2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  nav .menu-icon{
+    display: block;
+  }
+  nav .search-icon,
+  nav .menu-icon span{
+    display: block;
+  } */
 }

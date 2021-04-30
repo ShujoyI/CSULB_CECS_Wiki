@@ -4,29 +4,33 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
-  <div className='footer-container'>
-    <div className="footer-copyright text-center">
-      <div >
+    <footer classname="footer">
+      {/* <div class="inner-footer">
+        <div class="quick-links">
+          <ul>
+            <li class="quick-items"><a href="/about">About</a></li>
+            <li class="quick-items"><a href="/contact">Contact</a></li>
+            <li class="quick-items"><a href="/sitemap">Sitemap</a></li>
+            <li class="quick-items"><a href="/feedback">Feedback</a></li>
+            
+          </ul>
+        </div>
+      </div> */}
+      <div class="outer-footer">
+        <div class="quick-links">
+            <ul>
+              <li class="quick-items"><a href="/about">About</a></li>
+              <li class="quick-items"><a href="mailto:beachCSWiki@gmail.com">Contact</a></li>
+              <li class="quick-items"><a href="/sitemap">Sitemap</a></li>
+              <li class="quick-items"><a href="/feedback">Feedback</a></li>
+              
+            </ul>
+        </div>
         &copy; {(new Date().getFullYear())} Copyright: <a href="https://www.beachcs.wiki/"> BeachCS </a>
+        
+      
       </div>
-    </div>
-    <div class='footer-links'>
-      <div className='footer-link-wrapper'>
-        <div class='footer-link-items'>
-          <Link to='/About'>About</Link>
-        </div>
-        <div class='footer-link-items'>
-          <a href="mailto:beachCSWiki@gmail.com" className="mr-2">Contact</a>
-        </div>
-        <div class='footer-link-items'>
-          <Link to='/Sitemap'>Sitemap</Link>
-        </div>
-        <div class='footer-link-items'>
-          <Link to='/Feedback'>Feedback</Link>
-        </div>
-      </div> 
-    </div>
-  </div>
+    </footer>
   );
 }
 
