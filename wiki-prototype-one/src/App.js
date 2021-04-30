@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import CourseExplorer from './pages/CourseExplorer';
 import Career from './pages/Career';
 import CareerSuccess from './pages/CareerSuccess';
+import CareerConquering from './pages/CareerConquering';
 import Academics from './pages/Academics';
 import Guides from './pages/Guides';
 import Account from './pages/Account';
@@ -50,6 +51,7 @@ function App() {
           <Route path='/register' component={Register}/>
           <Route path='/login' component={Login}/>
           <Route path='/career-success' component={CareerSuccess}/>
+          <Route path='/career-conquering' component={CareerConquering}/>
           <Route path='/workfair-calendar' component={WorkfairCalendar}/>
           <Route path='/resume' component={Resume}/>
           <Route path='/pg_guide' component={Programming_guide}/>

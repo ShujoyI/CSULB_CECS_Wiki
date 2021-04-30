@@ -24,7 +24,7 @@ export default function Career() {
                                 <div className='career-links'>
                                     <li><Link className='Resume' to='resume'>Crafting your Resume</Link></li>
                                     <li><Link className ="career-success" to='career-success'>Job Success</Link></li>
-                                    <li><Link className='conquering-career-fair' to='careerfair'>Conquering the Career Fair</Link></li>
+                                    <li><Link className='career-conquering' to='career-conquering'>Conquering the Career Fair</Link></li>
                                     <li><Link className='workfairCalendar' to='workfair-calendar'>Workshop & Workfair calendar</Link></li>
                                 </div>
                             </div>
