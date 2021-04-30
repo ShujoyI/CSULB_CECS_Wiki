@@ -11,7 +11,7 @@ function Home () {
                 <video src="videos/video-3.mp4" autoPlay loop muted />
                 <div className='text-container'>Computer Science @ The Beach</div>
             </div>
-
+        
             <div className='list_images'>
 
                 <Link to='/academics' style={{ textDecoration: 'none' }}>

@@ -61,6 +61,7 @@ class Guides extends Component
                 
                 <div className ="guides_page">
                     <div className = "cards">
+                        
                         <div className="display"> 
                             <div className="g_card" >
                                 <h3>Student Affairs </h3>
@@ -90,8 +91,7 @@ class Guides extends Component
                             </div>
                 
                         </div>
-                     </div>
-                     <body>
+                    
                         <div className = "g_list">
                             <button onClick={useEffect}  className = "button_list" > Some helpful Links! </button>
                             
@@ -107,9 +107,9 @@ class Guides extends Component
                             
                         </div>
                        
-                     </body>    
+                       
 
-               
+                    </div>  
                     
                 </div>
                

@@ -1,15 +1,15 @@
 .home {
     height: 237vh;
     width: auto;
-    overflow: hidden;
+    
 }
 
 .video-container {
     background-color: rgba(0, 0, 0, 0.658);
     position: static;
-    height: 50%;
+    height: 30%;
     width: 100%;
-    z-index: 0;
+   
 }
 
 .video-container > video {
@@ -22,7 +22,7 @@
 
 .text-container {
     position: absolute;
-    top: 60%;
+    top: 40%;
     width: 100%;
     text-align: center;
     font-size: 54px;
@@ -38,6 +38,7 @@
     background-color: blue;
     z-index: 0;
     display: flex;
+    
 }
 
 .dimmer {
@@ -46,6 +47,7 @@
     background-color: rgba(0, 0, 0, 0.466);
     position: static;
     z-index: 0;
+    
 }
 
 /* code for the picture itself */
@@ -54,6 +56,7 @@
     width: 100%;
     height: 100%;
     transition: all 0.2s linear;
+    
 }
 
 .list_figure > img {
@@ -66,12 +69,13 @@
 }
 
 .link_text_container {
-    position: absolute;
+    position: relative;
     top: 35%;
     width: 100%;
     transform: translateY(-50%);
     transition: all 0.2s linear;
     z-index: 1;
+    
 }
 
 .link_text_container > h1 {
@@ -84,6 +88,7 @@
     border-top: royalblue;
     border-left: royalblue;
     border-right: royalblue;
+
 }
 
 .list_text_container:hover {
@@ -94,9 +99,73 @@
 .list_images {
     height: 50%;
     width: 100%;
-    position: static;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 0;
     row-gap: 0;
+
 }
+
+
+
+
+@media screen and (max-width:700px)
+{
+    .link_text_container  > h1
+    {
+        text-align: left;
+        font-size: 30px;
+    }
+
+    .list_images
+    {
+        height: 50%;
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+       
+    }
+    
+    .video-container 
+    {
+        background-color: rgba(0, 0, 0, 0.658);
+        height: 50%;
+        width: 80%;
+       
+    }
+
+    .text-container 
+    {
+      
+    
+        text-align:left;
+        font-size: 34px;
+        font-family: 'Poppins', sans-serif;
+        color: white;
+        word-break: break-word;
+        padding-left: 10px;
+        padding-right: 150px;
+        top: 150px;
+     
+    }
+    
+    .video-container {
+        background-color: rgba(0, 0, 0, 0.658);
+        position: static;
+        height: 10%;
+        width: 80%;
+    
+       
+    }
+
+    .home {
+        height: 180vh;
+        width: auto;
+        
+    }
+    
+
+    
+
+}
+
