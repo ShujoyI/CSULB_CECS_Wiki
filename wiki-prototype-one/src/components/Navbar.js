@@ -1,62 +1,36 @@
 import React, { useState } from 'react';
-import { Button } from 'react-bootstrap';
 import '../App.css';
+import { Button } from 'react-bootstrap';
+import "bootstrap/dist/css/bootstrap.min.css";
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
-  const [click, setClick] = useState(false);
-  
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
-
-  
   return (
-    <>
-      <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          BeachCS
-          <i class="fas fa-umbrella-beach"></i>
-        </Link>
-        <div className='menu-icon' onClick={handleClick}>
-          <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-        </div>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-            <li to='/academics' className='nav-links' onClick={closeMobileMenu}>
-              Academics
-            </li>
-          </li>
-          <li className='nav-item'>
-            <Link to='/career' className='nav-links' onClick={closeMobileMenu}> 
-              Career 
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/courseExplorer'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Course Explorer
-            </Link>
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/guides'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Guides
-            </Link>
-          </li>
-          
-        </ul>
-        
-      </nav>
-    </>
-  );
+    <nav>
+          <div class="menu-icon"><span class="fas fa-bars"></span></div>
+          <div class="logo">BeachCS</div>
+          <div class="nav-items">
+            <li><a href="/academics">Academics</a></li>
+            <li><a href="/career">Career</a></li>
+            <li><a href="/courseExplorer">Course Explorer</a></li>
+            <li><a href="/guides">Guides</a></li>
+          </div>
+          <div class="search-icon"><span class="fas fa-search"></span></div>
+          <div class="cancel-icon"><span class="fas fa-times"></span></div>
+
+          <form action="#">
+            <input type="search" class="search-data" placeholder="Search" required/>
+            <button type="submit" class="fas fa-search"></button>
+          </form>
+          <div class="nav-items-lb">
+            <li><a href='https://www.csulb.edu/'s>CSULB Home</a></li>
+          </div>
+    </nav>
+    )
+
+    
 }
 
 export default Navbar
