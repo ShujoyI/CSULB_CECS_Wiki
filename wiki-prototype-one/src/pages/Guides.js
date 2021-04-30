@@ -109,7 +109,9 @@ class Guides extends Component
                        
                        
 
-                    </div>  
+                    </div>
+
+                    <div className="extra"></div>  
                     
                 </div>
                

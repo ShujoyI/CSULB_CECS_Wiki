@@ -4,6 +4,7 @@
     .g_card
     {
         width: 40%;
+        
 
     }
 }
@@ -31,6 +32,12 @@
    
 }
 
+.extra
+{
+    height: 36vh;
+    background-color: antiquewhite ;
+}
+
 .display
 {
     background-image: url( ../images/guide1.jpg) ;
@@ -40,6 +47,8 @@
     flex-direction: row;
     justify-content: space-around;
     flex-flow: wrap; 
+    background-color: antiquewhite 
+
 }
 
 
@@ -68,6 +77,8 @@
     color:#ffffff;
     text-align: center;
     transition: background 0.2s;
+    
+    
 }
 
 .button_list::after
@@ -125,6 +136,7 @@
     justify-content: space-around;
     align-items: center;
     opacity: .75;
+    
 }
 
 .btng {
