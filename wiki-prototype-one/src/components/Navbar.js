@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../App.css';
-import { Button } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
@@ -10,7 +9,10 @@ function Navbar() {
   return (
     <nav>
           <div class="menu-icon"><span class="fas fa-bars"></span></div>
-          <Link class="logo" to='/'>BeachCS</Link>
+         
+          <div class="logo" >
+            <Link className='text-link' to='/'>BeachCS <i class="fas fa-umbrella-beach"></i></Link>
+          </div>
           <div class="nav-items">
             <li><a href="/academics">Academics</a></li>
             <li><a href="/career">Career</a></li>
@@ -29,8 +31,6 @@ function Navbar() {
           </div>
     </nav>
     )
-
-    
 }
 
 export default Navbar
