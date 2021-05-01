@@ -16,7 +16,7 @@ const Ides = () =>
                     </h3>
                     
                     <div className="row">
-                        <div className="card">
+                        <div className="ide-card">
                            
                             <div className="vs_pic"></div>
 
@@ -28,7 +28,7 @@ const Ides = () =>
                             </div>
                         </div>
 
-                        <div className="card">
+                        <div className="ide-card">
                             <div className="vs_code"></div>
 
                             <div className="card_body">
@@ -39,7 +39,7 @@ const Ides = () =>
                             </div>
                         </div>
 
-                        <div className="card">
+                        <div className="ide-card">
                             <div className="python"></div>
 
                             <div className="card_body">
@@ -50,7 +50,7 @@ const Ides = () =>
                             </div>
                         </div>
 
-                        <div className="card">
+                        <div className="ide-card">
                             <div className="eclipse"></div>
 
                             <div className="card_body">
@@ -61,7 +61,7 @@ const Ides = () =>
                             </div>
                         </div>
 
-                        <div className="card">
+                        <div className="ide-card">
                             <div className="replit"></div>
 
                             <div className="card_body">
@@ -70,7 +70,7 @@ const Ides = () =>
                             </div>
                         </div>
 
-                        <div className="card">
+                        <div className="ide-card">
                             <div className="virtualb"></div>
 
                             <div className="card_body">
@@ -82,7 +82,7 @@ const Ides = () =>
                             </div>
                         </div>
 
-                        <div className="card">
+                        <div className="ide-card">
                             <div className="online"></div>
 
                             <div className="card_body">

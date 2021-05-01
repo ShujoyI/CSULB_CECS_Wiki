@@ -1,9 +1,15 @@
-.courseHeaders {
-    background-color: white;
+.courseExplorer {
     height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: static;
+    background-color: white;
+}
+
+.courseHeaders {
+    width: 50%;
+    background-color: white;
+    position: relative;
 }
 
 .courseHeaders h1 {
@@ -11,105 +17,147 @@
     color: #000;
     font-size: 28px;
     position: relative;
-    top: 10px;
     left: 10px;
 }
 
 .roadMap {
     position: static;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .roadMap h2 {
     position: relative;
-
+    left: 12px;
+    font-size: 20px;
+    width: 75%;
 }
 
 .roadMapLink {
-    padding-left: 15px;
-    padding-bottom: 10px;
+    position: relative;
+    left: 30px;
+    width: 75%;
 }
 
-.courseHeaders h2 {
-    padding-top: 15px;
+.headerText {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.headerText h2 {
+    position: relative;
+    left: 12px;
     font-size: 20px;
+    width: 75%;
 }
 
-.courseHeaders h3 {
+.headerText h3 {
+    position: relative;
+    left: 30px;
     font-size: 15px;
-    padding-left: 30px;
+    width: 75%;
 }
 
 .lowerDivision {
+    position: static;
     display: flex;
     flex-direction: column;
-    padding-left: 60px;
-    margin-top: -290px;
+    flex-wrap: wrap;
+    height: auto;
 }
 
 .lowerDivision h2 {
-    padding-bottom: 15px;
+    position: relative;
+    left: 12px;
+    font-size: 20px;
 }
 
 .lowerDivisionButtonsRowOne {
     display: flex;
+    position: relative;
+    left: 30px;
     flex-direction: row;
-    padding-bottom: 1rem;
-    padding-left: 20px;
-}
-
-.lowerDivisionButtonsRowTwo {
-    display: flex;
-    flex-direction: row;
-    padding-left: 20px;
+    flex-wrap: wrap;
+    justify-content: left;
 }
 
 .upperDivision {
-    padding-left: 60px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    height: auto;
 }
 
 .upperDivision h2 {
-    padding-bottom: 15px;
+    position: relative;
+    left: 12px;
+    font-size: 20px;
 }
 
 .upperDivisionButtonsRowOne {
     display: flex;
     flex-direction: row;
-    padding-bottom: 1rem;
-    padding-left: 20px;
-}
-
-.upperDivisionButtonsRowTwo {
-    display: flex;
-    flex-direction: row;
-    padding-left: 20px;
+    position: relative;
+    flex-wrap: wrap;
+    left: 30px;
+    justify-content: left;
 }
 
 .elective {
-    padding-left: 60px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    flex-wrap: wrap;
 }
 
 .elective h2 {
-    padding-bottom: 15px;
+    font-size: 20px;
+    position: relative;
+    left: 12px;
+}
+
+.electiveOne {
+    font-size: 15px;
+    position: relative;
+    left: 12px;
 }
 
 .groupOne {
     display: flex;
     flex-direction: row;
-    padding-bottom: 1rem;
-    padding-left: 20px;
+    position: relative;
+    left: 30px;
+    flex-wrap: wrap;
+}
+
+.electiveTwo {
+    font-size: 15px;
+    position: relative;
+    left: 12px;
 }
 
 .groupTwo {
     display: flex;
     flex-direction: row;
-    padding-bottom: 1rem;
-    padding-left: 20px;
+    position: relative;
+    left: 30px;
+    flex-wrap: wrap;
+}
+
+.electiveThree {
+    font-size: 15px;
+    position: relative;
+    left: 12px;
 }
 
 .bothGroups {
     display: flex;
     flex-direction: row;
-    padding-left: 20px;
+    position: relative;
+    left: 30px;
+    flex-wrap: wrap;
 }
 
 .course_list_button {
@@ -121,6 +169,7 @@
     transition: all 0.3s ease-out;
     border-radius: 98%;
     margin-right: 1.3rem;
+    margin-bottom: 10px;
 }
 
 .course_list_button:hover {
@@ -138,47 +187,58 @@
     color: white;
 }
 
+.courseCards {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: 50%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .cardOne {
-    margin-left: 500px;
-    margin-top: -50px;
+    position: relative;
+    height: auto;
+    top: 10%;
 }
 
 .cardTwo {
-    margin-left: 905px;
-    margin-top: 300px;
+    position: relative;
+    top: 10%
 }
 
 .myCard {
     position: relative;
-    display: block;
-    width: 500px;
-    height: 0px;
-    padding-top: 10px;
     background-color: rgb(155, 155, 155);
-  }
-  
-  .cardTitle {
+    width: 80%;
+    display: block;
+    text-decoration: none;
+    pointer-events: none;
+    height: auto;
+    left: 10%;
+}
+
+.cardTitle {
     background-color: rgb(129, 129, 129);
-    width: 30%;
+    position: relative;
     font-size: 18px;
-    margin-left: 163px;
     margin-top: -10px;
-    text-align: center;
-  }
+    left: 10px;
+}
   
-  .cardHead {
+.cardHead {
     background-color: rgb(197, 197, 197);
     font-size: 15px;
     padding-left: 15px;
     padding-top: 0px;
     height: 20px;
     text-align: center;
-  }
+}
 
-  .cardBody {
-      background-color: rgb(155, 155, 155);
-      box-shadow: 14px 13px 15px #525252;
-      height: 250px;
-      padding-left: 15px;
-      font-size: 14px;
-  }
+.cardBody {
+    background-color: rgb(155, 155, 155);
+    box-shadow: 14px 13px 15px #525252;
+    height: auto;
+    padding-left: 15px;
+    font-size: 14px;
+}
