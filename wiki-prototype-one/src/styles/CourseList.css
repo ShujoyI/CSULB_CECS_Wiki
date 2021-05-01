@@ -209,7 +209,6 @@
 
 .myCard {
     position: relative;
-    background-color: rgb(155, 155, 155);
     width: 80%;
     display: block;
     text-decoration: none;
@@ -219,26 +218,29 @@
 }
 
 .cardTitle {
-    background-color: rgb(129, 129, 129);
+    background-color: #28303e;
     position: relative;
     font-size: 18px;
     margin-top: -10px;
-    left: 10px;
+    text-align: center;
+    color: white;
 }
-  
+
 .cardHead {
-    background-color: rgb(197, 197, 197);
+    background-color: #46556d;
     font-size: 15px;
-    padding-left: 15px;
     padding-top: 0px;
     height: 20px;
     text-align: center;
+    color: white;
 }
 
 .cardBody {
-    background-color: rgb(155, 155, 155);
+    background-color: #323c4e;
     box-shadow: 14px 13px 15px #525252;
     height: auto;
     padding-left: 15px;
     font-size: 14px;
+    color: white;
+    border-width: 100px;
 }

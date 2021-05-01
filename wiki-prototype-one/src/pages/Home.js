@@ -14,47 +14,39 @@ function Home () {
         
             <div className='list_images'>
 
-                <Link to='/academics' style={{ textDecoration: 'none' }}>
-                    <div className='dimmer'>
-                        <figure className='list_figure'>
-                            <img src='images/img-academics.png' alt='Academics'/>
-                            <div className='link_text_container' style={{ transform: 'translateX(25%)' }}>
-                                <h1>ACADEMICS</h1>
-                            </div>
-                        </figure>
+                <Link className='academic-link' to='/academics' style={{ textDecoration: 'none' }}>
+                    <div className='dimmer-academics'>
+                        <img src='images/img-academics.png' alt='Academics'/>
+                        <div className='academics_text_container'>
+                            ACADEMICS
+                        </div>
                     </div>
                 </Link>
 
-                <Link to='/guides' style={{ textDecoration: 'none' }}>
-                    <div className='dimmer'>
-                        <figure className='list_figure'>
-                            <img src='images/img-guides.jpg' alt='Guides' />
-                            <div className='link_text_container' style={{ transform: 'translateX(33%)' }}>
-                                <h1 style={{ width: '35%' }}>GUIDES</h1>
-                            </div>
-                        </figure>
+                <Link className='guide-link' to='/guides' style={{ textDecoration: 'none' }}>
+                    <div className='dimmer-guides'>
+                        <img src='images/img-guides.jpg' alt='Guides' />
+                        <div className='guides_text_container'>
+                            GUIDES
+                        </div>
                     </div>
                 </Link>
 
-                <Link to='/career' style={{ textDecoration: 'none' }}>
-                    <div className='dimmer'>
-                        <figure className='list_figure'>
-                            <img src='images/img-career.jpg' alt='Career' />
-                            <div className='link_text_container' style={{ transform: 'translateX(31%)' }}>
-                                <h1 style={{ width: '35%' }}>CAREER</h1>
-                            </div>
-                        </figure>
+                <Link className='career-link' to='/career' style={{ textDecoration: 'none' }}>
+                    <div className='dimmer-career'>
+                        <img src='images/img-career.jpg' alt='Career' />
+                        <div className='career_text_container'>
+                            CAREER
+                        </div>
                     </div>
                 </Link>
 
-                <Link to='/courseExplorer' style={{ textDecoration: 'none' }}>
-                    <div className='dimmer'>
-                        <figure className='list_figure'>
-                            <img src='images/img-course-explorer.jpg' alt='Course Explorer' />
-                            <div className='link_text_container' style={{ transform: 'translateX(16%)' }}>
-                                <h1 style={{ width: '70%' }}>COURSE EXPLORER</h1>
-                            </div>
-                        </figure>
+                <Link className='course-explorer-link' to='/courseExplorer' style={{ textDecoration: 'none' }}>
+                    <div className='dimmer-course-explorer'>
+                        <img src='images/img-course-explorer.jpg' alt='Course Explorer' />
+                        <div className='course_explorer_text_container'>
+                            COURSE EXPLORER
+                        </div>
                     </div>
                 </Link>              
             </div>

@@ -1,171 +1,382 @@
-.home {
-    height: 200vh;
-    width: auto;
-    
-}
-
-.video-container {
-    background-color: rgba(0, 0, 0, 0.658);
-    position: static;
-    height: 30%;
-    width: 100%;
-   
-}
-
-.video-container > video {
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    position: relative;
-    top: 0px;
-}
-
-.text-container {
-    position: absolute;
-    top: 40%;
-    width: 100%;
-    text-align: center;
-    font-size: 54px;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    z-index: 1;
-}
-
-.image_link {
-    position: static;
-    height: 50%;
-    width: 100%;
-    background-color: blue;
-    z-index: 0;
-    display: flex;
-    
-}
-
-.dimmer {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.466);
-    position: static;
-    z-index: 0;
-    
-}
-
-/* code for the picture itself */
-.list_figure {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: all 0.2s linear;
-    overflow: hidden;
-}
-
-.list_figure > img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: all 0.2s linear;
-    overflow: hidden;
-    z-index: -1;
-}
-
-.link_text_container {
-    position: relative;
-    top: 35%;
-    width: 100%;
-    transform: translateY(-50%);
-    transition: all 0.2s linear;
-    z-index: 1;
-    
-}
-
-.link_text_container > h1 {
-    text-align: center;
-    font-size: 54px;
-    width: 50%;
-    color: white;
-    font-family: 'Poppins', sans-serif; 
-    border: solid white 10px;
-    border-top: royalblue;
-    border-left: royalblue;
-    border-right: royalblue;
-
-}
-
-.list_text_container:hover {
-    transform: scale(1.1);
-}
-
-/* code for the 4 boxes that doesn't include the container */
-.list_images {
-    height: 50%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 0;
-    row-gap: 0;
-
-}
-
-
-
-
-@media screen and (max-width:700px)
-{
-    .link_text_container  > h1
-    {
-        text-align: left;
-        font-size: 30px;
+@media screen and (min-width: 320px) {
+    .home {
+        height: auto;
+        width: auto;
+        position: static;
+        display: flex;
+        flex-direction: column;
     }
 
-    .list_images
-    {
-        height: 50%;
-        width: 80%;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-       
-    }
-    
-    .video-container 
-    {
-        background-color: rgba(0, 0, 0, 0.658);
-        height: 50%;
-        width: 80%;
-       
-    }
-
-    .text-container 
-    {
-      
-    
-        text-align:left;
-        font-size: 34px;
-        font-family: 'Poppins', sans-serif;
-        color: white;
-        word-break: break-word;
-        padding-left: 10px;
-        padding-right: 150px;
-        top: 150px;
-     
-    }
-    
     .video-container {
         background-color: rgba(0, 0, 0, 0.658);
-        position: static;
-        height: 10%;
-        width: 80%;
-    
-       
+        position: relative;
+        height: 50%;
+        text-align: center;
     }
 
-    .home {
-        height: 180vh;
-        width: auto;
-        
+    .video-container video {
+        position: relative;
+        z-index: -1;
+        width: 100% !important;
+        height: auto !important;
     }
-    
 
-    
+    .text-container {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        position: absolute;
+        color: white;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 
+    /* code for the 4 boxes that doesn't include the container */
+    .list_images {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .academic-link {
+        width: 100%;
+    }
+
+    .guide-link {
+        width: 100%;
+    }
+
+    .career-link {
+        width: 100%;
+    }
+
+    .course-explorer-link {
+        width: 100%;
+    }
+
+    .dimmer-academics {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.466);
+        position: relative;
+    }
+
+    .dimmer-academics img {
+        position: relative;
+        width: 100% !important;
+        height: auto !important;
+        transition: all 0.2s linear;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    .academics_text_container {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s linear;
+        z-index: 1;
+        border: solid white 10px;
+        border-top: royalblue;
+        border-left: royalblue;
+        border-right: royalblue;
+    }
+
+    .dimmer-guides {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.466);
+    }
+
+    .dimmer-guides img {
+        position: relative;
+        width: 100% !important;
+        height: auto !important;
+        transition: all 0.2s linear;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    .guides_text_container {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s linear;
+        z-index: 1;
+        border: solid white 10px;
+        border-top: royalblue;
+        border-left: royalblue;
+        border-right: royalblue;
+    }
+
+    .dimmer-career {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.466);
+        position: relative;
+    }
+
+    .dimmer-career img {
+        position: relative;
+        width: 100% !important;
+        height: auto !important;
+        transition: all 0.2s linear;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    .career_text_container {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s linear;
+        z-index: 1;
+        border: solid white 10px;
+        border-top: royalblue;
+        border-left: royalblue;
+        border-right: royalblue;
+    }
+
+    .dimmer-course-explorer {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.466);
+        position: relative;
+    }
+
+    .dimmer-course-explorer img {
+        position: relative;
+        width: 100% !important;
+        height: auto !important;
+        transition: all 0.2s linear;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    .course_explorer_text_container {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s linear;
+        z-index: 1;
+        border: solid white 10px;
+        border-top: royalblue;
+        border-left: royalblue;
+        border-right: royalblue;
+    }
+
+    .list_text_container:hover {
+        transform: scale(1.1);
+    }
 }
 
+@media screen and (min-width: 1000px) {
+
+    .home {
+        height: auto;
+        width: auto;
+        position: static;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .video-container {
+        background-color: rgba(0, 0, 0, 0.658);
+        position: relative;
+        height: 50%;
+        text-align: center;
+    }
+
+    .video-container video {
+        position: relative;
+        z-index: -1;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .text-container {
+        font-size: 58px;
+        position: absolute;
+        color: white;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* code for the 4 boxes that doesn't include the container */
+    .list_images {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .academic-link {
+        width: 50%;
+    }
+
+    .guide-link {
+        width: 50%;
+    }
+
+    .career-link {
+        width: 50%;
+    }
+
+    .course-explorer-link {
+        width: 50%;
+    }
+
+    .dimmer-academics {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.466);
+        position: relative;
+    }
+
+    .dimmer-academics img {
+        position: relative;
+        width: 100% !important;
+        height: 120% !important;
+        transition: all 0.2s linear;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    .academics_text_container {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s linear;
+        z-index: 1;
+        border: solid white 10px;
+        border-top: royalblue;
+        border-left: royalblue;
+        border-right: royalblue;
+    }
+
+    .dimmer-guides {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.466);
+    }
+
+        .dimmer-guides img {
+            position: relative;
+            width: 100% !important;
+            height: auto !important;
+            transition: all 0.2s linear;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+    .guides_text_container {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s linear;
+        z-index: 1;
+        border: solid white 10px;
+        border-top: royalblue;
+        border-left: royalblue;
+        border-right: royalblue;
+    }
+
+    .dimmer-career {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.466);
+        position: relative;
+    }
+
+        .dimmer-career img {
+            position: relative;
+            width: 100% !important;
+            height: auto !important;
+            transition: all 0.2s linear;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+    .career_text_container {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s linear;
+        z-index: 1;
+        border: solid white 10px;
+        border-top: royalblue;
+        border-left: royalblue;
+        border-right: royalblue;
+    }
+
+    .dimmer-course-explorer {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.466);
+        position: relative;
+    }
+
+        .dimmer-course-explorer img {
+            position: relative;
+            width: 100% !important;
+            height: auto !important;
+            transition: all 0.2s linear;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+    .course_explorer_text_container {
+        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.2s linear;
+        z-index: 1;
+        border: solid white 10px;
+        border-top: royalblue;
+        border-left: royalblue;
+        border-right: royalblue;
+    }
+
+    .list_text_container:hover {
+        transform: scale(1.1);
+    }
+}
