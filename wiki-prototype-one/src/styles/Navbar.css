@@ -23,6 +23,15 @@ nav .logo{
   letter-spacing: -1px;
 }
 
+nav .text-link{
+  color: inherit;
+  text-decoration: inherit;
+}
+
+nav .text-link:hover{
+  color: #ecaa00;
+}
+
 nav.logo navbar-link-one{
   color: #fff;
 }
@@ -65,11 +74,11 @@ nav .nav-items-lb li a{
 
 
 nav .nav-items li a:hover{
-  color: #ff3d00;
+  color: #ecaa00;
 }
 
 nav .nav-items-lb li a:hover{
-  color: #ff3d00;
+  color: #ecaa00;
 }
 
 
@@ -94,7 +103,7 @@ nav form .search-data{
 
 nav form button{
   padding: 0 15px;
-  background: #ff3d00;
+  background: #ecaa00;
   border: none;
   cursor: pointer;
 }
