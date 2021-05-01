@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <nav>
           <div class="menu-icon"><span class="fas fa-bars"></span></div>
-          <div class="logo">BeachCS</div>
+          <Link class="logo" to='/'>BeachCS</Link>
           <div class="nav-items">
             <li><a href="/academics">Academics</a></li>
             <li><a href="/career">Career</a></li>

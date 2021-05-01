@@ -27,7 +27,8 @@ import Possible_IQ from './pages/Possible_IQ';
 import Study from './pages/Study';
 import Ides from './pages/Ides';
 import Motivation from './pages/Motivation';
-
+import Masters from './pages/Masters';
+import Minors from './pages/Minors';
 
 function App() {
   return (
@@ -59,6 +60,8 @@ function App() {
           <Route path='/study_g' component = {Study}/>
           <Route path='/ides_g' component={Ides}/>
           <Route path='/motivated' component={Motivation}/>
+          <Route path='/masters' component={Masters}/>
+          <Route path='/minors' component={Minors}/>
         </Switch>
         </ScrollToTop>
         <Footer />

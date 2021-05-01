@@ -7,7 +7,5 @@ import CourseList from '../components/CourseList.js';
 export default function CourseExplorer() {
     return ( 
         <CourseList/>
-    )
-
-    
+    )  
 }

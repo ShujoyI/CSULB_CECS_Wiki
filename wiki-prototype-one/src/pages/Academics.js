@@ -12,17 +12,13 @@ export default function Academics() {
             </div>
             <div className='academics-wrapper'>
                 <div className='academics-description'>
-                    <h3>If you are looking for what CS courses to take, go to the {" "}
-                        <Link to="/courseExplorer">Click here</Link>
+                    <h3>If you are looking for what CS courses are available at CSULB, go to the {" "}
+                        <Link to="/courseExplorer">Course Explorer.</Link>
                     </h3>
                 </div>
-                <div className='academics-guides'> 
-                    <h1>Guides</h1>
-                </div>
                 <div className='academics-links'>
-                    <li><Link to='/career/workfair'>Success workfairs</Link></li>
-                    <li><Link to='/career/crafting-resume'>Crafting your resume</Link></li>
-                    <li><Link to='/career/job-success'>How to Succeed at your Job</Link></li>
+                    <li><Link to='/masters'>Masters Program</Link></li>
+                    <li><Link to='/minors'>Cybersecurity Minor</Link></li>
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ import '../styles/Ides.css';
 const Ides = () =>
 {
     return(
-        <div>
+        <div className='ides_container'>
             <body className="card_body" >
                 <div className="contaier">
 

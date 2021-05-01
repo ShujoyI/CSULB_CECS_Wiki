@@ -7,7 +7,7 @@ import {Link} from "react-router-dom";
 const Study = () =>
 {
     return(
-        <div>
+        <div className='study_container'>
              <h1>Welcome to Study Guides! </h1>
              <h5> Some tips to study effectively   </h5>
 

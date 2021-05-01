@@ -19,18 +19,6 @@ export function CourseList() {
     const [displayCardOne, setDisplayCardOne] = useState("")
     const [displayCardTwo, setDisplayCardTwo] = useState("")
 
-    /*const courses = ["ENGR 101", "ENGR 102", "CECS 100", "CECS 105", "CECS 174", "CECS 225", "CECS 228"]
-    function addElement() {
-        for (let i = 0; i < courses.length; i++) {
-            const newButton = document.createElement("Button");
-            newButton.innerHTML = courses[i];
-            newButton.className = 'course_list_button';
-            newButton.onClick = setDetails(courses[i]);
-            const currentDiv = document.getElementById("lowerButtonsOne");
-            currentDiv.appendChild(newButton);
-        }
-    }*/
-
     function setDetails(variableToQuery) {
 
         // To deselect a course
@@ -84,9 +72,7 @@ export function CourseList() {
             </div>
             <h2>Below are all CS courses available at CSULB.</h2>
             <h3>* All courses listed under 'lower division' and 'upper division' are mandatory courses.</h3>
-            <div className='cardOne'>
-                <Course className="selectedCourseOne" courseNumber={courseOneNum} courseDescription={courseOneDes} coursePrerequisites={courseOnePre} courseCredits={courseOneCred} />
-            </div>
+     
             <div className='cardTwo'>
                 <Course className="selectedCourseTwo" courseNumber={courseTwoNum} courseDescription={courseTwoDes} coursePrerequisites={courseTwoPre} courseCredits={courseTwoCred} />
             </div>
@@ -100,6 +86,9 @@ export function CourseList() {
                     <Button className='course_list_button' onClick={node => setDetails("CECS 174")}>CECS 174</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 225")}>CECS 225</Button>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 228")}>CECS 228</Button>
+                    <div className='cardOne'>
+                        <Course className="selectedCourseOne" courseNumber={courseOneNum} courseDescription={courseOneDes} coursePrerequisites={courseOnePre} courseCredits={courseOneCred} />
+                    </div>
                 </div>
                 <div className='lowerDivisionButtonsRowTwo'>
                     <Button className='course_list_button' onClick={node => setDetails("CECS 274")}>CECS 274</Button>
@@ -161,7 +150,6 @@ export function CourseList() {
                     <Button className='course_list_button' onClick={node => setDetails("CECS 497")}>CECS 497</Button>
                 </div>
             </div>
-            {/* {addElement()} */}
         </div>
     );
 }
