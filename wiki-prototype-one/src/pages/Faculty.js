@@ -1,28 +1,25 @@
 import React from 'react';
 import '../App.css';
-import MastersInformation from '../components/MastersInformation.js';
-import '../styles/Masters.css';
+import '../styles/Faculty.css';
 
-export default function Masters() {
+export default function Faculty() {
     return (
-        <div className='masters'>
+        <div className='faculty'>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-3" ></div>
                     <div class="col-sm-6" >
-                    <div className='masters-headers'>
+                    <div className='faculty-headers'>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"> <a href="/">Home</a></li>
                             <li class="breadcrumb-item"> <a href="/academics">Academics</a></li>
-                            <li class="breadcrumb-item"> Applying to Graduate School</li>
+                            <li class="breadcrumb-item"> Faculty</li>
                         </ol>    
                     </div>
-                        <div className = 'masters-container'>
-                            <div className="masters-data">
-                            <h1 id="masters-title"><b>Applying to Graduate School (MS/PhD)</b></h1>
-                            <br></br>
-                            <h3><b>Choosing a school</b></h3>
-                            <p></p>
+                        <div className = 'faculty-container'>
+                            <div className="faculty-data">
+                            <h1 id="faculty-title"><b>CECS Faculty @ The Beach</b></h1>
+                            
                             </div>
                         </div>
                     </div>

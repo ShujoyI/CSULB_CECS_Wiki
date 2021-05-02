@@ -29,6 +29,8 @@ import Ides from './pages/Ides';
 import Motivation from './pages/Motivation';
 import Masters from './pages/Masters';
 import Minors from './pages/Minors';
+import Scheduling from './pages/Scheduling';
+import Faculty from './pages/Faculty';
 
 function App() {
   return (
@@ -56,12 +58,14 @@ function App() {
           <Route path='/workfair-calendar' component={WorkfairCalendar}/>
           <Route path='/resume' component={Resume}/>
           <Route path='/pg_guide' component={Programming_guide}/>
-          <Route  path='/interview_q' component = {Possible_IQ}/>
+          <Route path='/interview_q' component={Possible_IQ}/>
+          <Route path='/scheduling' component={Scheduling}/>
           <Route path='/study_g' component = {Study}/>
           <Route path='/ides_g' component={Ides}/>
           <Route path='/motivated' component={Motivation}/>
           <Route path='/masters' component={Masters}/>
           <Route path='/minors' component={Minors}/>
+          <Route path='/faculty' component={Faculty}/>
         </Switch>
         </ScrollToTop>
         <Footer />

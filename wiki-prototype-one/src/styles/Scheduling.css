@@ -1,0 +1,41 @@
+.schedule {
+    height: 85vh;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+  
+.schedule-container {
+    height: flex;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.schedule-headers{
+    width: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.schedule-title {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 16px;
+}
+
+.schedule-title h1 {
+    display: flex;
+    align-items: flex-end;
+    text-align: left;
+}

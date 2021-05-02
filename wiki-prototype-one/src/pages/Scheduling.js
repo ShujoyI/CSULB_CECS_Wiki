@@ -1,28 +1,25 @@
 import React from 'react';
 import '../App.css';
-import MastersInformation from '../components/MastersInformation.js';
-import '../styles/Masters.css';
+import '../styles/Scheduling.css';
 
-export default function Masters() {
+export default function scheduling() {
     return (
-        <div className='masters'>
+        <div className='schedule'>
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-3" ></div>
                     <div class="col-sm-6" >
-                    <div className='masters-headers'>
+                    <div className='schedule-headers'>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"> <a href="/">Home</a></li>
                             <li class="breadcrumb-item"> <a href="/academics">Academics</a></li>
-                            <li class="breadcrumb-item"> Applying to Graduate School</li>
+                            <li class="breadcrumb-item"> Scheduling Classes</li>
                         </ol>    
                     </div>
-                        <div className = 'masters-container'>
-                            <div className="masters-data">
-                            <h1 id="masters-title"><b>Applying to Graduate School (MS/PhD)</b></h1>
-                            <br></br>
-                            <h3><b>Choosing a school</b></h3>
-                            <p></p>
+                        <div className = 'schedule-container'>
+                            <div className="schedule-data">
+                            <h1 id="schedule-title"><b>Scheduling Classes</b></h1>
+                            
                             </div>
                         </div>
                     </div>

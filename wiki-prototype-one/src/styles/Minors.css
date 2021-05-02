@@ -1,0 +1,41 @@
+.minors {
+    height: 85vh;
+    width: auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+  
+.minors-container {
+    height: flex;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.minors-headers{
+    width: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.minors-title {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 16px;
+}
+
+.minors-title h1 {
+    display: flex;
+    align-items: flex-end;
+    text-align: left;
+}
