@@ -1,5 +1,5 @@
 .minors {
-    height: 85vh;
+    height: auto;
     width: auto;
     overflow: hidden;
     display: flex;
@@ -38,4 +38,16 @@
     display: flex;
     align-items: flex-end;
     text-align: left;
+}
+
+.minors-data li{
+    list-style-type: disc;
+    list-style-position: outside;
+    text-indent: -1.35em;
+    padding-left: 1em;
+}
+
+.minors-course-description{
+    margin-left: 4%;
+    margin-right: 4%;
 }
