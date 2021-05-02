@@ -161,11 +161,11 @@
 }
 
 .course_list_button {
-    background: transparent;
-    color:  #000;
+    background: #46556d;
+    color: #fff;
     padding: 4px 7px;
     font-size: 14px;
-    border: 3px solid #ecaa00;
+    border: 3px solid #323c4e;
     transition: all 0.3s ease-out;
     border-radius: 98%;
     margin-right: 1.3rem;

@@ -1,41 +1,231 @@
 .masters {
-    height: 85vh;
+    height: auto;
     width: auto;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
 }
-  
-.masters-container {
-    height: flex;
+
+.masters-headers {
     width: auto;
-    margin-left: auto;
-    margin-right: auto;
+    align-self: center;
+}
+
+.masters-container {
+    height: auto;
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
+    position: relative;
 }
 
-.masters-headers{
-    width: auto;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
+.masters-container h1 {
+    font-size: 36px;
+    align-self: center;
 }
 
-.masters-title {
-    width: auto;
+.masters_info_list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 16px;
+    background-color: white;
 }
 
-.masters-title h1 {
+.option_one {
     display: flex;
-    align-items: flex-end;
-    text-align: left;
+    flex-direction: row;
+}
+
+.option_two {
+    display: flex;
+    flex-direction: row;
+}
+
+.option_three {
+    display: flex;
+    flex-direction: row;
+}
+
+.option_four {
+    display: flex;
+    flex-direction: row;
+}
+
+.option_five {
+    display: flex;
+    flex-direction: row;
+}
+
+.option_six {
+    display: flex;
+    flex-direction: row;
+}
+
+.masters_sub_list_one {
+    overflow: auto;
+    width: 75%;
+    height: auto;
+    display: none;
+    padding: 0 10px; /* (top/botton ) (left/right*/
+    font-family: sans-serif;
+    background: #e6e6e6;
+    color: black;
+}
+
+.masters_sub_list_one li {
+    list-style-type: disc;
+    list-style-position: outside;
+    font-size: 18px;
+    text-indent: 5%;
+}
+
+.masters_sub_list_one h3 {
+    font-size: 24px;
+}
+
+.masters_list_one {
+    overflow: auto;
+    align-content: center;
+    width: 25%;
+    padding: 10px;
+    cursor: pointer;
+    background: #000066;
+    color: #ffffff;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.masters_sub_list_two {
+    overflow: auto;
+    width: 75%;
+    height: auto;
+    display: none;
+    padding: 0 10px; /* (top/botton ) (left/right*/
+    font-family: sans-serif;
+    background: #e6e6e6;
+    color: black;
+    border-width: 5px;
+    border-color: black;
+}
+
+.masters_sub_list_two li {
+    list-style-type: disc;
+    list-style-position: outside;
+    font-size: 18px;
+    text-indent: 5%;
+}
+
+.masters_sub_list_two h3 {
+    font-size: 24px;
+}
+
+.masters_list_two {
+    overflow: auto;
+    align-content: center;
+    width: 25%;
+    padding: 10px;
+    cursor: pointer;
+    background: #000066;
+    color: #ffffff;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.masters_sub_list_three {
+    overflow: auto;
+    width: 75%;
+    height: auto;
+    display: none;
+    padding: 0 10px; /* (top/botton ) (left/right*/
+    font-family: sans-serif;
+    background: #e6e6e6;
+    color: black;
+}
+
+.masters_sub_list_three li {
+    list-style-type: disc;
+    list-style-position: outside;
+    font-size: 18px;
+    text-indent: 5%;
+}
+
+.masters_sub_list_three h3 {
+    font-size: 24px;
+}
+
+.masters_list_three {
+    overflow: auto;
+    align-content: center;
+    width: 25%;
+    padding: 10px;
+    cursor: pointer;
+    background: #000066;
+    color: #ffffff;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.masters_list_one_active {
+    background: #000066;
+}
+
+.masters_list_one::after {
+    content: '\25be';
+    float: right;
+    transform: scale(1.5);
+}
+
+.masters_list_one_active + .masters_sub_list_one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.masters_list_one_active::after {
+    content: '\25b4';
+}
+
+.masters_list_two_active {
+    background: #000066;
+}
+
+.masters_list_two::after {
+    content: '\25be';
+    float: right;
+    transform: scale(1.5);
+}
+
+.masters_list_two_active + .masters_sub_list_two {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.masters_list_two_active::after {
+    content: '\25b4';
+}
+
+.masters_list_three_active {
+    background: #000066;
+}
+
+.masters_list_three::after {
+    content: '\25be';
+    float: right;
+    transform: scale(1.5);
+}
+
+.masters_list_three_active + .masters_sub_list_three {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.masters_list_three_active::after {
+    content: '\25b4';
 }
