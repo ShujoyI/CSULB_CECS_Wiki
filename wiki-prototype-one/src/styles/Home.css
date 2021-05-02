@@ -202,7 +202,7 @@
     .video-container {
         background-color: rgba(0, 0, 0, 0.658);
         position: relative;
-        height: 50%;
+        height: auto;
         text-align: center;
     }
 
@@ -265,7 +265,7 @@
     }
 
     .academics_text_container {
-        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        font-size: 58px;
         color: white;
         font-family: 'Poppins', sans-serif;
         position: absolute;
@@ -287,17 +287,17 @@
         background-color: rgba(0, 0, 0, 0.466);
     }
 
-        .dimmer-guides img {
-            position: relative;
-            width: 100% !important;
-            height: auto !important;
-            transition: all 0.2s linear;
-            overflow: hidden;
-            z-index: -1;
-        }
+    .dimmer-guides img {
+        position: relative;
+        width: 100% !important;
+        height: auto !important;
+        transition: all 0.2s linear;
+        overflow: hidden;
+        z-index: -1;
+    }
 
     .guides_text_container {
-        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        font-size: 58px;
         color: white;
         font-family: 'Poppins', sans-serif;
         position: absolute;
@@ -319,17 +319,17 @@
         position: relative;
     }
 
-        .dimmer-career img {
-            position: relative;
-            width: 100% !important;
-            height: auto !important;
-            transition: all 0.2s linear;
-            overflow: hidden;
-            z-index: -1;
-        }
+    .dimmer-career img {
+        position: relative;
+        width: 100% !important;
+        height: auto !important;
+        transition: all 0.2s linear;
+        overflow: hidden;
+        z-index: -1;
+    }
 
     .career_text_container {
-        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        font-size: 58px;
         color: white;
         font-family: 'Poppins', sans-serif;
         position: absolute;
@@ -351,17 +351,17 @@
         position: relative;
     }
 
-        .dimmer-course-explorer img {
-            position: relative;
-            width: 100% !important;
-            height: auto !important;
-            transition: all 0.2s linear;
-            overflow: hidden;
-            z-index: -1;
-        }
+    .dimmer-course-explorer img {
+        position: relative;
+        width: 100% !important;
+        height: auto !important;
+        transition: all 0.2s linear;
+        overflow: hidden;
+        z-index: -1;
+    }
 
     .course_explorer_text_container {
-        font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+        font-size: 58px;
         color: white;
         font-family: 'Poppins', sans-serif;
         position: absolute;
