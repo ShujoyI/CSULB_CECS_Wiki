@@ -1,3 +1,14 @@
+.react-flow {
+    /* display: flex; */
+    position: relative;
+    width: 65%;
+}
+
+.react-flow_pane {
+
+    /* display: flex; */
+}
+
 .react-flow__node:hover {
 
     background-color: rgb(98, 0, 255);
@@ -38,33 +49,47 @@
     border-style: solid;
 }
 
+
+.roadMapCard {
+
+    position: relative;
+    left: 68%;
+    bottom: 85%;
+    z-index: 4;
+    
+    
+}
+
 .myCardRoadMap {
     position: absolute;
-    left: 70%;
-    top: 15%;
-    z-index: 1;
+    /* display: flex; */
+    height: 500px;
+    color: white;
+    
 }
 
 .cardRoadBody {
-    background-color: rgb(155, 155, 155);
+    background-color: #323c4e;
     box-shadow: 14px 13px 15px #525252;
-    height: 250px;
-    font-size: 14px;
+    height: 400px;
+    font-size: 30px;
+    overflow: hidden;
 }
 
 .cardRoadTitle {
-    background-color: rgb(129, 129, 129);
+    background-color: #28303e;
     width: 100%;
+    padding-top: 10px;
     padding-bottom: 15px;
     text-align: center;
-    font-size: 18px;
+    font-size: 30px;
   }
 
 .cardRoadHead {
-    background-color: rgb(197, 197, 197);
-    font-size: 15px;
+    background-color: #46556d;
+    font-size: 30px;
     padding-left: 15px;
     padding-top: 0px;
-    height: 20px;
+    height: 50px;
     text-align: center;
 }
