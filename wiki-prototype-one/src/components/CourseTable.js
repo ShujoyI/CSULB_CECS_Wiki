@@ -48,15 +48,8 @@ class CourseTable extends Component{
         })
     }
 
-    renderTableHeader() {
-        let header = Object.keys(this.state.courses[0])
-        return header.map((key, index) => {
-            return <th key={index}>{key.toUpperCase()}</th>
-        })
-    }
-
-    renderTableHeader2() {
-        let header = Object.keys(this.state.courses2[0])
+    renderTableHeader(headerToRender) {
+        let header = Object.keys(headerToRender[0])
         return header.map((key, index) => {
             return <th key={index}>{key.toUpperCase()}</th>
         })
@@ -67,7 +60,7 @@ class CourseTable extends Component{
             <div>
                 <table id='courses'>
                     <tbody>
-                        <tr>{this.renderTableHeader()}</tr>
+                        <tr>{this.renderTableHeader(this.state.courses)}</tr>
                         {this.renderTableData()}
                     </tbody>
                 </table>
@@ -75,7 +68,7 @@ class CourseTable extends Component{
                 
                 <table id='courses'>
                     <tbody>
-                        <tr>{this.renderTableHeader2()}</tr>
+                        <tr>{this.renderTableHeader(this.state.courses2)}</tr>
                         {this.renderTableData2()}
                     </tbody>
                 </table>
