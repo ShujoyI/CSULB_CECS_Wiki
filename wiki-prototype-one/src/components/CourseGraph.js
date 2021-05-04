@@ -128,7 +128,7 @@ export default () => {
         zoomOnScroll = {false}
         onElementClick={onElementClick}
         onNodeContextMenu={onNodeContextMenu}
-        paneMoveable = {false}
+        // paneMoveable = {false}
       >
         <Controls
         showInteractive = {false}
@@ -140,7 +140,7 @@ export default () => {
         color = "#02decc" 
         />
       </ReactFlow>
-      <div className='courseCard'>
+      <div className='roadMapCard'>
         <Course className="selectedCourse" courseNumber={courseNum} courseDescription={courseDes} successors={courseSucc}/>
       </div>
     </div>
