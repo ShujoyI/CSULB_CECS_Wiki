@@ -1,5 +1,5 @@
 .schedule {
-    height: 85vh;
+    height: auto;
     width: auto;
     overflow: hidden;
     display: flex;

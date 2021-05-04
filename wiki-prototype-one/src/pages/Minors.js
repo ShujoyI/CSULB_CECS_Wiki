@@ -83,7 +83,7 @@ export default function Minors() {
                                             <li>This course teaches technology, application, operating system, infrastructure, and systems integration in internetworking and enterprise networking. Interoperability, mobile system, multimedia, distributed and collaborative systems, network management, fault tolerance, security and middleware. Case studies and hands-on activities.</li>
                                         </div>
                                     <p></p>
-                                    <p>Obtaining a minor in Cybersecurity can be an advantage for job seeking and career building </p>
+                                    
                                     
                             </div>
                         </div>
