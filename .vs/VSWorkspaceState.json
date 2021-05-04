@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\wiki-backend",
-    "\\wiki-prototype-one"
+    "\\wiki-prototype-one",
+    "\\wiki-prototype-one\\src",
+    "\\wiki-prototype-one\\src\\components",
+    "\\wiki-prototype-one\\src\\pages",
+    "\\wiki-prototype-one\\src\\styles"
   ],
-  "SelectedNode": "\\wiki-prototype-one\\package.json",
+  "SelectedNode": "\\wiki-prototype-one\\src\\components\\Table.js",
   "PreviewInSolutionExplorer": false
 }
