@@ -118,9 +118,6 @@ export default () => {
 
   return (
     <div style={{ height: 800 }}>
-      <div className='courseCard'>
-        <Course className="selectedCourse" courseNumber={courseNum} courseDescription={courseDes} successors={courseSucc}/>
-      </div>
       <ReactFlow
         elements={elements}
         onElementsRemove={onElementsRemove}
@@ -131,6 +128,7 @@ export default () => {
         zoomOnScroll = {false}
         onElementClick={onElementClick}
         onNodeContextMenu={onNodeContextMenu}
+        paneMoveable = {false}
       >
         <Controls
         showInteractive = {false}
@@ -142,6 +140,9 @@ export default () => {
         color = "#02decc" 
         />
       </ReactFlow>
+      <div className='courseCard'>
+        <Course className="selectedCourse" courseNumber={courseNum} courseDescription={courseDes} successors={courseSucc}/>
+      </div>
     </div>
   );
 };
