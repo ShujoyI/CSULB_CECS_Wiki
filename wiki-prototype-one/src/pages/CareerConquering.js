@@ -10,12 +10,12 @@ class CareerConquering extends Component {
                 <div class="row">
                     <div class="col-sm-3" ></div>
                     <div class="col-sm-6" >
-                    <div className='resumeHeaders'>
-                        <ul class="breadcrumb">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="career">Career</a></li>
-                            <li>Job Success</li>
-                        </ul>
+                    <div className='resumeHeaders'>                        
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"> <a href="/">Home</a></li>
+                            <li class="breadcrumb-item"> <a href="/Career">Career</a></li>
+                            <li class="breadcrumb-item">Conquering the Career Fair</li>
+                        </ol> 
                     </div>
                         <div className = 'resume-container'>
                             <div className="career-data">

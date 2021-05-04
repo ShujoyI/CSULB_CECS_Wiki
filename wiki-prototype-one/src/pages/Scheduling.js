@@ -54,11 +54,27 @@ export default function scheduling() {
                                     <p></p>
                                 <h3><b>Potential Scheduling</b></h3>
                                     <p></p>
-                                    <p>When starting out, we recommend taking CECS 100</p>
+                                    <p>Below are some potential schedules. Your schedule will look differernt depending on your other classes!</p>
+                                    <p>Whenever you schedule a class make sure to pay close attention to the professor. It's better to optimize your schedule to fit your perfered time, and to have better professors! Check the respective pages for each course on this wiki and use Rate My Professor.</p>
+                                    <p>This <b>are just example schedules</b>. Your own schedule will likely look different.  YOu need to consider what other majors/minors you will have, and other electives (both CS and Non CS) and general eduations you will need to take.</p>
                                     <div className='table_one'>
                                         <CourseTable />    
                                     </div>
-                                    
+                                    <p></p>
+                                <h3><b>CS Electives</b></h3>
+                                    <p></p>
+                                    <p>You can discover your interest in Computer Science as you take some electives. A good way to determine what elective you would like to take is to use the <Link to='/courseExplorer'> course explorer</Link> for help. </p>
+                                    <p>It is important to take classes about subjects in Computer Science that you may enjoy and might want to follow that career path. Electives are meant to be classes you want to enjoy, not classes you suffer in.</p>
+                                    <p></p>
+                                <hr/>
+                                <h6><b>Related Resources</b></h6>
+                                    <div className='resources'>
+                                        <li><Link to='/courseExplorer'>Course Explorer</Link></li>
+                                        <li><Link to='/degreeRoadMap'>Road Map</Link></li>
+                                        <li><Link to='/Minors'>Cyberscurity Minor</Link></li>
+                                    </div>
+                                    <p></p>
+                                <hr/>
                             </div>
                         </div>
                     </div>

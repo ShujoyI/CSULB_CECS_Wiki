@@ -39,3 +39,7 @@
     align-items: flex-end;
     text-align: left;
 }
+
+.resources li{
+    font-size: 12px;
+}

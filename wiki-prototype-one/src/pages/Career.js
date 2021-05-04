@@ -11,10 +11,10 @@ export default function Career() {
                     <div class="col-sm-3" ></div>
                     <div class="col-sm-6" >
                         <div className='career-headers'>
-                            <ul class="breadcrumb">
-                                <li><a href="/">Home</a></li>
-                                <li>Career</li>
-                            </ul>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"> <a href="/">Home</a></li>
+                            <li class="breadcrumb-item"> Career</li>
+                        </ol>  
                         </div>
                         <div className = 'career-container'>
                             <div className="career-data">
