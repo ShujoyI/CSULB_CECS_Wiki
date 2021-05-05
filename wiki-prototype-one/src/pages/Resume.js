@@ -11,11 +11,11 @@ class Resume extends Component {
                     <div class="col-sm-3" ></div>
                     <div class="col-sm-6" >
                     <div className='resumeHeaders'>
-                        <ul class="breadcrumb">
-                            <li><a href="/">Home</a></li>
-                            <li><a href="career">Career</a></li>
-                            <li>Resume</li>
-                        </ul>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"> <a href="/">Home</a></li>
+                            <li class="breadcrumb-item"> <a href="/Career">Career</a></li>
+                            <li class="breadcrumb-item">Resume</li>
+                        </ol> 
                     </div>
                         <div className = 'resume-container'>
                             <div className="career-data">

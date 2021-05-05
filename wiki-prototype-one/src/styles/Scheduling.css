@@ -1,5 +1,5 @@
 .schedule {
-    height: 85vh;
+    height: auto;
     width: auto;
     overflow: hidden;
     display: flex;
@@ -22,6 +22,7 @@
     display: flex;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
 }
 
 .schedule-title {
@@ -37,4 +38,8 @@
     display: flex;
     align-items: flex-end;
     text-align: left;
+}
+
+.resources li{
+    font-size: 12px;
 }

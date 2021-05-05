@@ -27,7 +27,7 @@ function Course(props) {
         const successors = props.successors;
         return (
             <Card className='myCardRoadMap'>
-                <Card.Header className='cardRoadHead'>Course Prerequisites</Card.Header>
+                <Card.Header className='cardRoadHeader'>Course Prerequisites</Card.Header>
                     <Card.Body className='cardRoadBody'>
                         <Card.Title className='cardRoadTitle'>{props.courseNumber}</Card.Title>
                         <Card.Text className='cardSuc'> Courses you can take after are: {

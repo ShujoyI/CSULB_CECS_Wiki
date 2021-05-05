@@ -14,38 +14,6 @@
     text-indent: 5%;
 }
 
-.sitemap-calendar-link{
-    text-indent: 5%;
-    flex-direction: column;
-}
-.sitemap-resume-link{
-    text-indent: 7%;
-}
-
-.sitemap-success-link{
-    text-indent: 7%;
-}
-
-.sitemap-calendar-link{
-    text-indent: 7%;
-}
-
-.sitemap-roadmap-link{
-    text-indent: 7%;
-}
-
-.sitemap-formotivation-link{
-    text-indent: 7%;
-}
-
-.sitemap-recomendedides-link{
-    text-indent: 7%;
-}
-
-.sitemap-programmingguides-link{
-    text-indent: 7%;
-}
-
-.sitemap-possibleinterviewquestions-link{
+.sitemap-sub-link {
     text-indent: 7%;
 }

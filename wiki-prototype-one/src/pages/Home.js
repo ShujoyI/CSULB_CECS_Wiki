@@ -8,7 +8,7 @@ function Home () {
     return (
         <div className='home'>
             <div className='video-container'>
-                <video src="videos/video-3.mp4" autoPlay loop muted />
+                <video src="videos/video-3.mp4" autoPlay={true} loop muted />
                 <div className='text-container'>Computer Science @ The Beach</div>
             </div>
         

@@ -28,12 +28,45 @@ class Table extends Component {
                 { name: 'Xiaolong Wu', title: 'Associate Professor', office: 'ECS-547', phone: '562.985.2910', email: 'xiaolong.wu@csulb.edu' },
                 { name: 'Hailu Xu', title: 'Assistant Professor', office: 'ECS-531', phone: '', email: 'hailu.xu@csulb.edu' },
                 { name: 'Wenlu Zhang', title: 'Assistant Professor/Undergraduate Advisor CS (M-Z)/Cybersecurity Applications Minor', office: 'ECS-550', phone: '562.985.4957', email: 'wenlu.zhang@csulb.edu' }
+            ],
+            partTime: [
+                { name: 'Roni Allen', title: 'Lecturer', office: 'ECS-525', phone: '562.985.1523', email: 'r.allen@csulb.edu' },
+                { name: 'David Brown', title: 'Lecturer', office: 'ECS-524', phone: '', email: 'david.brown@csulb.edu' },
+                { name: 'Murray Cappel', title: 'Lecturer', office: 'ECS-520', phone: '', email: 'murray.cappel@csulb.edu' },
+                { name: 'Shannon Cleary', title: 'Lecturer', office: 'VEC_403', phone: '', email: 'shannon.cleary@csulb.edu' },
+                { name: 'Dan Cregg', title: 'Lecturer', office: '', phone: '', email: 'dan.cregg@csulb.edu' },
+                { name: 'Arjang Fahim', title: 'Lecturer', office: 'VEC-404', phone: '', email: 'arjang.fahim@csulb.edu' },
+                { name: 'Anthony Giacalone', title: 'Lecturer', office: 'ECS-526', phone: '', email: 'anthony.giacalone@csulb.edu' },
+                { name: 'Steve Gold', title: 'Lecturer', office: 'VEC-219E', phone: '562.985.5097', email: 'steven.gold@csulb.edu' },
+                { name: 'Arnold Hackett', title: 'Lecturer', office: 'VEC-404', phone: '', email: 'arnold.hackett@csulb.edu' },
+                { name: 'Eric Hernandez', title: 'Lecturer', office: 'VEC-403', phone: '', email: 'eric.hernandez@csulb.edu' },
+                { name: 'Fei Hoffman', title: 'Lecturer', office: 'ECS-533', phone: '562.985.1523', email: 'fei.hoffman@csulb.edu' },
+                { name: 'Claus Jurgensen', title: 'Lecturer', office: 'ECS-530', phone: '', email: 'claus.jurgensen@csulb.edu' },
+                { name: 'Malik Luti', title: 'Lecturer', office: '', phone: '', email: 'malik.luti@csulb.edu' },
+                { name: 'Jamal Madni', title: 'Lecturer', office: '', phone: '', email: '' },
+                { name: 'Alireza Mehrnia', title: 'Lecturer', office: '', phone: '', email: 'alireza.mehrnia@csulb.edu' },
+                { name: 'Susan Nachawati', title: 'Lecturer', office: 'VEC-404A', phone: '', email: 'susan.nachawati@csulb.edu' },
+                { name: 'Minhthong Nguyen', title: 'Lecturer', office: 'VEC-404', phone: '', email: 'minhthong.nguyen@csulb.edu' },
+                { name: 'Mimi Opkins', title: 'Lecturer', office: 'ECS-524', phone: '', email: 'mimi.opkins@csulb.edu' },
+                { name: 'Nathan Pickrell', title: 'Lecturer', office: 'VEC-404', phone: '', email: 'nathan.pickrell@csulb.edu' },
+                { name: 'Gevik Sardarbegians', title: 'Lecturer', office: 'VEC-403', phone: '', email: 'gevik.sardarbegians@csulb.edu' },
+                { name: 'Pouye Sedighian', title: 'Lecturer', office: 'ECS-525', phone: '', email: 'pouye.sedighian@csulb.edu' },
+                { name: 'Maryam Seyyedhosseini', title: 'Lecturer', office: 'ECS-524', phone: '', email: 'marya.seyyedhosseini@csulb.edu' },
+                { name: 'Ali Sharifian', title: 'Lecturer', office: '', phone: '', email: 'ali.sharifian@csulb.edu' },
+                { name: 'Charles Siska', title: 'Lecturer', office: 'VEC-404', phone: '', email: 'charles.siska@csulb.edu' },
+                { name: 'Jose Tamayo', title: 'Lecturer', office: 'ECS-305', phone: '', email: 'jose.tamayo@csulb.edu' },
+                { name: 'Neal Terrell', title: 'Lecturer', office: 'ECS-526', phone: '', email: 'neal.terrell@csulb.edu' },
+                { name: 'Louis Uuh', title: 'Lecturer', office: 'ECS-530', phone: '', email: 'louis.uuh@csulb.edu' },
+                { name: 'Katherine Varela', title: 'Lecturer', office: 'ECS-530', phone: '', email: 'katherine.varela@csulb.edu' },
+                { name: 'Vatanak Vong', title: 'Lecturer', office: 'VEC-405', phone: '', email: 'vatanak.vong@csulb.edu' },
+                { name: 'Dave Winter', title: 'Lecturer', office: 'ECS-525', phone: '', email: 'dave.winter@csulb.edu' },
+                { name: 'Pooria Yaghini', title: 'Lecturer', office: 'ECS-524', phone: '', email: 'pooria.yaghini@csulb.edu' }
             ]
         }
     }
 
-    renderTableData() {
-        return this.state.teachers.map((teacher, index) => {
+    renderTableData(tableToRender) {
+        return tableToRender.map((teacher, index) => {
             const { name, title, office, phone, email } = teacher
             return (
                 <tr key={name}>
@@ -61,7 +94,15 @@ class Table extends Component {
                 <table id='teachers'>
                     <tbody>
                         <tr>{this.renderTableHeader()}</tr>
-                        {this.renderTableData()}
+                        {this.renderTableData(this.state.teachers)}
+                    </tbody>
+                </table>
+                <p />
+                <h1 id='title'>Part-Time Faculty</h1>
+                <table id='teachers'>
+                    <tbody>
+                        <tr>{this.renderTableHeader()}</tr>
+                        {this.renderTableData(this.state.partTime)}
                     </tbody>
                 </table>
             </div>
