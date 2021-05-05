@@ -50,12 +50,12 @@ nav nav-items-lb{
   padding: 0 0 0 40px;
 }
 
-nav .nav-items li{
+nav .nav-items li {
   padding: 0 15px;
 }
 
-nav .nav-items-lb li{
-  padding: 0 15px;
+nav .nav-items-lb a{
+  padding: 0px 15px;
 }
 
 nav .nav-items li a{
@@ -65,7 +65,7 @@ nav .nav-items li a{
   text-decoration: none;
 }
 
-nav .nav-items-lb li a{
+nav .nav-items-lb a{
   color: #fff;
   font-size: 18px;
   font-weight: 500;
@@ -77,7 +77,7 @@ nav .nav-items li a:hover{
   color: #ecaa00;
 }
 
-nav .nav-items-lb li a:hover{
+nav .nav-items-lb a:hover{
   color: #ecaa00;
 }
 

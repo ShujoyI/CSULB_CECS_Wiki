@@ -27,7 +27,7 @@ function Navbar() {
             <button type="submit" class="fas fa-search"></button>
           </form>
           <div class="nav-items-lb">
-            <li><a href='https://www.csulb.edu/'s>CSULB Home</a></li>
+            <a href='https://www.csulb.edu/'s>CSULB Home</a>
           </div>
     </nav>
     )
