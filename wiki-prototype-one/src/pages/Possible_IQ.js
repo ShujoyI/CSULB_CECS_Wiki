@@ -101,7 +101,7 @@ const Possible_IQ = () =>
         </div>
 
         <div>
-            <h2><Link to='/guides'>Back to Guide</Link></h2>
+            <h1><Link to='/guides'>Back to Guide</Link></h1>
         </div>
     </div>
     );
