@@ -93,6 +93,17 @@ const Ides = () =>
                             </div>
                         </div>
 
+                        <div className="ide-card">
+                            <div className="prolog"></div>
+
+                            <div className="card_body">
+                                <p>SWI-Prolog offer is a free implementation of the programming language Prolog</p>
+                                <p>commonly used for teaching and semantic web applications</p>
+                                <a href='https://swish.swi-prolog.org/'>Click here to code now!</a>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </body>

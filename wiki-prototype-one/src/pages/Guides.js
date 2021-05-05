@@ -24,35 +24,7 @@ class Guides extends Component
 
       
     
-        constructor(props)
-        {
-            super(props)
-            this.state = 
-            {
-                comment: null
-
-            }
-        }
-
-        handleSubmit = (event) =>
-        {
-                event.preventDefault()
-                const data = this.state
-                console.log("Final data is ", data)
-        }
-
-        handleInput = (event) => 
-        {
-            event.preventDefault()
-            this.setState({[event.target.comment]:event.target.value})
-        }
-
-        //need to connect this to back end 
-        /*SentToBackend()
-        {
-            this.setState(
-                {comment:null})
-        }*/
+     
         
         render()
         {
