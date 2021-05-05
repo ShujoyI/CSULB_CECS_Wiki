@@ -11,7 +11,7 @@
 
 .programmingPage 
 {
-    height: 100vh;
+    height: auto;
 }
 .pro_list
 {
@@ -127,6 +127,7 @@
 
 .hs_list
 {
+    
     overflow: auto;
     display: none;
 
