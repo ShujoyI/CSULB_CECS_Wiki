@@ -397,3 +397,45 @@
 .masters_list_six_active::after {
     content: '\25b4';
 }
+
+.masters_sub_list_one li {
+    list-style-type: disc;
+    list-style-position: outside;
+    text-indent: -1.35em;
+    padding-left: 5em;
+}
+
+.masters_sub_list_two li{
+    list-style-type: disc;
+    list-style-position: outside;
+    text-indent: -1.35em;
+    padding-left: 5em;
+}
+
+.masters_sub_list_three li{
+    list-style-type: disc;
+    list-style-position: outside;
+    text-indent: -1.35em;
+    padding-left: 5em;
+}
+
+.masters_sub_list_four li{
+    list-style-type: disc;
+    list-style-position: outside;
+    text-indent: -1.35em;
+    padding-left: 5em;
+}
+
+.masters_sub_list_five li{
+    list-style-type: disc;
+    list-style-position: outside;
+    text-indent: -1.35em;
+    padding-left: 5em;
+}
+
+.masters_sub_list_six li{
+    list-style-type: disc;
+    list-style-position: outside;
+    text-indent: -1.35em;
+    padding-left: 5em;
+}

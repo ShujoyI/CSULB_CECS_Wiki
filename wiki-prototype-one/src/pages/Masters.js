@@ -25,7 +25,7 @@ export function Masters() {
                     <div className='option_one'>
                         <button onClick={node => display("one")} className="masters_list_one"> GENERAL INFORMATION </button>
                         <div className="masters_sub_list_one">
-                            <h3>Courses you may take range over a broad spectrum of technological topics, including: </h3>
+                            <h3><b>Courses you may take range over a broad spectrum of technological topics, including: </b></h3>
                             <li>Software Engineering</li>
                             <li>Networks</li>
                             <li>Web Design</li>
@@ -34,26 +34,29 @@ export function Masters() {
                             <li>Computer Architecture</li>
                             <li>Artificial Intelligence</li>
                             <li>Computer Graphics</li>
-                            <h3>Pursuing a graduate program in Computer Science at CSULB provides the following: advanced study in software development and engineering, networking, operating systems, distributed computing, artificial intelligence, and analysis of algorithms. Students can pursue concentrations in Advanced Systems or Software Development.</h3>
-                            <h3>For questions, reach out to the graduate advisor: Bo Fu</h3>
-                            <h3>Complete your graduate degree with a comprehensive exam or thesis research project. Recent thesis projects have covered:</h3>
+                            <p></p>
+                            <p>Pursuing a graduate program in Computer Science at CSULB provides the following: advanced study in software development and engineering, networking, operating systems, distributed computing, artificial intelligence, and analysis of algorithms. Students can pursue concentrations in Advanced Systems or Software Development.</p>
+                            <h4><b>For questions, reach out to the graduate advisor: Bo Fu</b></h4>
+                            <p>Complete your graduate degree with a comprehensive exam or thesis research project. Recent thesis projects have covered:</p>
                             <li>Virtual Agents</li>
                             <li>Data Mining</li>
                             <li>Software Quality Assurance</li>
                             <li>Evolutionary Algorithms</li>
                             <li>Neural Networks</li>
                             <li>Distributed Web Computing</li>
+                            <p></p>
                         </div>
                     </div>
                     <div className='option_two'>
                         <button onClick={node => display("two")} className="masters_list_two"> ADMISSION </button>
                         <div className='masters_sub_list_two'>
-                            <h3>For admission, these are the following requirements for graduate applicants: </h3>
+                            <h3><b>For admission, these are the following requirements for graduate applicants: </b></h3>
                             <li>Have earned a bachelor's degree from an accredited institution</li>
                             <li>Have been in good standing at the last institution attended</li>
                             <li>Possess a grade point average (GPA) of at least 2.7 for the last 60 semester units (90 quarter units) attempted</li>
                             <li>Optionally, submit a general Graduate Record Examination (GRE) score. (Highly recommended for International Students and students with a GPA below 3.0)</li>
-                            <h3>Students may be admitted on a conditional basis, subject to the requirement that they remedy any deficiencies subsequent to admission. Letters of recommendation are not required. There is no separate application for the department.</h3>
+                            <p></p>
+                            <p>Students may be admitted on a conditional basis, subject to the requirement that they remedy any deficiencies subsequent to admission. Letters of recommendation are not required. There is no separate application for the department.</p>
                         </div>
                     </div>
                     <div className='option_three'>
@@ -68,29 +71,31 @@ export function Masters() {
                     <div className='option_four'>
                         <button onClick={node => display("four")} className="masters_list_four"> ELECTIVES </button>
                         <div className='masters_sub_list_four'>
-                            <h3>Check out the Graudate Course Explorer here -></h3>
+                            <h3><b>Check out the Graudate Course Explorer here -></b></h3>
                         </div>
                     </div>
                     <div className='option_five'>
                         <button onClick={node => display("five")} className="masters_list_five"> ADVANCED SYSTEMS </button>
                         <div className='masters_sub_list_five'>
                             <h3><b>Advanced Systems Concentration</b></h3>
-                            <h3><b>Comprehensive Exam Option:</b></h3>
-                            <h3><b>15 units of required courses specified for the area of concentration chosen</b></h3>
-                            <h3><b>15 units from allowed electives for the concentration</b></h3>
-                            <h3>(No more than 9 units may be from the 400 level courses.)</h3>
-                            <h3><b>Comprehensive examination covering the following required courses</b></h3>
+                            <h4><b>Comprehensive Exam Option:</b></h4>
+                            <p><b>15 units of required courses specified for the area of concentration chosen</b></p>
+                            <p><b>15 units from allowed electives for the concentration</b></p>
+                            <p>(No more than 9 units may be from the 400 level courses.)</p>
+                            <p><b>Comprehensive examination covering the following required courses</b></p>
                             <li>CECS 524 - Advanced Topics in Programming Languages (3 units)</li>
                             <li>CECS 528 - Advanced Analysis of Algorithms (3 units)</li>
                             <li>CECS 543 - Advanced Software Engineering (3 units)</li>
-                            <h3><b>Thesis Option:</b></h3>
-                            <h3>(Successful completion of a thesis provides a unifying culmination to the program, and an enhanced resume for future industrial or academic endeavors)</h3>
-                            <h3><b>15 units of required courses specified for the area of concentration chosen</b></h3>
-                            <h3><b>9 units from allowed electives for the concentration</b></h3>
-                            <h3>(No more than 9 units may be from the 400 level courses.)</h3>
-                            <h3><b>6 units of thesis with written report and oral presentation approved by the thesis committee.</b></h3>
-                            <h3>At least 3 units taken from the following course</h3>
+                            <p></p>
+                            <h4><b>Thesis Option:</b></h4>
+                            <p>(Successful completion of a thesis provides a unifying culmination to the program, and an enhanced resume for future industrial or academic endeavors)</p>
+                            <p><b>15 units of required courses specified for the area of concentration chosen</b></p>
+                            <p><b>9 units from allowed electives for the concentration</b></p>
+                            <p>(No more than 9 units may be from the 400 level courses.)</p>
+                            <p><b>6 units of thesis with written report and oral presentation approved by the thesis committee.</b></p>
+                            <p>At least 3 units taken from the following course</p>
                             <li>CECS 698 - Thesis or Industrial Project (3-6 units)</li>
+                            <p></p>
                             <h3>Remaining 3 units may be taken from either of the following courses</h3>
                             <li>CECS 697 - Directed Research (1-3 units)</li>
                             <li>CECS 698 - Thesis or Industrial Project (3-6 units)</li>
@@ -100,23 +105,24 @@ export function Masters() {
                         <button onClick={node => display("six")} className="masters_list_six"> SOFTWARE DEVELOPMENT </button>
                         <div className='masters_sub_list_six'>
                             <h3><b>Software Development Concentration</b></h3>
-                            <h3><b>Comprehensive Exam Option:</b></h3>
-                            <h3><b>18 units of required courses specified for the area of concentration chosen</b></h3>
-                            <h3><b>12 units from allowed electives for the concentration</b></h3>
-                            <h3>(No more than 9 units may be from the 400 level courses.)</h3>
-                            <h3><b>Comprehensive examination covering the following required courses</b></h3>
+                            <h4><b>Comprehensive Exam Option:</b></h4>
+                            <p><b>18 units of required courses specified for the area of concentration chosen</b></p>
+                            <p><b>12 units from allowed electives for the concentration</b></p>
+                            <p>(No more than 9 units may be from the 400 level courses.)</p>
+                            <p><b>Comprehensive examination covering the following required courses</b></p>
                             <li>CECS 524 - Advanced Topics in Programming Languages (3 units)</li>
                             <li>CECS 528 - Advanced Analysis of Algorithms (3 units)</li>
                             <li>CECS 543 - Advanced Software Engineering (3 units)</li>
-                            <h3><b>Thesis Option:</b></h3>
-                            <h3>(Successful completion of a thesis provides a unifying culmination to the program, and an enhanced resume for future industrial or academic endeavors)</h3>
-                            <h3><b>18 units of required courses specified for the area of concentration chosen</b></h3>
-                            <h3><b>6 units from allowed electives for the concentration</b></h3>
-                            <h3>(No more than 9 units may be from the 400 level courses.)</h3>
-                            <h3><b>6 units of thesis with written report and oral presentation approved by the thesis committee.</b></h3>
-                            <h3>At least 3 units taken from the following course</h3>
+                            <p></p>
+                            <h4><b>Thesis Option:</b></h4>
+                            <p>(Successful completion of a thesis provides a unifying culmination to the program, and an enhanced resume for future industrial or academic endeavors)</p>
+                            <p><b>18 units of required courses specified for the area of concentration chosen</b></p>
+                            <p><b>6 units from allowed electives for the concentration</b></p>
+                            <p>(No more than 9 units may be from the 400 level courses.)</p>
+                            <p><b>6 units of thesis with written report and oral presentation approved by the thesis committee.</b></p>
+                            <p>At least 3 units taken from the following course</p>
                             <li>CECS 698 - Thesis or Industrial Project (3-6 units)</li>
-                            <h3>Remaining 3 units may be taken from either of the following courses</h3>
+                            <h4>Remaining 3 units may be taken from either of the following courses</h4>
                             <li>CECS 697 - Directed Research (1-3 units)</li>
                             <li>CECS 698 - Thesis or Industrial Project (3-6 units)</li>
                         </div>

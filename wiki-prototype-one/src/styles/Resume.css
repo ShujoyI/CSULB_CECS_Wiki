@@ -64,6 +64,13 @@ ul.breadcrumb li a:hover {
     margin: 16px;
 }
 
+.career-data li{
+    list-style-type: disc;
+    list-style-position: outside;
+    text-indent: -1.35em;
+    padding-left: 1em;
+}
+
 .career-title h1 {
     display: flex;
     align-items: flex-end;
