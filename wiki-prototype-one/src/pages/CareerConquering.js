@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import '../styles/CareerConquering.css';
+import { Link } from 'react-router-dom';
 
 
 class CareerConquering extends Component {
@@ -20,19 +21,22 @@ class CareerConquering extends Component {
                         <div className = 'resume-container'>
                             <div className="career-data">
                             <h1 id="career-title"><b>Conquering the Career Fair</b></h1>
-                            <p>What can you do to ensure you keep that job and are viewed in a successful manner? What you most need to remember is that the first few months on your new job really create the impressions people will have of you. So, make those first few months really count - show up every day trying to impress - be professional, hard working and dedicated.</p>
-                            <p>Some ideas include: </p>
-
-                            <p><b>Dress for the job.</b> Make sure you dress professionally by examining what other successful people at the company wear to work.</p>
-                            <p><b>Develop a plan for the first few months.</b> Develop a plan for what you will do for those first days and months and stick to it. You can't do it all, instead develop some specific goals. </p>
-                            <p><b>Remember that you were hired because you are needed. </b> Your boss needes you to be successful so he or she can also be successful. So, think about your hob as a way to help your boss. The same is true for your colleagues. Find out what their greates pain points are - what they really need help with. Then pitch in and help them out, and learn from them. </p>
-                            <p><b>Show great initiative -</b> come to work early, stay late, ask colleagues and your boss what you can do. Roll up your sleeves to get the job done, no matter what it is. Do not wait for them to come to you. Go to them and show you are willing to do whatever it takes. This truly sepeartes out the go-getters from the rest of the pack. </p>
-                            <p><b>Display a positive, can-do attitude. </b> Show respect to your boss, colleagues, customers and staff. Be polite, calm, and professional in your dealings with others. </p>
-                            <p><b>Continue learning. </b> Set goals for the knowledge and skills you will need to develop to Succeed at your job. Maybe you will need additional certifications or training. Identify what these are and then draft your learning development plan. Perhaps most important is to enhance your communication skills - writing, listening, and speaking to various size groups. If this is not what you are good at, then put the time and attention into improving these communication skills. They are critical to all employers. Just ask them!</p>
-                            <p><b>Be open-minded and willing to learn and change. </b> Be willing to adjust to new circumstances from the work field. Seek feedack from your boss and coworkers and listen to their constructive comments.</p>
-                            <p><b>Be the best in your job as you can be. </b> Keep records of what you have done on the job so you will be prepared to share this with your boss when it is time for your review. He or she may not have seen all of the things you have accomplished.</p>
-                            <p><b>Remember, getting a new job is only half the battle. </b> Excelling at it takes some planning, preparation, hardwork and patient. But, the rewards will be worth it!</p>
                             <p></p>
+                            <p>Career fairs present an opportunity for you to interact with employers and showcase your skills. Since it can be dauting to present yourself in front of your potential employer, the following are some tips and tricks to help you succeed during the fiar. </p>
+                            <h5><b>Clarify your goal</b></h5>
+                            <p>You should have a goal in mind when coming to the career fair, whether it is to find information about your job market or to seek an internship or co-op for the sumer. This will help formulate a strategy for your interaction at the fair.</p>
+                            <h5><b>Research companies in advance</b></h5>
+                            <p>Reviewing the list of employers attending the fair before the event. Search and filter by industry, job type and more! Identify organizations that you want to talk to and make sure to visit them first when you arrive at the fair. Be confident and ask insightful questions.</p>
+                            <h5><b>Prepare your pitch</b></h5>
+                            <p>Since each employer only has a small window of time to interact with each student, prepare an “elevator pitch” introduction to make a positive and memorable impression. Practice your introduction with friends until you are comfortable with it. </p>
+                            <h5><b>Bring your resume</b></h5>
+                            <p>Make sure you have enough copies of your resume; bringing betwewen 20 and 30 is usually efficient. Be sure to include your phone number and email address on your resume. If you need to revamp your resume, head <Link to="/resume">here</Link> for help </p>
+                            <h5><b>During the event, prioritize your time</b></h5>
+                            <p>Highlight and prioritize those you are most interested in so you can organize your time efficiently. If your targeted employer is busy talking with other students, circulate and come back later.</p>
+                            <h5><b>First impressions are lasting impressions</b></h5>
+                            <p>Dress and act professionally. Your attire and manner carry the first impression. Make direct eye contact and shakehands firmly. Also, remember to smile!</p>
+                            <h5><b>Ask appropriate questions</b></h5>
+                            <p>Be sure to do your research! You don't want to ask the employers something you can learn from their website. Also, answer questions clearly and concisely. There may be many people in line behindy you, so you don't want to take up too much time. Ask if they are collecting resumes and you will want to follow up on interesting leads. Thank them for their time.  </p>
                             </div>
                         </div>
                     </div>
