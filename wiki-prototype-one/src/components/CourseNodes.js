@@ -1,5 +1,10 @@
 const position = { x: 0, y: 0 };
 const edgeType = 'smoothstep';
+const style = {
+
+  border: '1px solid #ff0072',
+  stroke: 'green',
+}
 
 export const CourseNodes = ({
 elements: [
@@ -11,6 +16,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 174' },
     position,
+    style,
   },
 
   // 2
@@ -19,6 +25,7 @@ elements: [
     sourcePosition: 'right',
     data: { label: 'ENGR 361' },
     position,
+    style,
   },
   // 3
   {
@@ -26,6 +33,7 @@ elements: [
     sourcePosition: 'right',
     data: { label: 'GE' },
     position,
+    style,
   },
   // 4
   {
@@ -34,6 +42,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CS Group 1 Elective' },
     position,
+    style,
   },
   // 5
   {
@@ -42,6 +51,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CS Group 2 Elective' },
     position,
+    style,
   },
   // 6
   {
@@ -50,6 +60,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CS Group 1 or 2 Elective' },
     position,
+    style,
   },
   // 7
   {
@@ -57,6 +68,7 @@ elements: [
     sourcePosition: 'right',
     data: { label: 'CECS 228' },
     position,
+    style,
   },
   // 8
   {
@@ -65,6 +77,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 274' },
     position,
+    style,
   },
   // 9
   {
@@ -73,6 +86,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 277' },
     position,
+    style,
   },
   // 10
   {
@@ -81,6 +95,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 225' },
     position,
+    style,
   },
   // 11
   {
@@ -89,6 +104,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 328' },
     position,
+    style,
   },
   // 12
   {
@@ -97,6 +113,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 229' },
     position,
+    style,
   },
   // 13
   {
@@ -105,6 +122,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 282' },
     position,
+    style,
   },
   // 14
   {
@@ -113,6 +131,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 341' },
     position,
+    style,
   },
   // 15
   {
@@ -121,6 +140,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 329' },
     position,
+    style,
   },
   // 16
   {
@@ -129,6 +149,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 342' },
     position,
+    style,
   },
   // 17
   {
@@ -137,6 +158,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 378' },
     position,
+    style,
   },
   // 18
   {
@@ -145,6 +167,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 323' },
     position,
+    style,
   },
   // 19
   {
@@ -153,6 +176,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 326' },
     position,
+    style,
   },
   // 20
   {
@@ -161,6 +185,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'EE 381' },
     position,
+    style,
   },
   // 21
   {
@@ -169,6 +194,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 350' },
     position,
+    style,
   },
   // 22
   {
@@ -177,6 +203,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 343' },
     position,
+    style,
   },
   // 23
   {
@@ -185,6 +212,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 327' },
     position,
+    style,
   },
   // 24
   {
@@ -193,6 +221,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 491A' },
     position,
+    style,
   },
   // 25
   {
@@ -201,6 +230,7 @@ elements: [
     targetPosition: 'left',
     data: { label: 'CECS 491B' },
     position,
+    style,
   },
    
 
@@ -211,6 +241,8 @@ elements: [
       type: edgeType,
       target: 'CECS_274',
       animated: true,
+      style,
+      style,
     },
     {
       id: 'e_CECS_174_CECS_228',
@@ -218,6 +250,8 @@ elements: [
       type: edgeType,
       target: 'CECS_228',
       animated: true,
+      style,
+      style,
     },
     {
       id: 'e_CECS_174_CECS_277',
@@ -225,6 +259,8 @@ elements: [
       type: edgeType,
       target: 'CECS_277',
       animated: true,
+      style,
+      style,
     },
     {
       id: 'e_CECS_228_CECS_328',
@@ -232,6 +268,8 @@ elements: [
       type: edgeType,
       target: 'CECS_328',
       animated: true,
+      style,
+      style,
     },
     {
       id: 'e_CECS_228_CECS_323',
@@ -239,6 +277,7 @@ elements: [
       type: edgeType,
       target: 'CECS_323',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_228_CECS_229',
@@ -246,6 +285,7 @@ elements: [
       type: edgeType,
       target: 'CECS_229',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_274_CECS_328',
@@ -253,6 +293,7 @@ elements: [
       type: edgeType,
       target: 'CECS_328',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_274_CECS_282',
@@ -260,6 +301,7 @@ elements: [
       type: edgeType,
       target: 'CECS_282',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_277_CECS_282',
@@ -267,6 +309,7 @@ elements: [
       type: edgeType,
       target: 'CECS_282',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_225_CECS_341',
@@ -274,6 +317,7 @@ elements: [
       type: edgeType,
       target: 'CECS_341',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_328_CECS_329',
@@ -281,6 +325,7 @@ elements: [
       type: edgeType,
       target: 'CECS_329',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_328_CECS_342',
@@ -288,6 +333,7 @@ elements: [
       type: edgeType,
       target: 'CECS_342',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_229_CECS_378',
@@ -295,6 +341,7 @@ elements: [
       type: edgeType,
       target: 'CECS_378',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_229_EE_381',
@@ -302,6 +349,7 @@ elements: [
       type: edgeType,
       target: 'EE_381',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_282_CECS_323',
@@ -309,6 +357,7 @@ elements: [
       type: edgeType,
       target: 'CECS_323',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_282_CECS_326',
@@ -316,6 +365,7 @@ elements: [
       type: edgeType,
       target: 'CECS_326',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_282_CECS_343',
@@ -323,6 +373,7 @@ elements: [
       type: edgeType,
       target: 'CECS_343',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_341_CECS_326',
@@ -330,6 +381,7 @@ elements: [
       type: edgeType,
       target: 'CECS_326',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_326_CECS_327',
@@ -337,6 +389,7 @@ elements: [
       type: edgeType,
       target: 'CECS_327',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_350_CECS_491A',
@@ -344,6 +397,7 @@ elements: [
       type: edgeType,
       target: 'CECS_491A',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_343_CECS_491A',
@@ -351,6 +405,7 @@ elements: [
       type: edgeType,
       target: 'CECS_491A',
       animated: true,
+      style,
     },
     {
       id: 'e_CECS_491A_CECS_491B',
@@ -358,6 +413,7 @@ elements: [
       type: edgeType,
       target: 'CECS_491B',
       animated: true,
+      style,
     },
     // 22
     

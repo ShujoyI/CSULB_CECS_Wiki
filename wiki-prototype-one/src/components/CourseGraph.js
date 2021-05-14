@@ -96,7 +96,7 @@ export default () => {
 
         else if (isNode(e) && !(courses.includes(e.data.label))) {
 
-          e.style = {backgroundColor: ''};
+          e.style = {backgroundColor: '', border: '1px solid #ff0072'};
         }
 
         // check if element is an edge that starts from the clicked node
@@ -109,7 +109,7 @@ export default () => {
         else if (isEdge(e) && (e.source != clickedNode.id)) {
 
           e.animated = true;
-          e.style = {stroke: ''};
+          e.style = {stroke: 'green'};
         }
 
         return e;

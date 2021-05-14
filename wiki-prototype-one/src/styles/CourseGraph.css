@@ -13,15 +13,15 @@
     transition: all 0.3s ease-out;  
 }
 
-.react-flow__node{
+/* .react-flow__node{
 
     border-color: #ff0072;
-}
+} */
 
-.react-flow__edge-path {
+/* .react-flow__edge-path {
 
     stroke: green;
-}
+} */
 
 .react-flow__handle {
     
