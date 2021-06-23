@@ -1,4 +1,4 @@
-# CSULB_CECS_Wiki
+# BeachCS
 
 Will utilize:
 
