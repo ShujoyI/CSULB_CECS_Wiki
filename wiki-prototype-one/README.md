@@ -26,7 +26,7 @@ Source Code: https://github.com/ShujoyI/CSULB_CECS_Wiki
 
 ## Support
 
-If you have issues, let one us know at
+If you have issues, contact one of us at
 
 Parth Chhasatiya: parth.chhasatiya@student.csulb.edu \
 Shujoy Islam: shujoy.islam@student.csulb.edu  \
